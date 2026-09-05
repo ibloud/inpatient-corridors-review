@@ -55,3 +55,12 @@ See also [AWARD-STRATEGY.md](AWARD-STRATEGY.md), [PROJECT-BRIEF.md](PROJECT-BRIE
 ## Repository principle
 
 Interest is not consent. Inspiration is not affiliation. Recognition follows a specific, verifiable contribution.
+
+## License
+
+This repository operates under a dual-license structure:
+* **Code:** MIT License
+* **Documentation & Design:** CC BY-NC-SA 4.0
+* **Audio, Branding, & Likenesses:** All Rights Reserved
+
+Please review the [LICENSE.md](LICENSE.md) file for complete terms, exclusions, and reuse restrictions.
