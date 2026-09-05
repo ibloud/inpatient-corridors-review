@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inpatient Corridors: Break the Grid</title>
+  <meta name="description" content="A consent-first collaboration proposal for Chris Webby / Inpatient. A public-interest game project connecting the themes of Asylum to community care." />
+  <meta property="og:title" content="Inpatient Corridors: Break the Grid" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ibloud.github.io/inpatient-corridors-review/" />
+  <meta name="twitter:card" content="summary" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0d0d;
+      --surface:  #181818;
+      --border:   #2a2a2a;
+      --text:     #f0f0f0;
+      --muted:    #999999;
+      --dim:      #666666;
+      --red:      #c0392b;
+      --red-dark: #9b2d20;
+      --red-bg:   #1a0a08;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--text); text-decoration: none; }
+    a:hover { color: #fff; }
+
+    .page { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 3rem 0 0;
+    }
+    header h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .header-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .header-rule {
+      border: none;
+      border-top: 2px solid var(--red);
+      margin: 0 auto 2rem;
+      width: 100%;
+    }
+
+    /* ── Video embed ── */
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #000;
+      margin-bottom: 1.5rem;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* ── Action buttons row ── */
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: var(--red-dark); color: #fff; }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--red); color: #fff; }
+
+    /* ── Status badge ── */
+    .badge {
+      display: inline-block;
+      background: var(--red-bg);
+      color: var(--red);
+      border: 1px solid #5a1a12;
+      border-radius: 3px;
+      font-size: 11px;
+      padding: 3px 10px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 2.5rem 0 0.85rem;
+      padding-left: 0.85rem;
+      border-left: 3px solid var(--red);
+    }
+
+    /* ── Prose ── */
+    p { color: var(--muted); margin-bottom: 1rem; max-width: 68ch; }
+    p strong { color: var(--text); font-weight: 600; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid var(--red);
+      padding: 0.75rem 1.25rem;
+      background: var(--surface);
+      border-radius: 0 4px 4px 0;
+      margin: 1.25rem 0;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    /* ── Engage cards ── */
+    .engage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 1rem 0 0.5rem;
+    }
+    .engage-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.4rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: border-color 0.15s;
+    }
+    .engage-card:hover { border-color: var(--red); text-decoration: none; }
+    .engage-tag {
+      font-size: 11px;
+      color: var(--red);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .engage-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin: 0; }
+    .engage-card p  { font-size: 0.875rem; color: var(--muted); margin: 0; line-height: 1.55; }
+    .engage-arrow   { margin-top: 0.5rem; font-size: 0.82rem; color: var(--dim); }
+
+    /* ── Options grid ── */
+    .options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 1rem 0 0.5rem;
+    }
+    .option {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .option-num {
+      font-size: 11px; color: var(--red);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 0.4rem; font-weight: 600;
+    }
+    .option h3 { margin: 0 0 0.35rem; font-size: 0.9rem; color: #fff; font-weight: 600; }
+    .option p  { font-size: 0.82rem; margin: 0; line-height: 1.5; }
+
+    /* ── Pilot list ── */
+    .pilot-list {
+      list-style: none;
+      margin: 0.5rem 0 1rem;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .pilot-list li {
+      display: flex; gap: 10px; align-items: flex-start;
+      color: var(--muted); font-size: 0.95rem;
+    }
+    .pilot-list li::before { content: '→'; color: var(--red); flex-shrink: 0; line-height: 1.7; }
+
+    /* ── Doc link grid ── */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 10px; margin: 1rem 0;
+    }
+    .doc-link {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 4px; padding: 0.65rem 0.9rem;
+      color: var(--muted); font-size: 0.875rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .doc-link:hover { border-color: var(--red); color: var(--text); }
+    .doc-link svg {
+      width: 13px; height: 13px; stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0; opacity: 0.5;
+    }
+
+    /* ── Review sequence ── */
+    .seq { display: flex; flex-direction: column; gap: 8px; margin: 0.75rem 0 1rem; }
+    .seq-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.92rem; color: var(--muted);
+    }
+    .seq-item a { color: #bbb; text-decoration: underline; text-decoration-color: #444; }
+    .seq-item a:hover { color: #fff; }
+    .seq-num {
+      background: var(--red-bg); border: 1px solid #5a1a12; color: var(--red);
+      border-radius: 3px; font-size: 11px; font-weight: 700;
+      min-width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 3px;
+    }
+
+    /* ── License ── */
+    .license-grid {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden; margin: 1rem 0;
+    }
+    .license-row { display: flex; border-bottom: 1px solid var(--border); }
+    .license-row:last-child { border-bottom: none; }
+    .license-type {
+      width: 42%; padding: 0.6rem 1rem;
+      font-size: 0.85rem; color: var(--text); font-weight: 500;
+      border-right: 1px solid var(--border);
+    }
+    .license-val { padding: 0.6rem 1rem; font-size: 0.85rem; color: var(--muted); }
+
+    /* ── Principle ── */
+    .principle {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem; margin: 1.25rem 0;
+      font-size: 0.95rem; color: var(--muted); font-style: italic;
+    }
+    .principle strong { color: var(--text); font-style: normal; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 3rem; border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.75rem;
+    }
+    footer span { font-size: 0.82rem; color: var(--dim); }
+    footer a { font-size: 0.82rem; color: var(--dim); }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <h1>Inpatient Corridors</h1>
+      <p class="header-sub">Ren x Chris Webby (Inpatient Project)</p>
+      <hr class="header-rule" />
+    </header>
+
+    <!-- Behind the scenes documentary -->
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/JadrrdwzO1U"
+        title="Inpatient — Behind the Scenes Documentary"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="action-row">
+      <a class="btn-primary" href="https://inpatient.world" target="_blank" rel="noopener noreferrer">Explore Inpatient World</a>
+      <a class="btn-secondary" href="https://renmakesmerch.com/en-us/products/inpatient-asylum-cd" target="_blank" rel="noopener noreferrer">Purchase the Album — CD</a>
+    </div>
+
+    <div style="text-align:center; margin-bottom: 1.5rem;">
+      <div class="badge">Independent review draft · Not affiliated with or endorsed by Chris Webby, Ren, Inpatient, or EightyHD Music</div>
+    </div>
+
+    <p>
+      This repository proposes a small, playable public-interest project connecting the themes listeners encounter in <strong>Asylum</strong>—neurodivergence, medication, institutional control, addiction, friendship, and survival—to a concrete question:
+    </p>
+
+    <blockquote>
+      When the institution is gone, what must a community build so people are supported rather than hidden, punished, or abandoned?
+    </blockquote>
+
+    <p>
+      The proposal adapts Loptr Lab's existing <strong>Inpatient Corridors</strong> concept into a facilitated digital experience. Players move through a system that accumulates pressure, makes suppression costly, and rewards collective redesign over domination. The project would pair the experience with moderated conversations and a public resource layer created with qualified mental-health and lived-experience partners.
+    </p>
+
+    <h2>Ways to engage with this project</h2>
+
+    <div class="engage-grid">
+      <a class="engage-card" href="VARIANT-RULES.html">
+        <div class="engage-tag">Strategy · Chess Variant</div>
+        <h3>Inpatient Corridors</h3>
+        <p>A playable chess-inspired variant built from the Inpatient Corridors concept. Move through a system that rewards collective redesign over domination.</p>
+        <div class="engage-arrow">View rules &amp; prototype →</div>
+      </a>
+      <a class="engage-card" href="https://ibloud.github.io/tarantula-clone-hero/" target="_blank" rel="noopener noreferrer">
+        <div class="engage-tag">Rhythm Game · Clone Hero</div>
+        <h3>Tarantula — Clone Hero Chart</h3>
+        <p>A custom Clone Hero chart for "Tarantula" by Ren x Chris Webby. Download the chart files and play along to the track that started this project.</p>
+        <div class="engage-arrow">Go to Clone Hero repo →</div>
+      </a>
+    </div>
+
+    <h2>What Chris is being asked to consider</h2>
+
+    <p>Chris is not being asked to endorse a finished product or serve as a mental-health-policy expert. He is invited to decide whether any part of this should proceed and, if so, in what role:</p>
+
+    <div class="options">
+      <div class="option">
+        <div class="option-num">01</div>
+        <h3>Decline</h3>
+        <p>No name, music, likeness, or implied relationship will be used.</p>
+      </div>
+      <div class="option">
+        <div class="option-num">02</div>
+        <h3>Review only</h3>
+        <p>Give private creative or factual feedback without public affiliation.</p>
+      </div>
+      <div class="option">
+        <div class="option-num">03</div>
+        <h3>Creative adviser</h3>
+        <p>Help shape the voice, experience, and boundaries with written credit terms.</p>
+      </div>
+      <div class="option">
+        <div class="option-num">04</div>
+        <h3>Co-creator</h3>
+        <p>Enter a negotiated agreement covering rights, approval, compensation, credit, and award attribution.</p>
+      </div>
+    </div>
+
+    <p>Ren's participation is separately optional and cannot be inferred from Chris's response.</p>
+
+    <h2>Proposed pilot</h2>
+
+    <ul class="pilot-list">
+      <li>A 15–20 minute browser-based scenario built from original Loptr Lab mechanics and art.</li>
+      <li>Three facilitated community sessions with small, consented cohorts.</li>
+      <li>A resource page developed with qualified community-care partners.</li>
+      <li>Anonymous, minimal evaluation: completion, voluntary reflection, accessibility feedback, and intended next action.</li>
+      <li>A public process archive showing what changed because participants spoke.</li>
+    </ul>
+
+    <p>This is an arts-and-engagement prototype — <strong>not therapy, diagnosis, medical advice, crisis care, or clinical research</strong>.</p>
+
+    <h2>Recognition strategy</h2>
+
+    <p>
+      The project is designed first to be useful and accountable. If it produces real public benefit, its strongest current recognition path is the <strong>Anthem Awards — Health</strong>, whose judging emphasizes concept, execution, impact and engagement, inclusivity, and capacity building.
+    </p>
+    <p>No award, nomination, eligibility, or individual credit is guaranteed. No submission should be made without written approval from the credited parties and evidence that the public work occurred.</p>
+
+    <h2>Repository documents</h2>
+
+    <div class="doc-grid">
+      <a class="doc-link" href="ORIGINAL-VARIANT-CONCEPT.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Original Variant Concept
+      </a>
+      <a class="doc-link" href="VARIANT-RULES.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Variant Rules
+      </a>
+      <a class="doc-link" href="PROTOTYPE-ASSESSMENT.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Prototype Assessment
+      </a>
+      <a class="doc-link" href="THE-ASK.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        The Ask
+      </a>
+      <a class="doc-link" href="AWARD-STRATEGY.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Award Strategy
+      </a>
+      <a class="doc-link" href="PROJECT-BRIEF.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Project Brief
+      </a>
+      <a class="doc-link" href="RIGHTS-AND-SAFETY.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Rights and Safety
+      </a>
+      <a class="doc-link" href="REVIEW-DECISION.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Review Decision
+      </a>
+    </div>
+
+    <h2>Review sequence</h2>
+
+    <div class="seq">
+      <div class="seq-item"><span class="seq-num">1</span><span>Read this page and <a href="THE-ASK.html">The Ask</a>.</span></div>
+      <div class="seq-item"><span class="seq-num">2</span><span>Review the original concept and playable rules in <a href="ORIGINAL-VARIANT-CONCEPT.html">Original Variant Concept</a> and <a href="VARIANT-RULES.html">Variant Rules</a>.</span></div>
+      <div class="seq-item"><span class="seq-num">3</span><span>Review the non-negotiable safeguards in <a href="RIGHTS-AND-SAFETY.html">Rights and Safety</a>.</span></div>
+      <div class="seq-item"><span class="seq-num">4</span><span>Choose a response in <a href="REVIEW-DECISION.html">Review Decision</a>.</span></div>
+    </div>
+
+    <h2>Repository principle</h2>
+
+    <div class="principle">
+      <strong>Interest is not consent.</strong> Inspiration is not affiliation. Recognition follows a specific, verifiable contribution.
+    </div>
+
+    <h2>License</h2>
+
+    <div class="license-grid">
+      <div class="license-row">
+        <div class="license-type">Code</div>
+        <div class="license-val">MIT License</div>
+      </div>
+      <div class="license-row">
+        <div class="license-type">Documentation &amp; Design</div>
+        <div class="license-val">CC BY-NC-SA 4.0</div>
+      </div>
+      <div class="license-row">
+        <div class="license-type">Audio, Branding &amp; Likenesses</div>
+        <div class="license-val">All Rights Reserved</div>
+      </div>
+    </div>
+
+    <p>See <a href="LICENSE.md" style="color:#bbb; text-decoration:underline; text-decoration-color:#444;">LICENSE.md</a> for complete terms, exclusions, and reuse restrictions.</p>
+
+    <footer>
+      <span>Loptr Lab · inpatient-corridors-review · Open source</span>
+      <a href="https://github.com/ibloud/inpatient-corridors-review/edit/main/README.md">Improve this page →</a>
+    </footer>
+
+  </div>
+</body>
+</html>
