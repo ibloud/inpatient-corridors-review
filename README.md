@@ -10,6 +10,15 @@ This repository proposes a small, playable public-interest project connecting th
 
 The proposal adapts Loptr Lab's existing **Inpatient Corridors** concept into a facilitated digital experience. Players move through a system that accumulates pressure, makes suppression costly, and rewards collective redesign over domination. The project would pair the experience with moderated conversations and a public resource layer created with qualified mental-health and lived-experience partners.
 
+**Behind the scenes:** Watch the [Inpatient documentary](https://youtu.be/JadrrdwzO1U) for context on the project's origins.
+
+**Support the artists:** [Purchase the Inpatient / Asylum CD](https://renmakesmerch.com/en-us/products/inpatient-asylum-cd) from Ren's official store.
+
+## Ways to engage with this project
+
+- **[Inpatient Corridors — Chess Variant](VARIANT-RULES.md):** A playable chess-inspired variant built from the Inpatient Corridors concept. Move through a system that rewards collective redesign over domination.
+- **[Tarantula — Clone Hero Chart](https://ibloud.github.io/tarantula-clone-hero/):** A custom Clone Hero chart for "Tarantula" by Ren x Chris Webby. Download the chart files and play along to the track that started this project.
+
 ## What Chris is being asked to consider
 
 Chris is not being asked to endorse a finished product or serve as a mental-health-policy expert. He is invited to decide whether any part of this should proceed and, if so, in what role:
@@ -59,8 +68,9 @@ Interest is not consent. Inspiration is not affiliation. Recognition follows a s
 ## License
 
 This repository operates under a dual-license structure:
-* **Code:** MIT License
-* **Documentation & Design:** CC BY-NC-SA 4.0
-* **Audio, Branding, & Likenesses:** All Rights Reserved
+
+- **Code:** MIT License
+- **Documentation & Design:** CC BY-NC-SA 4.0
+- **Audio, Branding, & Likenesses:** All Rights Reserved
 
 Please review the [LICENSE.md](LICENSE.md) file for complete terms, exclusions, and reuse restrictions.
