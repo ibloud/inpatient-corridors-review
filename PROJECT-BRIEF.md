@@ -54,6 +54,7 @@ Victory is not escape alone. Players allocate limited resources among housing, p
 ## Public outputs
 
 - Original browser prototype
+- Neutral 16-card pressure/support prototype with printable review sheet
 - Facilitator guide
 - Plain-language resource page
 - Accessibility statement
