@@ -6,7 +6,7 @@
 - Separate permissions are required for composition, master recording, lyrics, artwork, video, name/likeness, and trademarks where applicable.
 - No public statement may imply that interest, a reply, or private review equals partnership.
 - Creative, approval, credit, compensation, withdrawal, and award-submission terms must be written before production involving an artist begins.
-- Ren's consent and rights are separate from Chris's. Neither can authorize the other's contribution.
+- Ren is not a participant in the continuing project. Historical references do not imply a present relationship. Chris can authorize only his own contribution; no participant can authorize another person's protected material.
 
 ## Mental-health safeguards
 
