@@ -49,8 +49,7 @@ The first digital prototype should remain a two-player Duet scenario. Four-playe
 
 | Participant | Legitimate benefit |
 | --- | --- |
-| Chris Webby | An optional way to explore neurodivergence and institutional pressure without being presented as a clinician or redemption narrative |
-| Ren | A meaningful extension of related artistic themes without presumed participation or surrendered creative control |
+| Chris Webby | A separate, optional opportunity to review or participate on his own terms, without being presented as a clinician or asked to mediate another relationship |
 | Loptr Lab | Evidence that Veiled Dominion can translate cultural narratives into playable systems |
 | Duet | A scenario demonstrating dynamic rules, cooperation, accessibility, and facilitated play |
 | Players | An experience showing how orderly systems can generate pressure and why escape without support is incomplete |
@@ -61,8 +60,8 @@ The first digital prototype should remain a two-player Duet scenario. Four-playe
 
 - Usefulness, consent, and measurable impact precede award positioning.
 - Interest, silence, or private review never implies affiliation.
-- Chris and Ren make separate participation decisions.
-- Rights, compensation, approval, withdrawal, and credit are negotiated before protected material is used.
+- Chris makes an independent participation decision. Ren is not a participant in the continuing project.
+- Rights, compensation, approval, withdrawal, and credit are negotiated before any artist participates or protected material is used.
 - The prototype is presented as art and facilitated engagement, not therapy or clinical research.
 - Award credit follows completed, verifiable work.
 
