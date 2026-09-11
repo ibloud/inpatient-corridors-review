@@ -28,6 +28,7 @@ See [STATUS-AND-PROVENANCE.md](STATUS-AND-PROVENANCE.md) for the boundary betwee
 ## Playable material
 
 - **[Break the Grid — Chess Variant](VARIANT-RULES.md):** a playable Veiled Dominion scenario in which collective redesign can become more valuable than domination.
+- **[Compact Card Deck](BREAK-THE-GRID-DECK.md):** a neutral 16-card pressure/support module with a [printable review sheet](BREAK-THE-GRID-DECK.html).
 - **[Original Variant Concept](ORIGINAL-VARIANT-CONCEPT.md):** a dated provenance record preserving how the earlier concept developed. It is not the public-release ruleset.
 
 ## What Chris is being asked to consider
