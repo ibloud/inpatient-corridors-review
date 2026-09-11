@@ -1,20 +1,21 @@
-# The Ask
+# Independent Review Invitation for Chris Webby
 
 Chris,
 
-Loptr Lab would like to know whether you want to review a small interactive project inspired by questions raised around *Asylum*: who gets labeled unmanageable, what pressure institutions create, and what communities must build when confinement is not care.
+Loptr Lab independently continued a playable systems prototype prompted by questions we encountered while studying *Inpatient* and *Asylum*: who gets labeled unmanageable, what pressure institutions create, and what communities must build when confinement is not care.
 
-The proposal begins with mechanics Loptr Lab already developed independently: restraint accumulates tension; volatile action can rupture the board; and players cannot truly win by eliminating the person under pressure. They must change the system producing the crisis.
+The prototype uses Loptr Lab and Veiled Dominion mechanics. Restraint accumulates tension, volatile action can rupture the board, and players cannot repair the situation merely by eliminating the person under pressure. They must change the system producing the crisis.
+
+Ren is not a participant in the continued project. You are not being asked to comment on him, mediate any relationship, or take a side. This invitation concerns only your own perspective, rights, and possible role.
 
 We are asking for a decision, not an endorsement:
 
-- Is the premise worth developing?
-- Does it reflect anything you actually want to say?
-- Should *Asylum*, Inpatient, your name, or your music remain completely outside it?
-- If you want involvement, what role and approval rights would make that safe and useful?
+- Would you like to review the premise privately?
+- Does any part accurately reflect a subject you want to explore?
+- What feels inaccurate, reductive, or outside your voice?
+- Should your name, *Inpatient*, *Asylum*, or your music remain outside the forward-looking project?
+- If you want involvement, what role, approval rights, credit, compensation, and exit terms would make participation safe and worthwhile?
 
-The potential outcome is a free, accessible browser experience plus facilitated community conversations and a transparent impact record. If the completed work demonstrates real benefit, we would jointly consider an Anthem Awards Health entry or another category that accurately recognizes the contributors.
+The potential outcome is a free, accessible browser experience, facilitated community conversations, and a transparent impact record. Recognition may be considered only after useful work exists and each credited participant has approved the submission.
 
-The award is not the project. It is a possible record of work already done.
-
-Until there is written permission, this remains an independent Loptr Lab review proposal with no public claim of affiliation.
+Until a written agreement exists, this remains an independent Loptr Lab prototype. Silence, interest, or private feedback will not be presented as affiliation.
