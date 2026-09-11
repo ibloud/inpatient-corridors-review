@@ -2,13 +2,17 @@
 
 ## Working title
 
-**Inpatient Corridors: Break the Grid**
+**Break the Grid**
 
-The working title is provisional. It must change if requested by relevant rights holders.
+The name **Inpatient Corridors** is retained in the repository history as provenance for an earlier development phase. Any forward-looking public use of *Inpatient*, *Asylum*, artist names, music, marks, or other protected material requires permission from the appropriate rightsholder.
+
+## Status and ownership boundary
+
+Loptr Lab is continuing the original mechanics, documentation, facilitation model, and accessibility architecture as an independent project. Ren is not a participant. Chris Webby has not approved or endorsed the project and is offered a separate, optional review path.
 
 ## Purpose
 
-Translate an album-adjacent cultural conversation into an original participatory experience about pressure, autonomy, care, and system redesign.
+Translate a cultural inquiry about pressure, autonomy, care, and institutional failure into an original participatory experience about system redesign.
 
 ## Core interaction
 
@@ -16,9 +20,9 @@ The prototype begins inside a closed grid. Defensive or suppressive choices add 
 
 The final phase introduces the central choice: keep managing individuals inside the same architecture, or collectively break and rebuild the rules of the space.
 
-## Design revision required
+## Design boundary
 
-The earlier concept assigned an “analytical restraint” state to Ren and a “volatile variable” state to Webby. That mapping should **not** ship. It reduces two people to diagnostic archetypes and could reinforce stigma. The production version should use unnamed, player-selected states such as:
+An earlier concept assigned person-based states to real artists. That mapping does **not** ship. It reduced people to diagnostic or behavioral archetypes without their participation. The continuing version uses unnamed, player-selected actions:
 
 - Contain
 - Mask
@@ -27,7 +31,7 @@ The earlier concept assigned an “analytical restraint” state to Ren and a �
 - Ask for help
 - Change the environment
 
-No state is a diagnosis, moral identity, or fixed character class.
+No action is a diagnosis, moral identity, or fixed character class.
 
 ## Experience arc
 
@@ -37,15 +41,15 @@ Rules prioritize order and punish deviation. Players learn how apparently neutra
 
 ### 2. Accumulated Pressure
 
-Repeated containment raises system-wide tension. Players see that an “individual outburst” has architectural causes.
+Repeated containment raises system-wide tension. Players see that an individual outburst can have architectural causes.
 
 ### 3. Shattered Boundary
 
-The existing system stops functioning. Players can compete for control or cooperate to rewrite one rule.
+The existing system stops functioning. Players can compete for control or cooperate to rewrite the rules.
 
 ### 4. Community Aftercare
 
-Victory is not escape alone. Players allocate limited resources among housing, peer support, mobile crisis response, clinical care, creative space, transportation, and legal advocacy. Tradeoffs remain visible.
+Victory is not escape alone. Players allocate limited resources among housing, peer support, mobile crisis response, consensual clinical care, creative space, transportation, and legal advocacy.
 
 ## Public outputs
 
@@ -55,12 +59,12 @@ Victory is not escape alone. Players allocate limited resources among housing, p
 - Accessibility statement
 - Rights and provenance ledger
 - Anonymized impact summary
-- Short making-of piece, only with participant consent
+- Optional making-of material created only with participant consent
 
 ## Intended audience
 
-Adults interested in music, neurodivergence, mental-health history, community care, and interactive storytelling. A youth version would require a separate safeguarding plan and partner approval.
+Adults interested in interactive storytelling, neurodivergence, mental-health history, and community care. A youth version requires a separate safeguarding plan and partner approval.
 
 ## Success definition
 
-The pilot succeeds if participants can identify at least one structural cause of crisis, distinguish care from coercion, and name one practical community support—without the experience stigmatizing diagnosis, romanticizing crisis, or presenting artists as clinicians.
+The pilot succeeds if participants can identify at least one structural cause of crisis, distinguish care from coercion, and name one practical community support—without stigmatizing diagnosis, romanticizing crisis, or presenting artists as clinicians.
