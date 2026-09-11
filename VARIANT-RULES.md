@@ -146,6 +146,14 @@ This is the **Continuum ending**: escape is incomplete unless a support structur
 
 Everyone loses if System Pressure reaches 10 or no surviving player has a legal move. The debrief should focus on which rules produced collapse—not which player should be blamed.
 
+## Optional compact card module
+
+After players understand the base rules, add the neutral 16-card [Break the Grid deck](BREAK-THE-GRID-DECK.md). Deal one card to each player, draw at the start of each turn, and allow one card to be played instead of a normal action.
+
+Each card offers an Immediate Response and a Collective Change. This module is designed to test player agency and system redesign without restoring the archived 52-card War Hand, suit hierarchy, or dice-combat system.
+
+Use the [printable card sheet](BREAK-THE-GRID-DECK.html) for paper playtesting.
+
 ## Debrief prompts
 
 1. Which actions created pressure while appearing orderly or helpful?
