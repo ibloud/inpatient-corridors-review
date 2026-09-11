@@ -21,6 +21,7 @@ The design contains enough material for an immediate paper playtest and enough s
 - Trauma and Support tokens
 - Three escalating board phases
 - Six community-care interventions
+- Neutral 16-card pressure/support module with two-path choices
 - Competitive, cooperative, and collapse endings
 - Debrief questions
 - Safety and consent boundaries
@@ -36,7 +37,7 @@ The design contains enough material for an immediate paper playtest and enough s
 | Timing | Add a round counter and deterministic phase transitions |
 | Consent | Provide an explicit accept/refuse interaction for Clinical Care |
 | Shared funding | Let both players contribute Support to Care cards |
-| Balance | Playtest thresholds of 6, 8, and 10; treat them as provisional |
+| Balance | Playtest thresholds of 6, 8, and 10 and all card costs; treat them as provisional |
 | Evaluation | Collect anonymous program feedback, never mental-health profiles |
 
 The first digital prototype should remain a two-player Duet scenario. Four-player support adds networking, interface, and balance complexity without improving the first test of the central mechanic.
