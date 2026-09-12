@@ -69,6 +69,7 @@ Usefulness, consent, and documented public benefit come first. A completed pilot
 2. Review [PROJECT-BRIEF.md](PROJECT-BRIEF.md), [VARIANT-RULES.md](VARIANT-RULES.md), and [PROTOTYPE-ASSESSMENT.md](PROTOTYPE-ASSESSMENT.md).
 3. Review the non-negotiable safeguards in [RIGHTS-AND-SAFETY.md](RIGHTS-AND-SAFETY.md).
 4. Use [REVIEW-DECISION.md](REVIEW-DECISION.md) as a private discussion aid.
+5. See [OUTREACH-RECORD.md](OUTREACH-RECORD.md) for the dated message and current response status.
 
 ## Repository principle
 
