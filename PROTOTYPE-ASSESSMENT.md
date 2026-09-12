@@ -42,6 +42,12 @@ The design contains enough material for an immediate paper playtest and enough s
 
 The first digital prototype should remain a two-player Duet scenario. Four-player support adds networking, interface, and balance complexity without improving the first test of the central mechanic.
 
+## Chris-driven direction now specified
+
+The repository now contains a documented, reviewable hypothesis grounded in Chris Webby's public discography. The proposed layer adds Own Your Move, Call It Plainly, Crew Check, Receipts, Revision Cycle, and Independent Exit.
+
+These mechanics are original Loptr Lab adaptations. The thematic connection is interpretive until Chris reviews it. No music, lyrics, likeness, voice model, or protected artwork is required to test them.
+
 ## Shared goal
 
 > Build and test an accessible game in which players discover that managing individual behavior cannot repair a system that continually manufactures crisis.
