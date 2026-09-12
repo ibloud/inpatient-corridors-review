@@ -8,7 +8,7 @@
 
 Ren is not a participant in the continuing project. The repository does not state or imply a reason, assign blame, or invite another artist to mediate. Historical references remain only where needed to preserve an accurate development record.
 
-Chris Webby has not approved, endorsed, or joined the project. He is offered a separate, optional opportunity to review the work privately and make his own decision.
+Chris Webby has not approved, endorsed, or joined the project. He is offered a separate, optional opportunity to review the work privately and make his own decision. A September 12, 2026 discography lens documents Loptr Lab's evidence and interpretive design hypothesis; it is not attributed to Chris.
 
 ## What continues
 
