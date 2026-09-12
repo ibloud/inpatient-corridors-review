@@ -10,9 +10,19 @@ The name **Inpatient Corridors** is retained in the repository history as proven
 
 Loptr Lab is continuing the original mechanics, documentation, facilitation model, and accessibility architecture as an independent project. Ren is not a participant. Chris Webby has not approved or endorsed the project and is offered a separate, optional review path.
 
+## Chris-driven hypothesis
+
+Subject to Chris Webby's review, correction, and consent, the intended direction is:
+
+> A replayable independent-artist pressure lab where people speak plainly, test inherited rules, own the consequences of rupture, build support without surrendering agency, and leave a record that makes the next attempt better.
+
+This direction is informed by a career-spanning pattern interpreted from the #WebbyWednesday release practice, the *Webster's Laboratory* framing, chemical and institutional language across multiple projects, the “Raw Thoughts” sequence, and an extensive collaborative catalog. See [CHRIS-WEBBY-DISCOGRAPHY-LENS.md](CHRIS-WEBBY-DISCOGRAPHY-LENS.md).
+
+It does not assume that Chris agrees with the interpretation or grant permission to use his name, music, marks, or likeness in a released experience.
+
 ## Purpose
 
-Translate a cultural inquiry about pressure, autonomy, care, and institutional failure into an original participatory experience about system redesign.
+Translate a cultural inquiry about pressure, autonomy, independent expression, accountability, practical support, and institutional failure into an original participatory experience about system redesign.
 
 ## Core interaction
 
@@ -47,9 +57,13 @@ Repeated containment raises system-wide tension. Players see that an individual 
 
 The existing system stops functioning. Players can compete for control or cooperate to rewrite the rules.
 
-### 4. Community Aftercare
+### 4. Own the Route
 
-Victory is not escape alone. Players allocate limited resources among housing, peer support, mobile crisis response, consensual clinical care, creative space, transportation, and legal advocacy.
+Victory is not escape alone. Players allocate limited resources among housing, peer support, mobile crisis response, consensual clinical care, creative space, transportation, and legal advocacy. They also preserve a record of which rules created pressure and what the group changed.
+
+### 5. Revision Cycle
+
+The table reviews one recorded pressure event, distinguishes assertion from corroborated observation, and may revise one rule by consent. The next playthrough begins with that receipt rather than pretending the previous failure never happened.
 
 ## Public outputs
 
