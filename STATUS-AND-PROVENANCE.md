@@ -38,3 +38,9 @@ The files `ORIGINAL-VARIANT-CONCEPT.md` and the repository history preserve earl
 Loptr Lab claims only its original mechanics, writing, documentation, technical architecture, and other independently created material. Third-party rights remain with their respective rightsholders.
 
 Any future contributor receives written scope, credit, ownership/licensing, compensation, correction, withdrawal, publicity, and exit terms before their contribution is commercially exploited or presented as a partnership.
+
+## Outreach status
+
+On September 12, 2026, Dominique Devereaux / Loptr Lab sent the project to the official general-inquiries address published by ChrisWebby.com. This verifies outreach only; it does not establish personal receipt by Chris, review, interest, approval, endorsement, or participation.
+
+See [OUTREACH-RECORD.md](OUTREACH-RECORD.md) for the preserved message and contact-routing rationale.
