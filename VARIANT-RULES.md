@@ -146,6 +146,50 @@ This is the **Continuum ending**: escape is incomplete unless a support structur
 
 Everyone loses if System Pressure reaches 10 or no surviving player has a legal move. The debrief should focus on which rules produced collapse—not which player should be blamed.
 
+## Chris-driven facilitation layer
+
+This optional layer translates the [discography research](CHRIS-WEBBY-DISCOGRAPHY-LENS.md) into original, artist-neutral mechanics. Its use does not imply Chris Webby's participation or permission.
+
+### Own Your Move
+
+Before an Outburst or another action that will raise System Pressure, the acting player states the outcome they are trying to produce. Record only the stated goal, action, and result. Do not interpret motive, personality, or diagnosis.
+
+### Call It Plainly
+
+Once per round, a player may name one active rule they believe generated Tension or System Pressure.
+
+- If another player corroborates the observation, create 1 Support.
+- If another player disagrees, record both views for the debrief.
+- Corroboration concerns the board event, not the speaker's identity or health.
+
+### Crew Check
+
+When a player requests help, each other player may choose one response:
+
+- **Support:** contribute a token or legal Connect action.
+- **Challenge:** identify a likely board consequence before the move resolves.
+- **Decline:** do not participate, without penalty.
+
+No response is assumed.
+
+### Receipts
+
+Whenever System Pressure rises, record the action or rule that caused it. A receipt contains no player diagnosis, private disclosure, or speculation.
+
+### Revision Cycle
+
+At the end of each phase:
+
+1. Review one receipt.
+2. Identify the rule and observed consequence.
+3. Let every player propose a change or pass.
+4. Adopt one temporary revision only with unanimous consent.
+5. Mark it as a playtest rule, not permanent canon.
+
+### Independent Exit
+
+A player may leave the scenario at the end of their turn without being labeled defeated. Remove their pieces without increasing System Pressure. The remaining table continues, while the debrief records whether a safe route or support structure existed for that exit.
+
 ## Optional compact card module
 
 After players understand the base rules, add the neutral 16-card [Break the Grid deck](BREAK-THE-GRID-DECK.md). Deal one card to each player, draw at the start of each turn, and allow one card to be played instead of a normal action.
