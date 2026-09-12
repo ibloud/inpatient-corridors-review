@@ -10,6 +10,12 @@ This repository develops a small, playable public-interest project about institu
 
 The work grew from Loptr Lab's study of themes encountered around *Inpatient* and *Asylum*, but its gameplay, documentation, facilitation model, and accessibility architecture are being developed independently. Protected artist material is not required to play or continue the prototype.
 
+## If Chris Webby drives the direction
+
+A scan of Chris's public discography supports a distinct design hypothesis: **Inpatient becomes an independent-artist pressure lab built around candid speech, repeated practice, visible consequences, crew-based support, and the right to revise the system without surrendering personal agency.** This is Loptr Lab's interpretation for Chris to approve, correct, or reject—not a claim about his intent.
+
+Read the evidence, interpretation, and recommended mechanics in [CHRIS-WEBBY-DISCOGRAPHY-LENS.md](CHRIS-WEBBY-DISCOGRAPHY-LENS.md).
+
 ## What belongs to Loptr Lab's continuing project
 
 - The Veiled Dominion-derived board and systems framework
@@ -59,7 +65,7 @@ Usefulness, consent, and documented public benefit come first. A completed pilot
 
 ## Review sequence
 
-1. Read [STATUS-AND-PROVENANCE.md](STATUS-AND-PROVENANCE.md) and [THE-ASK.md](THE-ASK.md).
+1. Read [STATUS-AND-PROVENANCE.md](STATUS-AND-PROVENANCE.md), [CHRIS-WEBBY-DISCOGRAPHY-LENS.md](CHRIS-WEBBY-DISCOGRAPHY-LENS.md), and [THE-ASK.md](THE-ASK.md).
 2. Review [PROJECT-BRIEF.md](PROJECT-BRIEF.md), [VARIANT-RULES.md](VARIANT-RULES.md), and [PROTOTYPE-ASSESSMENT.md](PROTOTYPE-ASSESSMENT.md).
 3. Review the non-negotiable safeguards in [RIGHTS-AND-SAFETY.md](RIGHTS-AND-SAFETY.md).
 4. Use [REVIEW-DECISION.md](REVIEW-DECISION.md) as a private discussion aid.
