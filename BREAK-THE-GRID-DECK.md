@@ -6,14 +6,14 @@
 
 ## Design purpose
 
-The deck makes the project's central choice tangible: a player can use a fast response that moves the immediate problem, or invest Support in a change that reduces the pressure produced by the system.
+The deck makes the project's central choice tangible: a player can use a fast response that moves the immediate problem, or invest Support in a change that reduces the pressure produced by the system. In the Chris-driven hypothesis, the Voice and Connection cards also test candid speech, crew response, independent choice, and accountability for consequences.
 
 Every card offers two paths:
 
 - **Immediate response** — free or inexpensive, useful now, but may transfer or increase pressure.
 - **Collective change** — costs Support or cooperation and changes the shared environment.
 
-Neither path is treated as a diagnosis or a measure of the player.
+Neither path is treated as a diagnosis or a measure of the player. The deck uses no lyrics, track titles, artist likenesses, or artist-assigned character classes.
 
 ## Setup
 
