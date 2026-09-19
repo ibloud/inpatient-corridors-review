@@ -9,7 +9,7 @@
 | Sender | Dominique Devereaux / Loptr Lab |
 | From | questions@loptrlab.com |
 | Recipient role | Official general-inquiries channel published by ChrisWebby.com |
-| To | chriswebbyinquiries@gmail.com |
+| To | [private evidence locator: outreach-email-2026-09-12] |
 | Subject | Break the Grid — independent prototype for Chris Webby’s review |
 | Delivery status | Sent |
 | Response status | No response recorded at the time this record was created |
