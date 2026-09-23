@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Break the Grid</title>
+<meta name="description" content="Documentation, safety, provenance, event planning, and participation resources for Break the Grid.">
+<style>
+:root{--bg:#0d0d0d;--surface:#171717;--surface2:#1d1d1d;--border:#303030;--text:#f4f4f4;--muted:#aaa;--dim:#777;--accent:#c0392b;--accent-bg:#210c09}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--text);text-decoration:none}a:hover{color:#fff}.page{max-width:1050px;margin:auto;padding:0 1.25rem 4rem}
+header{padding:2rem 0 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.brand{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:.35rem 0 0}h2{font-size:1.25rem;margin:2.5rem 0 .8rem;border-left:3px solid var(--accent);padding-left:.8rem}h3{font-size:1rem;margin:.1rem 0 .35rem}p{color:var(--muted);max-width:72ch;margin:.35rem 0 1rem}
+nav{display:flex;gap:1rem;flex-wrap:wrap;font-size:.82rem}nav a{color:var(--muted)}nav a:hover{color:#fff}
+.intro{padding:2rem 0 1rem;display:grid;grid-template-columns:1.5fr 1fr;gap:1.5rem}.callout{background:var(--accent-bg);border:1px solid #5a1a12;border-radius:8px;padding:1rem 1.1rem}.callout strong{color:#fff}.callout p{font-size:.9rem;margin:.35rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem 1.05rem;transition:.15s border-color}.card:hover{border-color:var(--accent)}.tag{color:var(--accent);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.desc{font-size:.87rem;color:var(--muted);line-height:1.5;margin:0}.arrow{display:block;color:var(--dim);font-size:.78rem;margin-top:.65rem}
+.quick{display:flex;flex-wrap:wrap;gap:10px;margin:1rem 0}.button{display:inline-block;border:1px solid var(--border);border-radius:5px;padding:.7rem 1rem;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}.button.primary{background:var(--accent);border-color:var(--accent)}.button:hover{border-color:var(--accent)}
+.note{font-size:.82rem;color:var(--dim)}footer{border-top:1px solid var(--border);margin-top:3rem;padding-top:1.25rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--dim);font-size:.8rem}
+@media(max-width:700px){.intro{grid-template-columns:1fr}header{align-items:start}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div><div class="brand">Break the Grid · Loptr Lab</div><h1>Resources</h1></div>
+  <nav aria-label="Primary"><a href="./">Home</a><a href="VARIANT-RULES.html">Play</a><a href="event/">Event</a><a href="STATUS-AND-PROVENANCE.html">Status</a></nav>
+</header>
+
+<section class="intro">
+  <div>
+    <p style="font-size:1.08rem;color:#ddd">Documentation should help you understand the project without making you reverse-engineer it.</p>
+    <p>This page is the documentation index for the current Break the Grid project: what it is, how the prototype works, what is proposed, how safety and consent are handled, and where the supporting records live.</p>
+    <div class="quick"><a class="button primary" href="PROJECT-BRIEF.html">Start with the project brief</a><a class="button" href="RIGHTS-AND-SAFETY.html">Read safety boundaries</a></div>
+  </div>
+  <aside class="callout">
+    <strong>Important boundary</strong>
+    <p>This is an arts-and-engagement prototype. It is not therapy, diagnosis, medical advice, crisis care, or clinical research.</p>
+    <p>Participation is voluntary. Prompts can be skipped. No medical records are requested.</p>
+  </aside>
+</section>
+
+<h2>Start here</h2>
+<div class="grid">
+<a class="card" href="PROJECT-BRIEF.html"><span class="tag">Overview</span><h3>Project Brief</h3><p class="desc">Purpose, audience, core interaction, experience arc, boundaries, and proposed public outputs.</p><span class="arrow">Read the brief →</span></a>
+<a class="card" href="STATUS-AND-PROVENANCE.html"><span class="tag">Current status</span><h3>Status &amp; Provenance</h3><p class="desc">What is current, what is historical, what continues independently, and what requires authorization.</p><span class="arrow">See the status record →</span></a>
+<a class="card" href="PROTOTYPE-ASSESSMENT.html"><span class="tag">Review</span><h3>Prototype Assessment</h3><p class="desc">Assessment of the playable concept, its mechanics, and the issues still requiring work.</p><span class="arrow">Review the prototype →</span></a>
+</div>
+
+<h2>Play and understand the experience</h2>
+<div class="grid">
+<a class="card" href="VARIANT-RULES.html"><span class="tag">Play</span><h3>Variant Rules</h3><p class="desc">The current rules and mechanics for the playable prototype.</p><span class="arrow">Open rules →</span></a>
+<a class="card" href="BREAK-THE-GRID-DECK.html"><span class="tag">Optional module</span><h3>Compact Card Deck</h3><p class="desc">A neutral 16-card module for testing pressure, support, and collective system change.</p><span class="arrow">View the deck →</span></a>
+<a class="card" href="interactive/"><span class="tag">Interactive narrative</span><h3>Interactive Track</h3><p class="desc">Ink writing, browser implementation, playtesting, QA, accessibility, and provenance work.</p><span class="arrow">Open interactive track →</span></a>
+</div>
+
+<h2>Host, event, and community work</h2>
+<div class="grid">
+<a class="card" href="event/"><span class="tag">Event · In process</span><h3>Violet's Revenge: The Forensics Trail</h3><p class="desc">The current proposed event-format extension, with planning status and outstanding verification items.</p><span class="arrow">Open event phase →</span></a>
+<a class="card" href="EVENT-PHASE-IN-PROCESS.html"><span class="tag">Operations</span><h3>Event Phase Record</h3><p class="desc">Planning requirements, access boundaries, participant coordination, and operational caveats.</p><span class="arrow">Read the event record →</span></a>
+<a class="card" href="THE-ASK.html"><span class="tag">Participation</span><h3>The Ask</h3><p class="desc">The current invitation and decision boundary for outside review or contribution.</p><span class="arrow">Read the ask →</span></a>
+</div>
+
+<h2>Safety, consent, and rights</h2>
+<div class="grid">
+<a class="card" href="RIGHTS-AND-SAFETY.html"><span class="tag">Safety</span><h3>Rights, Consent &amp; Safety</h3><p class="desc">Non-negotiable rights boundaries, mental-health safeguards, research limits, AI disclosure, and facilitator scope.</p><span class="arrow">Read safeguards →</span></a>
+<a class="card" href="LICENSE.html"><span class="tag">Rights</span><h3>License</h3><p class="desc">Code, documentation, original design, and third-party material boundaries.</p><span class="arrow">Read licensing terms →</span></a>
+<a class="card" href="REVIEW-DECISION.html"><span class="tag">Review aid</span><h3>Review Decision</h3><p class="desc">A structured aid for considering whether and how to engage with the project.</p><span class="arrow">Open review aid →</span></a>
+</div>
+
+<h2>Research, design history, and supporting records</h2>
+<div class="grid">
+<a class="card" href="SOURCE-MAP.html"><span class="tag">Evidence</span><h3>Source Map</h3><p class="desc">Where project claims, references, and supporting materials come from.</p><span class="arrow">Open source map →</span></a>
+<a class="card" href="ORIGINAL-VARIANT-CONCEPT.html"><span class="tag">History</span><h3>Original Variant Concept</h3><p class="desc">Earlier design material retained as provenance, not as a current participation or rights claim.</p><span class="arrow">View provenance →</span></a>
+<a class="card" href="NEXT-PHASE-RELEASE-ARCHITECTURE.html"><span class="tag">Design study</span><h3>Next-Phase Release Architecture</h3><p class="desc">The proposed transition into varied participation modes, midpoint reframe, and retrospective play.</p><span class="arrow">Read the architecture →</span></a>
+<a class="card" href="EVENT-PHASE-IN-PROCESS.html"><span class="tag">Current work</span><h3>Event Phase in Process</h3><p class="desc">A dated planning record for the next public-format study.</p><span class="arrow">Read current planning →</span></a>
+</div>
+
+<h2>External resources</h2>
+<div class="grid">
+<a class="card" href="https://heartsupport.com/" target="_blank" rel="noreferrer"><span class="tag">Peer support</span><h3>HeartSupport</h3><p class="desc">A public peer-support resource. It is not a substitute for emergency services, clinical care, or event-staff escalation.</p><span class="arrow">Visit HeartSupport →</span></a>
+<a class="card" href="https://github.com/ibloud/violets-revenge" target="_blank" rel="noreferrer"><span class="tag">Companion project</span><h3>Violet's Revenge repository</h3><p class="desc">Project source and community coordination documentation for the event companion work.</p><span class="arrow">Open repository →</span></a>
+</div>
+
+<p class="note" style="margin-top:2rem">For emergency situations, contact local emergency services or an appropriate local crisis service. The resources on this page are informational and do not replace professional care.</p>
+
+<footer><span>Break the Grid · Loptr Lab</span><a href="./">Return to the project home →</a></footer>
+</div>
+</body>
+</html>
