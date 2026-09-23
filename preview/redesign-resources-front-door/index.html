@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Break the Grid — Loptr Lab</title>
+<meta name="description" content="Break the Grid is an independent Loptr Lab systems prototype exploring pressure, autonomy, community care, and redesign.">
+<meta property="og:title" content="Break the Grid — Loptr Lab">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ibloud.github.io/inpatient-corridors-review/">
+<meta property="og:image" content="https://ibloud.github.io/inpatient-corridors-review/assets/social-preview.png">
+<style>
+:root{--bg:#0d0d0d;--surface:#171717;--border:#303030;--text:#f4f4f4;--muted:#aaa;--dim:#777;--accent:#c0392b;--accent-bg:#210c09}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--text);text-decoration:none}a:hover{color:#fff}.page{max-width:1050px;margin:auto;padding:0 1.25rem 4rem}
+header{padding:2rem 0 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.brand{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1;margin:.35rem 0 0}h2{font-size:1.2rem;margin:2.6rem 0 .8rem;border-left:3px solid var(--accent);padding-left:.8rem}h3{font-size:1rem;margin:.1rem 0 .35rem}p{color:var(--muted);max-width:72ch;margin:.35rem 0 1rem}
+nav{display:flex;gap:1rem;flex-wrap:wrap;font-size:.82rem}nav a{color:var(--muted)}nav a:hover{color:#fff}
+.hero{padding:2.25rem 0 1.5rem;display:grid;grid-template-columns:1.45fr 1fr;gap:1.5rem;align-items:start}.hero-lead{font-size:1.12rem;color:#ddd;max-width:62ch}.question{border-left:3px solid var(--accent);background:var(--surface);padding:1rem 1.1rem;border-radius:0 7px 7px 0;color:#ddd}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:1.2rem 0}.button{display:inline-block;border:1px solid var(--border);border-radius:5px;padding:.72rem 1rem;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}.button.primary{background:var(--accent);border-color:var(--accent)}.button:hover{border-color:var(--accent)}
+.video{position:relative;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;margin:1rem 0}.video iframe{width:100%;height:100%;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem 1.05rem;transition:.15s border-color}.card:hover{border-color:var(--accent)}.tag{color:var(--accent);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.desc{font-size:.87rem;color:var(--muted);line-height:1.5;margin:0}.arrow{display:block;color:var(--dim);font-size:.78rem;margin-top:.65rem}
+.feature{background:linear-gradient(135deg,var(--surface),#120908);border:1px solid #5a1a12;border-left:4px solid var(--accent);border-radius:8px;padding:1.15rem 1.2rem}.feature h3{font-size:1.15rem;color:#fff}.meta{font-size:.8rem;color:var(--dim)}
+.safety{margin-top:2rem;background:var(--accent-bg);border:1px solid #5a1a12;border-radius:8px;padding:1rem 1.1rem}.safety strong{color:#fff}.safety p{font-size:.88rem;margin:.3rem 0}
+footer{border-top:1px solid var(--border);margin-top:3rem;padding-top:1.25rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--dim);font-size:.8rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div><div class="brand">Loptr Lab · Independent prototype</div><h1>Break the Grid</h1></div>
+  <nav aria-label="Primary"><a href="VARIANT-RULES.html">Play</a><a href="resources.html">Resources</a><a href="event/">Event</a><a href="STATUS-AND-PROVENANCE.html">Status</a></nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="hero-lead">An independent systems prototype about institutional pressure, autonomy, community care, and redesign.</p>
+    <p>The project turns those questions into a playable experience, a proposed event format, and a documentation system that makes the work easier to inspect and discuss.</p>
+    <div class="actions"><a class="button primary" href="VARIANT-RULES.html">Play / review prototype</a><a class="button" href="resources.html">Documentation &amp; resources</a></div>
+  </div>
+  <div class="question"><strong>The question</strong><br>When the institution is gone, what must a community build so people are supported rather than hidden, punished, or abandoned?</div>
+</section>
+
+<div class="video" aria-label="Behind the scenes documentary">
+<iframe src="https://www.youtube.com/embed/JadrrdwzO1U" title="Break the Grid — Behind the Scenes Documentary" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<h2>Choose your path</h2>
+<div class="grid">
+<a class="card" href="VARIANT-RULES.html"><span class="tag">PLAY</span><h3>Experience the prototype</h3><p class="desc">See the current rules, mechanics, and playable structure without reading the entire project history first.</p><span class="arrow">Start here →</span></a>
+<a class="card" href="event/"><span class="tag">HOST / EVENT</span><h3>See the event-format work</h3><p class="desc">Explore Violet's Revenge: The Forensics Trail and its current planning boundaries.</p><span class="arrow">Open event phase →</span></a>
+<a class="card" href="resources.html"><span class="tag">REVIEW</span><h3>Find the documentation</h3><p class="desc">One page for project briefs, safety, provenance, research, event records, and supporting materials.</p><span class="arrow">Open Resources →</span></a>
+<a class="card" href="interactive/"><span class="tag">BUILD</span><h3>Follow the interactive track</h3><p class="desc">Ink writing, browser implementation, playtesting, QA, accessibility, and provenance.</p><span class="arrow">Open interactive track →</span></a>
+</div>
+
+<h2>Current next phase</h2>
+<section class="feature">
+  <div class="tag">In process · proposal / planning stage</div>
+  <h3>Violet's Revenge: The Forensics Trail</h3>
+  <p>A proposed Halloween pop-up and all-day Minneapolis investigation extending the project's next-format work into a physical/public-space study. It is not a launch announcement, venue confirmation, or statement of artist participation.</p>
+  <p class="meta">Saturday, October 31, 2026 · Access, venue, registration, route, budget, and other operational details remain subject to verification.</p>
+  <div class="actions"><a class="button primary" href="event/">Open event phase</a><a class="button" href="EVENT-PHASE-IN-PROCESS.html">Read planning record</a></div>
+</section>
+
+<h2>What the project is — and is not</h2>
+<div class="grid">
+<div class="card"><span class="tag">Is</span><h3>A participatory design prototype</h3><p class="desc">Players encounter pressure, support, constraints, and choices about changing the system rather than simply managing individuals inside it.</p></div>
+<div class="card"><span class="tag">Is not</span><h3>Clinical care</h3><p class="desc">It is not therapy, diagnosis, medical advice, crisis care, or clinical research. Participation is voluntary and prompts may be skipped.</p></div>
+<div class="card"><span class="tag">Rights</span><h3>Independent work</h3><p class="desc">The continuing project uses independently created mechanics and documentation. Third-party names, music, likenesses, and protected material remain subject to their rights holders.</p></div>
+</div>
+
+<div class="safety"><strong>Safety and consent</strong><p>No diagnosis or medical-record collection. Facilitators are not presented as therapists unless independently licensed and serving in that role. Crisis and peer-support resources are separated from the artistic experience.</p><div class="actions" style="margin:.7rem 0 0"><a class="button" href="RIGHTS-AND-SAFETY.html">Read the full safety boundary</a><a class="button" href="resources.html">See all resources</a></div></div>
+
+<footer><span>Break the Grid · Loptr Lab</span><a href="resources.html">Documentation &amp; Resources →</a></footer>
+</div>
+</body>
+</html>
