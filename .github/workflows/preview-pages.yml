@@ -53,3 +53,5 @@ jobs:
           git add preview/redesign-resources-front-door
           git commit -m "Publish redesign preview" || echo "No preview changes"
           git push origin gh-pages
+
+# Preview is published under /preview/redesign-resources-front-door/.
