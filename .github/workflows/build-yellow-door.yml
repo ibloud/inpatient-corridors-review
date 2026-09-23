@@ -30,7 +30,7 @@ jobs:
       - name: Verify compiled story
         run: |
           test -s interactive/yellow-door/story/yellow-door-alpha.json
-          node -e "JSON.parse(require('fs').readFileSync('interactive/yellow-door/story/yellow-door-alpha.json','utf8')); console.log('Compiled JSON is valid.')"
+          node -e "const fs=require('fs'); const raw=fs.readFileSync('interactive/yellow-door/story/yellow-door-alpha.json','utf8').replace(/^\\uFEFF/,''); JSON.parse(raw); console.log('Compiled JSON is valid.')"
       - name: Commit compiled story
         run: |
           git config user.name "github-actions[bot]"
