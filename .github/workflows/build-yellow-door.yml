@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "interactive/yellow-door/**"
+      - "interactive/yellow-door/story/yellow-door-alpha.ink"
+      - "interactive/yellow-door/docs/**"
       - ".github/workflows/build-yellow-door.yml"
   workflow_dispatch:
 
