@@ -1,33 +1,37 @@
-import { Compiler } from "https://esm.sh/inkjs@2.4.0/full";
-
 let story = null;
 const storyContainer = document.getElementById("story");
 const choicesContainer = document.getElementById("choices");
 const errorContainer = document.getElementById("error");
 const stats = document.getElementById("stats");
 const debug = new URLSearchParams(location.search).get("debug") === "1";
-if (debug) stats.hidden = false;
 
 function fail(message) {
   errorContainer.hidden = false;
   errorContainer.textContent = message;
 }
 
+function getVariable(name) {
+  if (!story) return "";
+  const state = story.variablesState;
+  return typeof state.$ === "function" ? state.$(name) : state[name];
+}
+
 function updateStats() {
   if (!story || !debug) return;
-  const v = story.variablesState;
+  stats.hidden = false;
   stats.textContent = [
-    `Support: ${v.Support}`,
-    `Resistance: ${v.Resistance}`,
-    `Knowledge: ${v.Knowledge}`,
-    `Trust: ${v.Trust}`,
-    `Participation: ${v.Participation}`,
-    `Pressure: ${v.SystemPressure}`
+    `Support: ${getVariable("Support")}`,
+    `Resistance: ${getVariable("Resistance")}`,
+    `Knowledge: ${getVariable("Knowledge")}`,
+    `Trust: ${getVariable("Trust")}`,
+    `Participation: ${getVariable("Participation")}`,
+    `Pressure: ${getVariable("SystemPressure")}`
   ].join(" · ");
 }
 
 function continueStory() {
   choicesContainer.innerHTML = "";
+
   while (story.canContinue) {
     const text = story.Continue();
     if (text.trim()) {
@@ -56,19 +60,37 @@ function continueStory() {
   });
 
   updateStats();
-  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+  window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
 }
 
-fetch("../story/yellow-door-alpha.ink")
-  .then(response => {
-    if (!response.ok) throw new Error(`Ink source returned HTTP ${response.status}`);
-    return response.text();
-  })
-  .then(source => {
-    story = new Compiler(source).Compile();
-    continueStory();
-  })
-  .catch(error => {
-    fail(`The alpha could not load or compile. ${error.message}`);
-    console.error(error);
-  });
+function start() {
+  if (!window.inkjs || typeof window.inkjs.Story !== "function") {
+    throw new Error("The local Ink runtime did not load.");
+  }
+
+  fetch("../story/yellow-door-alpha.json", {cache: "no-store"})
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Compiled story returned HTTP ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(raw => {
+      const storyJson = raw.replace(/^\uFEFF/, "");
+      story = new window.inkjs.Story(storyJson);
+      errorContainer.hidden = true;
+      storyContainer.innerHTML = "";
+      continueStory();
+    })
+    .catch(error => {
+      fail(`The alpha could not start. ${error.message}`);
+      console.error(error);
+    });
+}
+
+try {
+  start();
+} catch (error) {
+  fail(`The alpha could not start. ${error.message}`);
+  console.error(error);
+}
