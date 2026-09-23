@@ -20,20 +20,40 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install Ink compiler
+
+      - name: Install Ink runtime and compiler
         run: npm install --no-save --ignore-scripts inkjs@2.4.0
+
       - name: Compile Ink to JSON
         run: |
           npx --no-install inkjs -s interactive/yellow-door/story/yellow-door-alpha.ink > /tmp/ink-stats.json
           npx --no-install inkjs -o interactive/yellow-door/story/yellow-door-alpha.json interactive/yellow-door/story/yellow-door-alpha.ink
-      - name: Verify compiled story
+
+      - name: Verify compiled story and runtime
         run: |
           test -s interactive/yellow-door/story/yellow-door-alpha.json
-          node -e "const fs=require('fs'); const raw=fs.readFileSync('interactive/yellow-door/story/yellow-door-alpha.json','utf8').replace(/^\\uFEFF/,''); JSON.parse(raw); console.log('Compiled JSON is valid.')"
-      - name: Commit compiled story
+          node - <<'NODE'
+          const fs = require("fs");
+          const raw = fs.readFileSync("interactive/yellow-door/story/yellow-door-alpha.json", "utf8").replace(/^\uFEFF/, "");
+          const json = JSON.parse(raw);
+          const { Story } = require("inkjs");
+          const story = new Story(raw);
+          console.log("Compiled JSON is valid.");
+          console.log("Ink version:", json.inkVersion);
+          console.log("Initial choices:", story.currentChoices.length);
+          NODE
+
+      - name: Install browser Ink runtime
+        run: |
+          mkdir -p interactive/yellow-door/docs/vendor
+          curl -fsSL https://cdn.jsdelivr.net/npm/inkjs@2.4.0/dist/ink.js             -o interactive/yellow-door/docs/vendor/ink.js
+          test -s interactive/yellow-door/docs/vendor/ink.js
+          grep -q "inkjs" interactive/yellow-door/docs/vendor/ink.js
+
+      - name: Commit compiled story and browser runtime
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add interactive/yellow-door/story/yellow-door-alpha.json
-          git diff --cached --quiet || git commit -m "Build Yellow Door Ink story"
+          git add interactive/yellow-door/story/yellow-door-alpha.json interactive/yellow-door/docs/vendor/ink.js
+          git diff --cached --quiet || git commit -m "Build Yellow Door browser runtime"
           git push
