@@ -57,12 +57,12 @@
     document.head.appendChild(script);
   }
 
-  loadScript("vendor/ink.js?v=20260923-5", "Ink browser runtime", function () {
+  loadScript("vendor/ink.js?v=20260923-6", "Ink browser runtime", function () {
     if (!window.inkjs || typeof window.inkjs.Story !== "function") {
       show("Runtime error: Ink browser runtime loaded, but inkjs.Story is unavailable.");
       return;
     }
-    loadScript("app.js?v=20260923-5", "Yellow Door application", function () {
+    loadScript("app.js?v=20260923-6", "Yellow Door application", function () {
       if (typeof window.startYellowDoor !== "function") {
         show("Runtime error: Yellow Door application loaded, but its startup function is unavailable.");
       }
