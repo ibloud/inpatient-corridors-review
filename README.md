@@ -31,6 +31,16 @@ Read the evidence, interpretation, and recommended mechanics in [CHRIS-WEBBY-DIS
 
 See [STATUS-AND-PROVENANCE.md](STATUS-AND-PROVENANCE.md) for the boundary between historical context and current participation.
 
+## Event phase — in process
+
+The next-format event study is documented in **[EVENT-PHASE-IN-PROCESS.md](EVENT-PHASE-IN-PROCESS.md)**. It connects the Inpatient Corridors design work to the **Violet's Revenge: The Forensics Trail** proposal while keeping event planning, venue verification, accessibility requirements, and participation safeguards explicit.
+
+**Participant coordination is gated:** participants first complete/win the game, then receive the Discord invitation for the participant coordination space. Discord is not the public entry point.
+
+Related repositories:
+- [Violet's Revenge](https://github.com/ibloud/violets-revenge)
+- [50 Ways to Leave Another — Interactive Narrative Writer Path](https://github.com/ibloud/50-ways-to-leave-another/blob/main/docs/interactive-narrative-writer-path.md)
+
 ## Playable material
 
 - **[Break the Grid — Chess Variant](VARIANT-RULES.md):** a playable Veiled Dominion scenario in which collective redesign can become more valuable than domination.
