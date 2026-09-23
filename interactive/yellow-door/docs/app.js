@@ -1,4 +1,8 @@
-let story = null;\nlet started = false;\nconst bootTimer = window.setTimeout(() => {\n  if (!started) fail("The Yellow Door is still waiting for its browser runtime. Try Reload, or open this page with ?debug=1.");\n}, 5000);
+let story = null;
+let started = false;
+const bootTimer = window.setTimeout(() => {
+  if (!started) fail("The Yellow Door is still waiting for its browser runtime. Try Reload, or open this page with ?debug=1.");
+}, 5000);
 const storyContainer = document.getElementById("story");
 const choicesContainer = document.getElementById("choices");
 const errorContainer = document.getElementById("error");
@@ -78,6 +82,8 @@ function start() {
     .then(raw => {
       const storyJson = raw.replace(/^\uFEFF/, "");
       story = new window.inkjs.Story(storyJson);
+      started = true;
+      window.clearTimeout(bootTimer);
       errorContainer.hidden = true;
       storyContainer.innerHTML = "";
       continueStory();
