@@ -466,9 +466,9 @@ Nobody agrees on everything.
 
 Still, people identify three shared goals:
 
-- Understand the decision.
-- Request transparency.
-- Ensure future changes include input from those affected.
+Understand the decision.
+Request transparency.
+Ensure future changes include input from those affected.
 
 The discussion does not solve everything.
 
