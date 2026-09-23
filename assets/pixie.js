@@ -7,7 +7,7 @@ const b=document.createElement("button");b.className="pixie-button";b.type="butt
 const d=document.createElement("div");d.className="pixie-backdrop";d.id="pixie-panel";d.setAttribute("role","dialog");d.setAttribute("aria-modal","true");d.setAttribute("aria-labelledby","pixie-title");d.innerHTML=`<div class="pixie-panel"><div class="pixie-panel-head"><h2 id="pixie-title">PIXIE · Control Panel</h2><button class="pixie-close" type="button" id="pixie-close">Close</button></div><div class="pixie-grid">
 <a href="${link("interactive/yellow-door/docs/")}"><strong>Play Yellow Door</strong><span>Open the interactive alpha.</span></a>
 <a href="${link("event/")}"><strong>Event Phase</strong><span>Open Violet's Revenge: The Forensics Trail.</span></a>
-<a href="https://heartsupport.com/" target="_blank" rel="noreferrer"><strong>HeartSupport</strong><span>Public support resource.</span></a>
+<a href="https://www.superme.ai/ibloud_ivxx" target="_blank" rel="noreferrer"><strong>ibloud · SuperMe</strong><span>Creator profile and personal context.</span></a>\n<a href="https://heartsupport.com/" target="_blank" rel="noreferrer"><strong>HeartSupport</strong><span>Public support resource.</span></a>
 <a href="${link("next-phase/")}"><strong>Next Phase</strong><span>Review the release-architecture study.</span></a>
 <a href="${link("RIGHTS-AND-SAFETY.md")}"><strong>Safety</strong><span>Rights, consent, and safety boundaries.</span></a>
 <a href="${link("STATUS-AND-PROVENANCE.md")}"><strong>Provenance</strong><span>Current status and development record.</span></a>
