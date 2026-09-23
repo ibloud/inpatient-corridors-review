@@ -32,16 +32,19 @@ function updateStats() {
   ].join(" · ");
 }
 
-function continueStory() {
+function continueStory(shouldScroll) {
   choicesContainer.innerHTML = "";
+
+  let linesAdded = 0;
 
   while (story.canContinue) {
     const text = story.Continue();
-    if (text.trim()) {
+    if (text && text.trim()) {
       const p = document.createElement("p");
       p.className = "story-line";
       p.textContent = text;
       storyContainer.appendChild(p);
+      linesAdded += 1;
     }
   }
 
@@ -56,7 +59,7 @@ function continueStory() {
       });
       try {
         story.ChooseChoiceIndex(choice.index);
-        continueStory();
+        continueStory(true);
       } catch (error) {
         fail("The story could not continue. " + (error && error.message ? error.message : String(error)));
         console.error(error);
@@ -66,8 +69,25 @@ function continueStory() {
   });
 
   updateStats();
+
+  const choiceCount = story.currentChoices.length;
+  if (linesAdded === 0 && choiceCount === 0) {
+    fail("The Ink story loaded, but returned no story text or choices. The browser runtime is working; the compiled story state needs inspection.");
+    console.warn("Yellow Door reached an empty Ink state.", {
+      canContinue: story.canContinue,
+      choiceCount: choiceCount
+    });
+    return;
+  }
+
   errorContainer.hidden = true;
-  window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+
+  if (shouldScroll) {
+    const target = choicesContainer.lastElementChild || storyContainer.lastElementChild;
+    if (target && typeof target.scrollIntoView === "function") {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
 }
 
 function startYellowDoor() {
@@ -86,7 +106,7 @@ function startYellowDoor() {
   errorContainer.hidden = false;
   errorContainer.textContent = "Ink runtime ready. Loading the compiled story…";
 
-  fetch("../story/yellow-door-alpha.json?v=20260923-5", {cache: "no-store"})
+  fetch("../story/yellow-door-alpha.json?v=20260923-6", {cache: "no-store"})
     .then(function (response) {
       if (!response.ok) {
         throw new Error("Compiled story returned HTTP " + response.status);
@@ -98,7 +118,7 @@ function startYellowDoor() {
       const storyJson = raw.replace(/^\uFEFF/, "");
       story = new window.inkjs.Story(storyJson);
       storyContainer.innerHTML = "";
-      continueStory();
+      continueStory(false);
       started = true;
       window.clearTimeout(bootTimer);
     })
