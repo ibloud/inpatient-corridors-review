@@ -540,39 +540,18 @@ Sometimes it leaves questions unanswered.
 
 === determine_ending ===
 {
-Support >= 3 &&
-Resistance >= 2 &&
-Knowledge >= 3 &&
-Participation >= 5 &&
-Trust >= 2:
+- Support >= 3 && Resistance >= 2 && Knowledge >= 3 && Participation >= 5 && Trust >= 2:
     -> ending_community
-- else:
-{
-Support >= 4 &&
-Support >= Resistance + 1 &&
-Support >= Knowledge:
+- Support >= 4 && Support >= Resistance + 1 && Support >= Knowledge:
     -> ending_caretaker
-- else:
-{
-Resistance >= 4 &&
-Resistance > Support:
+- Resistance >= 4 && Resistance > Support:
     -> ending_instigator
-- else:
-{
-Knowledge >= 5 &&
-Investigated == true &&
-Knowledge > Support:
+- Knowledge >= 5 && Investigated == true && Knowledge > Support:
     -> ending_researcher
-- else:
-{
-Participation >= 5 &&
-Trust >= 3:
+- Participation >= 5 && Trust >= 3:
     -> ending_builder
 - else:
     -> ending_observer
-}
-}
-}
 }
 
 === ending_community ===
@@ -697,18 +676,15 @@ Not every lesson becomes action.
 
 === pressure_epilogue ===
 {
-SystemPressure <= 2:
+- SystemPressure <= 2:
     The atmosphere feels lighter.
     People ask questions more freely.
-- else:
-{
-SystemPressure <= 6:
+- SystemPressure <= 6:
     Some uncertainty remains.
     Old habits fade slowly.
 - else:
     The tension never fully leaves.
     The next yellow door may not be far away.
-}
 }
 
 -> final_debrief
@@ -725,22 +701,14 @@ PARTICIPATION: {Participation}
 
 === archetype ===
 {
-Support > Resistance &&
-Support > Knowledge:
+- Support > Resistance && Support > Knowledge:
     You approached the corridor primarily through relationships.
-- else:
-{
-Resistance > Support &&
-Resistance > Knowledge:
+- Resistance > Support && Resistance > Knowledge:
     You approached the corridor primarily through challenge.
-- else:
-{
-Knowledge > Resistance &&
-Knowledge > Support:
+- Knowledge > Resistance && Knowledge > Support:
     You approached the corridor primarily through investigation.
 - else:
     You approached the corridor through several modes.
-}
 }
 
 The yellow door is gone.
