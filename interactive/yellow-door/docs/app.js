@@ -1,4 +1,4 @@
-let story = null;
+let story = null;\nlet started = false;\nconst bootTimer = window.setTimeout(() => {\n  if (!started) fail("The Yellow Door is still waiting for its browser runtime. Try Reload, or open this page with ?debug=1.");\n}, 5000);
 const storyContainer = document.getElementById("story");
 const choicesContainer = document.getElementById("choices");
 const errorContainer = document.getElementById("error");
