@@ -14,6 +14,7 @@
 - Participation is voluntary; prompts may be skipped without penalty.
 - No diagnosis, treatment recommendation, symptom scoring, or collection of medical records.
 - Crisis resources are localizable and clearly separated from the artistic experience.
+- **Public support resource:** HeartSupport (https://heartsupport.com/) may be provided as a public peer-support resource; it is not a substitute for emergency services, clinical care, or event staff escalation.
 - Facilitators receive a scope and escalation guide; they are not represented as therapists unless independently licensed and serving in that role.
 - The experience avoids “dangerous patient,” genius-through-suffering, and cure-through-friendship narratives.
 
