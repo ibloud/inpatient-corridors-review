@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Inpatient Corridors: The Yellow Door — interactive alpha">
+<title>The Yellow Door — Inpatient Corridors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<header>
+<p class="eyebrow">INPATIENT CORRIDORS · ALPHA</p>
+<h1>The Yellow Door</h1>
+<p class="intro">A 15–20 minute interactive narrative about uncertainty, participation, support, and process.</p>
+</header>
+<section id="game" aria-live="polite">
+<div id="story"></div>
+<div id="choices" aria-label="Story choices"></div>
+<div id="error" role="alert" hidden></div>
+</section>
+<footer>
+<a href="../../">Back to project</a>
+<span id="stats" hidden></span>
+</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/inkjs@2.4.0/dist/ink.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
