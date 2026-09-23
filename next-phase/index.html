@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Phase — Release Architecture · Loptr Lab</title>
+<meta name="description" content="An independent release-architecture study mapping a 17-piece cadence into the Break the Grid prototype.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0d0d;--surface:#181818;--border:#2a2a2a;--text:#f0f0f0;--muted:#999;--dim:#666;--red:#c0392b;--red-bg:#1a0a08}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.page{max-width:980px;margin:0 auto;padding:0 1.5rem 4rem}
+header{text-align:center;padding:3.5rem 0 2rem}
+h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;color:#fff;margin-bottom:.65rem}
+.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:700}
+.lede{max-width:700px;margin:1rem auto;color:var(--muted);font-size:1.05rem}
+.rule{border:0;border-top:2px solid var(--red);margin:0 auto 2rem}
+h2{font-size:1.2rem;color:#fff;margin:2.6rem 0 .9rem;padding-left:.85rem;border-left:3px solid var(--red)}
+p{max-width:72ch;color:var(--muted);margin-bottom:1rem}
+strong{color:var(--text)}
+blockquote{margin:1.25rem 0;padding:1rem 1.25rem;background:var(--surface);border-left:3px solid var(--red);color:#ccc;font-style:italic}
+.note{padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin:1rem 0;color:var(--muted);font-size:.9rem}
+.timeline{display:grid;gap:8px;margin:1rem 0}
+.beat{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:5px;padding:.85rem 1rem}
+.num{color:var(--red);font-weight:800;font-size:.8rem}
+.role{color:#ddd;font-size:.92rem}
+.time{color:var(--dim);font-variant-numeric:tabular-nums;font-size:.82rem}
+.beat.long{border-left:3px solid var(--red)}
+.map{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1rem 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1rem}
+.card .tag{font-size:.7rem;color:var(--red);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.card h3{font-size:.95rem;color:#fff;margin:.35rem 0}
+.card p{font-size:.84rem;margin:0;line-height:1.5}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:1rem 0}
+.step{background:var(--surface);border:1px solid var(--border);padding:1rem;border-radius:5px}
+.step b{display:block;color:var(--red);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem}
+.step span{color:#ddd;font-size:.9rem}
+ul{margin:.5rem 0 1.2rem 1.2rem;color:var(--muted)}
+li{margin:.35rem 0}
+footer{margin-top:3rem;border-top:1px solid var(--border);padding-top:1.25rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer a,footer span{font-size:.8rem;color:var(--dim)}
+a{color:#bbb}a:hover{color:#fff}
+@media(max-width:650px){.beat{grid-template-columns:36px 1fr}.time{grid-column:2}.map{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+<div class="kicker">Next phase · independent design study</div>
+<h1>Release Architecture</h1>
+<p class="lede">The next part of the concept is not another document explaining the idea. It is a sequence: impact, variation, reframing, collective response, and a record of what remains.</p>
+<hr class="rule">
+</header>
+
+<div class="note"><strong>Reference boundary.</strong> The 17-beat sequence below is a structural study based on a supplied playlist layout. Protected recordings, lyrics, artwork, footage, and artist branding are not embedded or reproduced here.</div>
+
+<h2>The 17-beat cadence</h2>
+<div class="timeline">
+<div class="beat"><div class="num">01</div><div class="role">Immediate-impact opener</div><div class="time">3:36</div></div>
+<div class="beat"><div class="num">02</div><div class="role">High-energy escalation</div><div class="time">5:06</div></div>
+<div class="beat"><div class="num">03</div><div class="role">Identity / perspective expansion</div><div class="time">4:10</div></div>
+<div class="beat"><div class="num">04</div><div class="role">Transitional narrative movement</div><div class="time">4:46</div></div>
+<div class="beat"><div class="num">05</div><div class="role">Conflict / relationship pressure</div><div class="time">3:04</div></div>
+<div class="beat"><div class="num">06</div><div class="role">Thematic statement — lyric format</div><div class="time">5:01</div></div>
+<div class="beat"><div class="num">07</div><div class="role">Thematic companion — lyric format</div><div class="time">3:17</div></div>
+<div class="beat"><div class="num">08</div><div class="role">Visual narrative escalation</div><div class="time">3:58</div></div>
+<div class="beat"><div class="num">09</div><div class="role">Visual motif / intensity shift</div><div class="time">3:47</div></div>
+<div class="beat"><div class="num">10</div><div class="role">Visualiser — atmosphere</div><div class="time">3:09</div></div>
+<div class="beat"><div class="num">11</div><div class="role">Visualiser — decompression</div><div class="time">4:24</div></div>
+<div class="beat"><div class="num">12</div><div class="role">Lyric-format deepening</div><div class="time">5:41</div></div>
+<div class="beat"><div class="num">13</div><div class="role">Late-sequence return</div><div class="time">3:47</div></div>
+<div class="beat"><div class="num">14</div><div class="role">Narrative video / culmination</div><div class="time">4:56</div></div>
+<div class="beat"><div class="num">15</div><div class="role">Visualiser / final emotional extension</div><div class="time">5:32</div></div>
+<div class="beat long"><div class="num">16</div><div class="role">Full-length continuity asset</div><div class="time">1:01:07</div></div>
+<div class="beat long"><div class="num">17</div><div class="role">Documentary / making-of layer</div><div class="time">58:55</div></div>
+</div>
+
+<h2>What the cadence changes</h2>
+<div class="steps">
+<div class="step"><b>01 · Hit</b><span>Establish identity before explanation.</span></div>
+<div class="step"><b>02 · Vary</b><span>Rotate observation, conversation, investigation, reflection, and decision.</span></div>
+<div class="step"><b>03 · Reframe</b><span>Change the central question at the midpoint.</span></div>
+<div class="step"><b>04 · Build</b><span>Turn disagreement into process and infrastructure.</span></div>
+<div class="step"><b>05 · Remember</b><span>End with evidence, reflection, and what carries forward.</span></div>
+</div>
+
+<h2>Interactive prototype mapping</h2>
+<div class="map">
+<div class="card"><div class="tag">Immediate identity</div><h3>Yellow Door</h3><p>Atmosphere and social tension arrive before the player is asked to solve anything.</p></div>
+<div class="card"><div class="tag">Perspective</div><h3>Witness + Caretaker</h3><p>Players can notice behavior, attend to a person, or choose a lower-demand route.</p></div>
+<div class="card"><div class="tag">Investigation</div><h3>Archive + Rumor</h3><p>Information can reduce uncertainty, complicate it, or expose recurring patterns.</p></div>
+<div class="card"><div class="tag">Reframe</div><h3>Midpoint reveal</h3><p>A legitimate restriction can coexist with a flawed process. The story stops requiring a villain.</p></div>
+<div class="card"><div class="tag">Build</div><h3>Collective response</h3><p>Support, information, challenge, participation, and infrastructure become different forms of action.</p></div>
+<div class="card"><div class="tag">Remember</div><h3>Debrief + process archive</h3><p>The final layer records what the player learned and what the system could do differently next time.</p></div>
+</div>
+
+<h2>The midpoint question</h2>
+<blockquote>How should decisions be made when they affect people who were not included in making them?</blockquote>
+<p>The restriction does not need to be secretly evil. The people making the decision do not need to be villains. The tension comes from a familiar institutional gap: a decision can be reasonable in isolation and still create harm when people are excluded from the process.</p>
+
+<h2>What the next release should leave behind</h2>
+<ul>
+<li>Shared questions instead of a single “correct” interpretation.</li>
+<li>More than one legitimate way to participate.</li>
+<li>A visible shift from individual reaction to collective capacity.</li>
+<li>A retrospective layer that documents what changed.</li>
+<li>A structure that can support the next iteration without pretending the previous one was perfect.</li>
+</ul>
+
+<div class="note"><strong>Design boundary.</strong> This is an independent design study. It does not claim authorship, endorsement, participation, approval, or permission from any third party whose work informed the structural reference.</div>
+
+<footer>
+<span>Loptr Lab · Break the Grid · Next Phase</span>
+<a href="../">Back to the project →</a>
+</footer>
+</div>
+</body>
+</html>
