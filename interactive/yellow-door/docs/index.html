@@ -17,7 +17,7 @@
 <section id="game" aria-live="polite">
 <div id="story"></div>
 <div id="choices" aria-label="Story choices"></div>
-<div id="error" role="alert" hidden></div>
+<div id="error" role="alert">Starting the Yellow Door…</div>
 </section>
 <footer>
 <a href="../../">Back to project</a>
@@ -40,7 +40,7 @@ window.addEventListener("unhandledrejection", (event) => {
   el.textContent = `Runtime error: ${reason?.message || reason || "The Yellow Door runtime failed to start."}`;
 });
 </script>
-<script src="vendor/ink.js?v=20260923-2"></script>
-<script src="app.js?v=20260923-2"></script>
+<script src="vendor/ink.js?v=20260923-3"></script>
+<script src="app.js?v=20260923-3"></script>
 </body>
 </html>
