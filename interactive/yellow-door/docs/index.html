@@ -17,7 +17,7 @@
 <section id="game" aria-live="polite">
 <div id="story"></div>
 <div id="choices" aria-label="Story choices"></div>
-<div id="error" role="alert">Starting the Yellow Door…</div>
+<div id="error" role="alert">Loading the Yellow Door runtime…</div>
 </section>
 <footer>
 <a href="../../">Back to project</a>
@@ -25,22 +25,50 @@
 </footer>
 </main>
 <script>
-window.addEventListener("error", (event) => {
-  const el = document.getElementById("error");
-  if (!el) return;
-  el.hidden = false;
-  el.textContent = `Runtime error: ${event.message || "The Yellow Door runtime could not load."}`;
-});
+(function () {
+  const error = document.getElementById("error");
 
-window.addEventListener("unhandledrejection", (event) => {
-  const el = document.getElementById("error");
-  if (!el) return;
-  el.hidden = false;
-  const reason = event.reason;
-  el.textContent = `Runtime error: ${reason?.message || reason || "The Yellow Door runtime failed to start."}`;
-});
+  function show(message) {
+    error.hidden = false;
+    error.textContent = message;
+  }
+
+  window.addEventListener("error", function (event) {
+    const source = event.filename ? " (" + event.filename.split("/").pop() + ":" + event.lineno + ")" : "";
+    show("Runtime error: " + (event.message || "A browser script failed to execute.") + source);
+  });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event.reason;
+    show("Runtime error: " + (reason && reason.message ? reason.message : String(reason || "The Yellow Door runtime failed to start.")));
+  });
+
+  function loadScript(src, label, next) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = false;
+    script.onload = function () {
+      show(label + " loaded. Starting the next step…");
+      next();
+    };
+    script.onerror = function () {
+      show("Runtime error: Could not load " + label + ".");
+    };
+    document.head.appendChild(script);
+  }
+
+  loadScript("vendor/ink.js?v=20260923-5", "Ink browser runtime", function () {
+    if (!window.inkjs || typeof window.inkjs.Story !== "function") {
+      show("Runtime error: Ink browser runtime loaded, but inkjs.Story is unavailable.");
+      return;
+    }
+    loadScript("app.js?v=20260923-5", "Yellow Door application", function () {
+      if (typeof window.startYellowDoor !== "function") {
+        show("Runtime error: Yellow Door application loaded, but its startup function is unavailable.");
+      }
+    });
+  });
+})();
 </script>
-<script src="vendor/ink.js?v=20260923-4"></script>
-<script src="app.js?v=20260923-4"></script>
 </body>
 </html>
