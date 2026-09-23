@@ -7,6 +7,7 @@ on:
       - "interactive/yellow-door/story/yellow-door-alpha.ink"
       - "interactive/yellow-door/docs/**"
       - ".github/workflows/build-yellow-door.yml"
+  pull_request:
   workflow_dispatch:
 
 permissions:
