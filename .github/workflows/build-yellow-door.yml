@@ -1,0 +1,32 @@
+name: Build Yellow Door
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "interactive/yellow-door/**"
+      - ".github/workflows/build-yellow-door.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Compile Ink to JSON
+        run: npx --yes inkjs@2.4.0 interactive/yellow-door/story/yellow-door-alpha.ink -o interactive/yellow-door/story/yellow-door-alpha.json
+      - name: Verify compiled story
+        run: test -s interactive/yellow-door/story/yellow-door-alpha.json
+      - name: Commit compiled story
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add interactive/yellow-door/story/yellow-door-alpha.json
+          git diff --cached --quiet || git commit -m "Build Yellow Door Ink story"
+          git push
