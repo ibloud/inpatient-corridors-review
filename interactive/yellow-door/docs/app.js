@@ -1,3 +1,5 @@
+import { Compiler } from "https://esm.sh/inkjs@2.4.0/full";
+
 let story = null;
 const storyContainer = document.getElementById("story");
 const choicesContainer = document.getElementById("choices");
@@ -35,6 +37,7 @@ function continueStory() {
       storyContainer.appendChild(p);
     }
   }
+
   story.currentChoices.forEach(choice => {
     const button = document.createElement("button");
     button.type = "button";
@@ -51,21 +54,21 @@ function continueStory() {
     });
     choicesContainer.appendChild(button);
   });
+
   updateStats();
   window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
 }
 
-fetch("../story/yellow-door-alpha.json")
+fetch("../story/yellow-door-alpha.ink")
   .then(response => {
-    if (!response.ok) throw new Error(`Story JSON returned HTTP ${response.status}`);
-    return response.json();
+    if (!response.ok) throw new Error(`Ink source returned HTTP ${response.status}`);
+    return response.text();
   })
-  .then(data => {
-    if (typeof inkjs === "undefined") throw new Error("inkjs did not load.");
-    story = new inkjs.Story(data);
+  .then(source => {
+    story = new Compiler(source).Compile();
     continueStory();
   })
   .catch(error => {
-    fail(`The alpha could not load. ${error.message}`);
+    fail(`The alpha could not load or compile. ${error.message}`);
     console.error(error);
   });
