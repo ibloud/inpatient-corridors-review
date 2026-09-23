@@ -66,6 +66,19 @@
       width: 100%;
     }
 
+
+    /* ── Ecosystem front door ── */
+    .ecosystem-front-door { margin: 0 0 2rem; }
+    .ecosystem-brand { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; padding:1rem 0 .65rem; border-bottom:1px solid var(--border); }
+    .ecosystem-brand strong { color:#fff; font-size:1.05rem; letter-spacing:.02em; }
+    .ecosystem-brand span { color:var(--dim); font-size:.78rem; }
+    .path-kicker { color:var(--red); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin:1.25rem 0 .6rem; }
+    .path-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:8px; }
+    .path-card { display:block; background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:.75rem .8rem; }
+    .path-card:hover { border-color:var(--red); }
+    .path-card strong { display:block; color:#fff; font-size:.84rem; }
+    .path-card span { display:block; color:var(--muted); font-size:.72rem; margin-top:.15rem; }
+
     /* ── Video embed ── */
     .video-wrap {
       position: relative;
@@ -336,8 +349,23 @@
       <hr class="header-rule" />
     </header>
 
+    <section class="ecosystem-front-door" aria-label="ibloud.xyz ecosystem">
+      <div class="ecosystem-brand">
+        <strong>ibloud.xyz</strong>
+        <span>One identity · tools open separately</span>
+      </div>
+      <div class="path-kicker">Try the Path</div>
+      <div class="path-grid">
+        <a class="path-card" href="#writing"><strong>Writing</strong><span>Public work and verified records</span></a>
+        <a class="path-card" href="#archive"><strong>Archive</strong><span>Research, provenance, and history</span></a>
+        <a class="path-card" href="#play"><strong>Play</strong><span>Interactive experiments</span></a>
+        <a class="path-card" href="#live"><strong>Live</strong><span>Events and current phases</span></a>
+        <a class="path-card" href="#pixie"><strong>PIXIE</strong><span>Open the workspace gateway below</span></a>
+      </div>
+    </section>
+
     <!-- Behind the scenes documentary -->
-    <div class="video-wrap">
+    <div id="writing" class="video-wrap">
       <iframe
         src="https://www.youtube.com/embed/JadrrdwzO1U"
         title="Inpatient — Behind the Scenes Documentary"
@@ -376,6 +404,7 @@
     </p>
 
 
+    <div id="play"></div>
     <h2>Interactive narrative track</h2>
     <section class="featured-event" aria-labelledby="interactive-title">
       <div class="event-kicker">Ink · Training / prototype</div>
@@ -387,6 +416,7 @@
       </div>
     </section>
 
+    <div id="live"></div>
     <h2>Featured next event phase</h2>
     <section class="featured-event" aria-labelledby="event-title">
       <div class="event-kicker">In process · Event / companion study</div>
@@ -480,6 +510,7 @@
     </p>
     <p>No award, nomination, eligibility, or individual credit is guaranteed. No submission should be made without written approval from the credited parties and evidence that the public work occurred.</p>
 
+    <div id="archive"></div>
     <h2>Repository documents</h2>
 
     <div class="doc-grid">
@@ -560,6 +591,7 @@
       <a href="https://github.com/ibloud/inpatient-corridors-review/edit/main/README.md">Improve this page →</a>
     </footer>
 
+    <span id="pixie" aria-hidden="true"></span>
     <button class="pixie-button" type="button" id="pixie-open" aria-controls="pixie-panel" aria-expanded="false">PIXIE</button>
     <div class="pixie-backdrop" id="pixie-panel" role="dialog" aria-modal="true" aria-labelledby="pixie-title">
       <div class="pixie-panel">
