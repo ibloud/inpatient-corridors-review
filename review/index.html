@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mentor / Advisor Review — Break the Grid</title>
+<meta name="description" content="An interactive review path for mentors, advisors, and qualified collaborators evaluating Break the Grid.">
+<style>
+:root{--bg:#0d0d0d;--surface:#181818;--border:#2a2a2a;--text:#f0f0f0;--muted:#999;--dim:#666;--red:#c0392b;--redbg:#1a0a08}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:inherit}.page{max-width:900px;margin:auto;padding:0 1.25rem 5rem}header{padding:3rem 0 2rem;border-bottom:2px solid var(--red)}h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;margin:0 0 .75rem}h2{font-size:1.25rem;border-left:3px solid var(--red);padding-left:.75rem;margin:2.5rem 0 1rem}h3{margin:.2rem 0 .4rem;color:#fff}p{color:var(--muted);max-width:70ch}.kicker{color:var(--red);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.altitude{display:inline-block;margin-top:1rem;padding:.45rem .7rem;background:var(--redbg);border:1px solid #5a1a12;border-radius:4px;color:#e6a29a;font-size:.8rem}.panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin:1rem 0}.notice{border-left:3px solid var(--red)}.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.choice{background:#111;border:1px solid var(--border);border-radius:6px;padding:1rem;text-align:left;color:var(--text);cursor:pointer}.choice:hover,.choice.selected{border-color:var(--red)}.choice small{display:block;color:var(--muted);margin-top:.25rem}.choice input{position:absolute;opacity:0}.track{display:none}.track.active{display:block}.track-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.track-card{background:#111;border:1px solid var(--border);border-radius:6px;padding:1rem}.mode{font-size:.68rem;color:var(--red);font-weight:700;letter-spacing:.1em;text-transform:uppercase}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:1rem}.btn{display:inline-block;border:1px solid var(--border);background:transparent;border-radius:4px;padding:.7rem 1rem;text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}.btn.primary{background:var(--red);border-color:var(--red);color:#fff}.btn:hover{border-color:var(--red)}.question{margin:1.2rem 0}.question label{display:block;color:#ddd;font-weight:600;margin-bottom:.5rem}.question textarea,.question input,.question select{width:100%;background:#0d0d0d;border:1px solid var(--border);border-radius:5px;color:#eee;padding:.75rem;font:inherit}.question textarea{min-height:100px;resize:vertical}.feedback{display:none}.feedback.active{display:block}.route-list{margin:.5rem 0 0;padding-left:1.2rem;color:var(--muted)}.route-list li{margin:.3rem 0}.muted{color:var(--dim);font-size:.82rem}.back{margin-top:2rem}.status{min-height:1.4em;color:#c9c9c9;font-size:.85rem}.footer{border-top:1px solid var(--border);margin-top:3rem;padding-top:1rem;color:var(--dim);font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+<div class="kicker">Loptr Lab · Break the Grid</div>
+<h1>Mentor / Advisor Review</h1>
+<p>A guided front door for people who have questions, expertise, or useful friction to bring to the project.</p>
+<div class="altitude">Current altitude: paper-playtest prototype · expert review · not public-release ready</div>
+</header>
+
+<section class="panel notice">
+<h2 style="margin-top:0">You don't need to know what you are supposed to think.</h2>
+<p>This page is designed to let your response determine the review path. Choose what you are interested in, what you are willing to examine, or simply where something caught your attention. You can change paths at any time.</p>
+<p><strong>The request is not "approve this."</strong> We are looking for observations, questions, boundaries, contradictions, and things that should be tested next.</p>
+</section>
+
+<section id="start">
+<h2>1 · Where do you want to enter?</h2>
+<div class="choices" id="laneChoices">
+<button class="choice" data-lane="play"><strong>Play / system</strong><small>I want to examine mechanics, rules, pacing, or what happens when someone actually plays.</small></button>
+<button class="choice" data-lane="people"><strong>Participant / host</strong><small>I want to know whether a participant or community organizer can understand what to do.</small></button>
+<button class="choice" data-lane="safety"><strong>Safety / community care</strong><small>I want to stress-test consent, boundaries, facilitation, or community-care assumptions.</small></button>
+<button class="choice" data-lane="access"><strong>Accessibility</strong><small>I want to look for barriers in participation, presentation, navigation, or documentation.</small></button>
+<button class="choice" data-lane="rights"><strong>Rights / provenance</strong><small>I want to examine attribution, permissions, governance, ownership, or adaptation boundaries.</small></button>
+<button class="choice" data-lane="replicate"><strong>Replication / facilitation</strong><small>I want to see whether another qualified person could actually run or adapt this.</small></button>
+<button class="choice" data-lane="evidence"><strong>Claims / evidence</strong><small>I want to examine what is established, proposed, hypothesized, or still needs evidence.</small></button>
+<button class="choice" data-lane="mixed"><strong>I have questions</strong><small>I don't know my lane yet. Let the project give me a broad route.</small></button>
+</div>
+</section>
+
+<section id="route" class="panel track">
+<h2 id="routeTitle">Your review route</h2>
+<p id="routeIntro"></p>
+<div class="track-grid" id="routeCards"></div>
+<div class="actions"><a class="btn primary" id="primaryDoc" href="#feedback">Go to review questions ↓</a><button class="btn" id="reset" type="button">Choose another route</button></div>
+</section>
+
+<section id="orientation" class="panel track">
+<h2>2 · Before you review</h2>
+<p id="modeText"></p>
+<p><strong>Ask for problems before prescribing solutions.</strong> "I got lost here" is useful evidence. "Add X" may be useful later, but first tell us what you observed and why it matters.</p>
+</section>
+
+<section id="feedback" class="panel feedback">
+<h2>3 · Observe → Question → Protect / Change</h2>
+<p>Use these prompts in whatever order helps. You may answer one, several, or none. This form does not submit data to a server.</p>
+<div class="question"><label for="observe">What did you observe?</label><textarea id="observe" placeholder="Something that confused, surprised, slowed, concerned, delighted, or contradicted your expectations…"></textarea></div>
+<div class="question"><label for="question">What question does that raise?</label><textarea id="question" placeholder="What would you want clarified, tested, compared, or verified?"></textarea></div>
+<div class="question"><label for="protect">What would you protect?</label><textarea id="protect" placeholder="What should not be lost in the next iteration?"></textarea></div>
+<div class="question"><label for="change">What would you change or test next?</label><textarea id="change" placeholder="A problem, experiment, boundary, or revision—not necessarily a finished solution."></textarea></div>
+<div class="question"><label for="contact">If you want a response, where should it go? <span class="muted">(optional)</span></label><input id="contact" type="text" placeholder="Your preferred contact method"></div>
+<div class="actions"><button class="btn primary" id="copy" type="button">Copy my review</button><a class="btn" href="https://github.com/ibloud/inpatient-corridors-review/issues/new" target="_blank" rel="noreferrer">Open a GitHub issue</a></div>
+<p class="status" id="status" aria-live="polite"></p>
+</section>
+
+<section class="panel">
+<h2>What your review can influence</h2>
+<ul class="route-list">
+<li><strong>Gameplay / system:</strong> next paper-playtest iteration, rule clarification, balance tests, or deferred mechanics.</li>
+<li><strong>Participant / host:</strong> front-door language, facilitator materials, and replication documentation.</li>
+<li><strong>Safety / community care:</strong> boundaries, escalation procedures, resource language, and external qualified review.</li>
+<li><strong>Accessibility:</strong> interface, format, pacing, alternative participation modes, and documentation.</li>
+<li><strong>Rights / provenance:</strong> permissions, attribution, governance, correction, withdrawal, and adaptation rules.</li>
+<li><strong>Replication / facilitation:</strong> host packet, staffing assumptions, materials, localization, and operational questions.</li>
+<li><strong>Claims / evidence:</strong> wording of claims, hypotheses, success measures, and what evidence must exist before release.</li>
+</ul>
+<p class="muted">Feedback does not itself establish endorsement, affiliation, authorship, clinical validation, or permission to use another person's work.</p>
+</section>
+
+<section class="panel">
+<h2>What this project is not</h2>
+<p>This is an arts-and-engagement prototype. It is not therapy, diagnosis, medical advice, crisis care, or clinical research. Participation is voluntary; reviewers are not being asked to disclose personal health information.</p>
+<p>Event-specific operational details remain proposals until independently verified. Review of the event concept is different from operational approval of an event.</p>
+</section>
+
+<div class="footer">
+Break the Grid · Independent Loptr Lab prototype · <a href="../">Return to project front door →</a>
+</div>
+</div>
+
+<script>
+(function(){
+const routes={
+play:{title:"Play / System Design",mode:"GENERATIVE · Find what is missing",intro:"Start with the thing itself. Play if possible; otherwise inspect the rules and prototype. We want to know where the system breaks, surprises, or becomes unclear.",cards:[["Playable rules","../VARIANT-RULES.html","Try the current rule set."],["Prototype assessment","../PROTOTYPE-ASSESSMENT.html","See what is ready for paper playtesting and what remains provisional."],["Original concept","../ORIGINAL-VARIANT-CONCEPT.html","See the provenance of the mechanics."]]},
+people:{title:"Participant / Host Experience",mode:"GENERATIVE · Find friction in the journey",intro:"Review the experience as a person encountering it without the project history. Where would you know what to do next—and where would you have to reverse-engineer it?",cards:[["Project front door","../","See the current public entry."],["Project brief","../PROJECT-BRIEF.html","Understand the intended experience and audience."],["Event phase","../event/","See the proposed physical/public expression."]]},
+safety:{title:"Safety / Community Care",mode:"EVALUATIVE · Stress-test the boundary",intro:"Read the safeguards as something that must hold under ambiguity, pressure, disagreement, and real-world facilitation—not merely as statements of intent.",cards:[["Rights & safety","../RIGHTS-AND-SAFETY.html","Review the non-negotiable boundaries."],["Project brief","../PROJECT-BRIEF.html","Check the intended audience and design boundaries."],["Event phase","../event/","Stress-test the proposed event context."]]},
+access:{title:"Accessibility",mode:"EVALUATIVE · Find participation barriers",intro:"Look for barriers in interaction, reading, navigation, pacing, sensory load, alternative participation, and the documentation itself. We want concrete observations.",cards:[["Playable prototype","../interactive/","Inspect the current interactive surface."],["Yellow Door","../interactive/yellow-door/docs/","Open the current browser experience."],["Project front door","../","Review navigation and information hierarchy."]]},
+rights:{title:"Rights / Provenance / Governance",mode:"VALIDATING · Confirm the framing",intro:"Check whether the project says what it can legitimately say, use, credit, adapt, and invite others to do. Flag ambiguity rather than assuming permission.",cards:[["Rights & safety","../RIGHTS-AND-SAFETY.html","Review permissions and approval boundaries."],["Status & provenance","../STATUS-AND-PROVENANCE.html","Review current claims about participation and provenance."],["The Ask","../THE-ASK.html","Review the independent-review invitation."]]},
+replicate:{title:"Replication / Facilitation",mode:"GENERATIVE + EVALUATIVE · Test whether it can travel",intro:"Pretend you are a qualified organizer who did not build this. What would you need to run, localize, staff, explain, or safely stop the experience?",cards:[["Event phase","../event/","Inspect the proposed public expression and its open operational questions."],["Project brief","../PROJECT-BRIEF.html","Review the intended structure and audience."],["Rights & safety","../RIGHTS-AND-SAFETY.html","Check the boundaries a host would have to preserve."]]},
+evidence:{title:"Claims / Evidence / Documentation",mode:"VALIDATING · Separate fact, proposal, hypothesis, and evidence",intro:"Look at the language as a reviewer who cares whether claims can be checked. Identify statements that need qualification, sources, testing, or later evidence.",cards:[["Prototype assessment","../PROTOTYPE-ASSESSMENT.html","See the current readiness distinctions."],["Status & provenance","../STATUS-AND-PROVENANCE.html","Check current-status language."],["Project brief","../PROJECT-BRIEF.html","Review the stated success definition."]]},
+mixed:{title:"Broad Review",mode:"EXPLORATORY · Follow what catches your attention",intro:"You do not need a specialty to begin. Start with the project front door, then follow the question that feels most important to you.",cards:[["Project front door","../","Start with the whole project."],["Playable rules","../VARIANT-RULES.html","Try the current system."],["Rights & safety","../RIGHTS-AND-SAFETY.html","Check the boundary conditions."]]}
+};
+let current="mixed";
+const choices=document.querySelectorAll(".choice"), route=document.getElementById("route"), orient=document.getElementById("orientation"), feedback=document.getElementById("feedback");
+function choose(key){current=key;const r=routes[key];choices.forEach(c=>c.classList.toggle("selected",c.dataset.lane===key));route.classList.add("active");orient.classList.add("active");feedback.classList.add("active");document.getElementById("routeTitle").textContent=r.title;document.getElementById("routeIntro").textContent=r.intro;document.getElementById("modeText").textContent="Review mode: "+r.mode;document.getElementById("routeCards").innerHTML=r.cards.map(c=>'<div class="track-card"><div class="mode">Suggested entry</div><h3>'+c[0]+'</h3><p>'+c[2]+'</p><a class="btn" href="'+c[1]+'">Open →</a></div>').join("");document.getElementById("primaryDoc").href="#feedback";route.scrollIntoView({behavior:"smooth",block:"start"});}
+choices.forEach(c=>c.addEventListener("click",()=>choose(c.dataset.lane)));
+document.getElementById("reset").addEventListener("click",()=>{route.classList.remove("active");orient.classList.remove("active");feedback.classList.remove("active");choices.forEach(c=>c.classList.remove("selected"));document.getElementById("start").scrollIntoView({behavior:"smooth"});});
+document.getElementById("copy").addEventListener("click",async()=>{const r=routes[current];const text="BREAK THE GRID — MENTOR / ADVISOR REVIEW\n\nRoute: "+r.title+"\nMode: "+r.mode+"\n\nOBSERVE\n"+document.getElementById("observe").value+"\n\nQUESTION\n"+document.getElementById("question").value+"\n\nPROTECT\n"+document.getElementById("protect").value+"\n\nCHANGE / TEST NEXT\n"+document.getElementById("change").value+"\n\nCONTACT (optional)\n"+document.getElementById("contact").value;try{await navigator.clipboard.writeText(text);document.getElementById("status").textContent="Review copied to your clipboard. You can paste it into an email, document, or GitHub issue."; }catch(e){document.getElementById("status").textContent="Clipboard access was unavailable. Select and copy your responses manually.";}}); 
+})();
+</script>
+</body>
+</html>
