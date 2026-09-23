@@ -1,8 +1,7 @@
 let story = null;
 let started = false;
-const bootTimer = window.setTimeout(() => {
-  if (!started) fail("The Yellow Door is still waiting for its browser runtime. Try Reload, or open this page with ?debug=1.");
-}, 5000);
+let bootTimer = null;
+
 const storyContainer = document.getElementById("story");
 const choicesContainer = document.getElementById("choices");
 const errorContainer = document.getElementById("error");
@@ -24,12 +23,12 @@ function updateStats() {
   if (!story || !debug) return;
   stats.hidden = false;
   stats.textContent = [
-    `Support: ${getVariable("Support")}`,
-    `Resistance: ${getVariable("Resistance")}`,
-    `Knowledge: ${getVariable("Knowledge")}`,
-    `Trust: ${getVariable("Trust")}`,
-    `Participation: ${getVariable("Participation")}`,
-    `Pressure: ${getVariable("SystemPressure")}`
+    "Support: " + getVariable("Support"),
+    "Resistance: " + getVariable("Resistance"),
+    "Knowledge: " + getVariable("Knowledge"),
+    "Trust: " + getVariable("Trust"),
+    "Participation: " + getVariable("Participation"),
+    "Pressure: " + getVariable("SystemPressure")
   ].join(" · ");
 }
 
@@ -46,57 +45,75 @@ function continueStory() {
     }
   }
 
-  story.currentChoices.forEach(choice => {
+  story.currentChoices.forEach(function (choice) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "choice";
     button.textContent = choice.text;
-    button.addEventListener("click", () => {
-      choicesContainer.querySelectorAll("button").forEach(b => b.disabled = true);
+    button.addEventListener("click", function () {
+      choicesContainer.querySelectorAll("button").forEach(function (b) {
+        b.disabled = true;
+      });
       try {
         story.ChooseChoiceIndex(choice.index);
         continueStory();
       } catch (error) {
-        fail(`The story could not continue: ${error.message}`);
+        fail("The story could not continue. " + (error && error.message ? error.message : String(error)));
+        console.error(error);
       }
     });
     choicesContainer.appendChild(button);
   });
 
   updateStats();
+  errorContainer.hidden = true;
   window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
 }
 
-function start() {
+function startYellowDoor() {
   if (!window.inkjs || typeof window.inkjs.Story !== "function") {
-    throw new Error("The local Ink runtime did not load.");
+    fail("Runtime error: The local Ink runtime did not expose inkjs.Story.");
+    return;
   }
 
-  fetch("../story/yellow-door-alpha.json", {cache: "no-store"})
-    .then(response => {
+  if (bootTimer) window.clearTimeout(bootTimer);
+  bootTimer = window.setTimeout(function () {
+    if (!started) {
+      fail("The Yellow Door is taking too long to start. Try Reload, or open this page with ?debug=1.");
+    }
+  }, 8000);
+
+  errorContainer.hidden = false;
+  errorContainer.textContent = "Ink runtime ready. Loading the compiled story…";
+
+  fetch("../story/yellow-door-alpha.json?v=20260923-5", {cache: "no-store"})
+    .then(function (response) {
       if (!response.ok) {
-        throw new Error(`Compiled story returned HTTP ${response.status}`);
+        throw new Error("Compiled story returned HTTP " + response.status);
       }
       return response.text();
     })
-    .then(raw => {
+    .then(function (raw) {
+      errorContainer.textContent = "Compiled story loaded. Creating the story…";
       const storyJson = raw.replace(/^\uFEFF/, "");
       story = new window.inkjs.Story(storyJson);
-      started = true;
-      window.clearTimeout(bootTimer);
-      errorContainer.hidden = true;
       storyContainer.innerHTML = "";
       continueStory();
+      started = true;
+      window.clearTimeout(bootTimer);
     })
-    .catch(error => {
-      fail(`The alpha could not start. ${error.message}`);
+    .catch(function (error) {
+      window.clearTimeout(bootTimer);
+      fail("The alpha could not start. " + (error && error.message ? error.message : String(error)));
       console.error(error);
     });
 }
 
+window.startYellowDoor = startYellowDoor;
+
 try {
-  start();
+  startYellowDoor();
 } catch (error) {
-  fail(`The alpha could not start. ${error.message}`);
+  fail("The alpha could not start. " + (error && error.message ? error.message : String(error)));
   console.error(error);
 }
