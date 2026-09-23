@@ -16,6 +16,8 @@ VAR SupportedPerson = false
 VAR ChallengedAuthority = false
 VAR MidpointRevealSeen = false
 
+-> start
+
 === start ===
 The yellow door wasn't special yesterday.
 
