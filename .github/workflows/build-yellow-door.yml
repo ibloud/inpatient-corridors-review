@@ -20,10 +20,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install Ink compiler
+        run: npm install --no-save --ignore-scripts inkjs@2.4.0
       - name: Compile Ink to JSON
-        run: npx --yes inkjs@2.4.0 interactive/yellow-door/story/yellow-door-alpha.ink -o interactive/yellow-door/story/yellow-door-alpha.json
+        run: |
+          set -o pipefail
+          npx --no-install inkjs -s interactive/yellow-door/story/yellow-door-alpha.ink | tee /tmp/ink-stats.json
+          npx --no-install inkjs -o interactive/yellow-door/story/yellow-door-alpha.json interactive/yellow-door/story/yellow-door-alpha.ink
       - name: Verify compiled story
-        run: test -s interactive/yellow-door/story/yellow-door-alpha.json
+        run: |
+          test -s interactive/yellow-door/story/yellow-door-alpha.json
+          node -e "JSON.parse(require('fs').readFileSync('interactive/yellow-door/story/yellow-door-alpha.json','utf8')); console.log('Compiled JSON is valid.')"
       - name: Commit compiled story
         run: |
           git config user.name "github-actions[bot]"
