@@ -1,0 +1,55 @@
+name: Preview redesign on GitHub Pages
+
+on:
+  push:
+    branches:
+      - redesign/resources-front-door
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-preview
+  cancel-in-progress: true
+
+jobs:
+  publish-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out redesign branch
+        uses: actions/checkout@v4
+        with:
+          ref: redesign/resources-front-door
+          fetch-depth: 0
+
+      - name: Prepare preview
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/preview
+          mkdir -p /tmp/preview
+          rsync -a --exclude='.git' --exclude='.github' ./ /tmp/preview/
+
+      - name: Check out Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: pages
+          fetch-depth: 0
+
+      - name: Publish preview under isolated path
+        run: |
+          set -euo pipefail
+          rm -rf pages/preview/redesign-resources-front-door
+          mkdir -p pages/preview/redesign-resources-front-door
+          rsync -a /tmp/preview/ pages/preview/redesign-resources-front-door/
+          touch pages/preview/redesign-resources-front-door/.nojekyll
+
+      - name: Commit preview
+        working-directory: pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add preview/redesign-resources-front-door
+          git commit -m "Publish redesign preview" || echo "No preview changes"
+          git push origin gh-pages
