@@ -24,6 +24,22 @@
 <span id="stats" hidden></span>
 </footer>
 </main>
+<script>
+window.addEventListener("error", (event) => {
+  const el = document.getElementById("error");
+  if (!el) return;
+  el.hidden = false;
+  el.textContent = `Runtime error: ${event.message || "The Yellow Door runtime could not load."}`;
+});
+
+window.addEventListener("unhandledrejection", (event) => {
+  const el = document.getElementById("error");
+  if (!el) return;
+  el.hidden = false;
+  const reason = event.reason;
+  el.textContent = `Runtime error: ${reason?.message || reason || "The Yellow Door runtime failed to start."}`;
+});
+</script>
 <script type="module" src="app.js"></script>
 </body>
 </html>
