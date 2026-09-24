@@ -594,32 +594,8 @@
     </footer>
 
     <span id="pixie" aria-hidden="true"></span>
-    <button class="pixie-button" type="button" id="pixie-open" aria-controls="pixie-panel" aria-expanded="false">PIXIE</button>
-    <div class="pixie-backdrop" id="pixie-panel" role="dialog" aria-modal="true" aria-labelledby="pixie-title">
-      <div class="pixie-panel">
-        <div class="pixie-panel-head"><h2 id="pixie-title">PIXIE · Control Panel</h2><button class="pixie-close" type="button" id="pixie-close">Close</button></div>
-        <div class="pixie-grid">
-          <a href="interactive/yellow-door/docs/"><strong>Play Yellow Door</strong><span>Open the interactive alpha.</span></a>
-          <a href="event/"><strong>Event Phase</strong><span>Open Violet's Revenge: The Forensics Trail.</span></a>
-          <a href="https://heartsupport.com/" target="_blank" rel="noreferrer"><strong>HeartSupport</strong><span>Public support resource.</span></a>
-          <a href="next-phase/"><strong>Next Phase</strong><span>Review the release-architecture study.</span></a>
-          <a href="RIGHTS-AND-SAFETY.html"><strong>Safety</strong><span>Rights, consent, and safety boundaries.</span></a>
-          <a href="STATUS-AND-PROVENANCE.html"><strong>Provenance</strong><span>Current status and development record.</span></a>
-          <a href="https://github.com/ibloud/violets-revenge" target="_blank" rel="noreferrer"><strong>Violet's Revenge</strong><span>Companion project and coordination repo.</span></a>
-          <a href="https://github.com/ibloud/50-ways-to-leave-another/blob/main/docs/interactive-narrative-writer-path.md" target="_blank" rel="noreferrer"><strong>50 Ways Writer Path</strong><span>Interactive-narrative training pathway.</span></a>
-        </div>
-        <p class="pixie-note">Participant coordination is gated: complete/win the game first, then receive the Discord invitation. Discord is not the public entry point.</p>
-      </div>
-    </div>
-    <script>
-      (() => {
-        const open=document.getElementById('pixie-open'), panel=document.getElementById('pixie-panel'), close=document.getElementById('pixie-close');
-        const setOpen=(value)=>{panel.classList.toggle('open',value);open.setAttribute('aria-expanded',String(value));};
-        open.addEventListener('click',()=>setOpen(true)); close.addEventListener('click',()=>setOpen(false));
-        panel.addEventListener('click',(e)=>{if(e.target===panel)setOpen(false);});
-        document.addEventListener('keydown',(e)=>{if(e.key==='Escape')setOpen(false);});
-      })();
-    </script>
+
+
 
   </div>
 </body>
