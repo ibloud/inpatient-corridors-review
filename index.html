@@ -67,6 +67,9 @@
     }
 
 
+    .pixie-inline-trigger { background: transparent; border: 1px solid var(--border); color: var(--muted); border-radius: 4px; padding: .6rem .9rem; font: inherit; font-size: .82rem; cursor: pointer; }
+    .pixie-inline-trigger:hover { border-color: var(--red); color: #fff; }
+
     /* ── Ecosystem front door ── */
     .ecosystem-front-door { margin: 0 0 2rem; }
     .ecosystem-brand { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; padding:1rem 0 .65rem; border-bottom:1px solid var(--border); }
@@ -593,10 +596,18 @@
       <a href="https://github.com/ibloud/inpatient-corridors-review/edit/main/README.md">Improve this page →</a>
     </footer>
 
-    <span id="pixie" aria-hidden="true"></span>
+    <button id="pixie" type="button" class="pixie-inline-trigger" aria-controls="pixie-panel">Open PIXIE →</button>
 
 
 
   </div>
+
+<script>
+document.addEventListener("click", function (event) {
+  const trigger = event.target.closest("#pixie");
+  const open = document.getElementById("pixie-open");
+  if (trigger && open) { event.preventDefault(); open.click(); }
+});
+</script>
 </body>
 </html>
