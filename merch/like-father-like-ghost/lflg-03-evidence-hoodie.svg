@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4500" height="5400" viewBox="0 0 4500 5400">
+<rect width="4500" height="5400" fill="#0d0d0d"/>
+<g fill="none" stroke="#2a2a2a" stroke-width="24">
+<path d="M500 700H4000V4700H500Z"/>
+<path d="M500 1200H4000M500 4200H4000"/>
+</g>
+<g fill="#f0f0f0" font-family="Arial, Helvetica, sans-serif">
+<text x="650" y="1030" font-size="86" font-weight="700" letter-spacing="13">EVIDENCE / LFLG-03</text>
+<text x="650" y="1760" font-size="330" font-weight="700" letter-spacing="14">LIKE</text>
+<text x="650" y="2110" font-size="330" font-weight="700" letter-spacing="14">FATHER,</text>
+<text x="650" y="2460" font-size="330" font-weight="700" letter-spacing="14">LIKE GHOST</text>
+</g>
+<g fill="#c0392b" font-family="Arial, Helvetica, sans-serif">
+<text x="650" y="2910" font-size="72" letter-spacing="11">OBSERVATION / RECORD / RETURN</text>
+</g>
+<g fill="none" stroke="#c0392b" stroke-width="30">
+<rect x="650" y="3250" width="700" height="700"/>
+<path d="M700 3900L1300 3300M700 3300L1300 3900"/>
+</g>
+<g fill="#999" font-family="Arial, Helvetica, sans-serif" font-size="58" letter-spacing="8">
+<text x="1550" y="3380">THE RECORD IS NOT</text>
+<text x="1550" y="3470">THE SAME THING</text>
+<text x="1550" y="3560">AS THE MEMORY.</text>
+</g>
+</svg>
