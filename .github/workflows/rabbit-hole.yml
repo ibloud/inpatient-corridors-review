@@ -23,7 +23,9 @@ jobs:
           mkdir -p rabbit-hole/vendor
           curl -fsSL https://raw.githubusercontent.com/ibloud/the-rabbit-hole/main/ink/rabbit-hole.ink -o rabbit-hole/story.ink
           test -s rabbit-hole/story.ink
-      - run: node rabbit-hole/.build/node_modules/inkjs/bin/inkjs-compiler.js rabbit-hole/story.ink -o rabbit-hole/story.json
+      - run: |
+          cd rabbit-hole/.build
+          npx --no-install inkjs -o ../story.json ../story.ink
       - run: cp rabbit-hole/.build/node_modules/inkjs/dist/ink-full.js rabbit-hole/vendor/ink-full.js
       - run: |
           node - <<'NODE'
