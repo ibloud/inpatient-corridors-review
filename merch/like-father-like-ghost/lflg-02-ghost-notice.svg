@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4500" height="5400" viewBox="0 0 4500 5400">
+<rect width="4500" height="5400" fill="#f0f0f0"/>
+<rect x="360" y="360" width="3780" height="4680" fill="none" stroke="#0d0d0d" stroke-width="34"/>
+<g fill="#0d0d0d" font-family="Arial, Helvetica, sans-serif">
+<text x="560" y="820" font-size="110" font-weight="700" letter-spacing="16">NOTICE / 404</text>
+<text x="560" y="1030" font-size="64" letter-spacing="8">SUBJECT: LIKE FATHER, LIKE GHOST</text>
+<text x="560" y="1220" font-size="54" fill="#666">STATUS: UNACCOUNTED FOR</text>
+</g>
+<path d="M2250 1700
+C1870 1700 1650 2010 1650 2390
+V3100
+C1650 3440 1900 3680 2250 3680
+C2600 3680 2850 3440 2850 3100
+V2390
+C2850 2010 2630 1700 2250 1700Z
+M1930 2390C2020 2280 2110 2230 2250 2230
+C2390 2230 2480 2280 2570 2390"
+fill="none" stroke="#c0392b" stroke-width="42"/>
+<circle cx="2050" cy="2670" r="48" fill="#0d0d0d"/>
+<circle cx="2450" cy="2670" r="48" fill="#0d0d0d"/>
+<path d="M2060 3070H2440" stroke="#0d0d0d" stroke-width="34"/>
+<g fill="#0d0d0d" font-family="Arial, Helvetica, sans-serif">
+<text x="560" y="4300" font-size="150" font-weight="700" letter-spacing="10">LIKE FATHER,</text>
+<text x="560" y="4480" font-size="150" font-weight="700" letter-spacing="10">LIKE GHOST</text>
+<text x="560" y="4760" font-size="58" letter-spacing="7">KEEP THE RECEIPT. BREAK THE GRID.</text>
+</g>
+</svg>
