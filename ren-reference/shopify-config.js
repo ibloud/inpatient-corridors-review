@@ -1,1 +1,1 @@
-window.REN_SHOPIFY={domain:"keb5k1-ud.myshopify.com",storefrontToken:"",apiVersion:"2026-07"};
+window.REN_SHOPIFY={domain:"",storefrontToken:"",apiVersion:"2026-07"};
