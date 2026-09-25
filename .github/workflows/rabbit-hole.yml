@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 22
       - run: mkdir -p rabbit-hole/.build
-      - run: npm init -y
+      - run: npm init -y --name=ink-build
         working-directory: rabbit-hole/.build
       - run: npm install --no-save inkjs@2.4.0
         working-directory: rabbit-hole/.build
