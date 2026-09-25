@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4500" height="5400" viewBox="0 0 4500 5400">
+<rect width="4500" height="5400" fill="#0d0d0d"/>
+<g fill="none" stroke="#c0392b" stroke-width="28" opacity=".9">
+<path d="M500 800H4000V4600H500Z"/>
+<path d="M1050 800V4600M3450 800V4600"/>
+<path d="M1050 1450H3450M1050 3950H3450"/>
+<path d="M2250 1450V3950"/>
+</g>
+<g fill="#f0f0f0" font-family="Arial, Helvetica, sans-serif">
+<text x="2250" y="2050" text-anchor="middle" font-size="330" font-weight="700" letter-spacing="18">LIKE FATHER,</text>
+<text x="2250" y="2440" text-anchor="middle" font-size="330" font-weight="700" letter-spacing="18">LIKE GHOST</text>
+<text x="2250" y="2800" text-anchor="middle" font-size="74" letter-spacing="14" fill="#999">INPATIENT CORRIDORS / BREAK THE GRID</text>
+</g>
+<g fill="#c0392b" font-family="Arial, Helvetica, sans-serif" font-size="58" letter-spacing="9">
+<text x="620" y="950">CORRIDOR 01</text>
+<text x="620" y="4510">EXIT IS NOT THE SAME AS ESCAPE</text>
+<text x="3380" y="4510" text-anchor="end">LFLG / 01</text>
+</g>
+</svg>
