@@ -1,6 +1,16 @@
 let story = null;
 let started = false;
 let bootTimer = null;
+let musicIndex = 0;
+
+const musicEncounters = [
+  {title:"So The Story Goes...", index:1, prompt:"The first image opens the door. Stay with it."},
+  {title:"CTRL ALT DELETE", index:2, prompt:"The corridor changes when the frame changes. What do you follow?"},
+  {title:"Truth or Dare", index:3, prompt:"A question arrives before an answer. Keep watching."},
+  {title:"Dream Life", index:4, prompt:"The room turns inward. Notice what the story makes visible."},
+  {title:"Two's On A Cigarette", index:5, prompt:"Two voices share the frame. Listen for the handoff."},
+  {title:"Pink Heineken", index:6, prompt:"The final room in this thread. Nothing here tells you what to believe."}
+];
 
 const storyContainer = document.getElementById("story");
 const choicesContainer = document.getElementById("choices");
@@ -30,6 +40,65 @@ function updateStats() {
     "Participation: " + getVariable("Participation"),
     "Pressure: " + getVariable("SystemPressure")
   ].join(" · ");
+}
+
+function renderMusicEncounter() {
+  const encounter = musicEncounters[musicIndex];
+  storyContainer.innerHTML = "";
+  choicesContainer.innerHTML = "";
+  errorContainer.hidden = true;
+
+  const wrap = document.createElement("section");
+  wrap.className = "video-encounter";
+  wrap.setAttribute("aria-labelledby", "video-encounter-title");
+
+  const kicker = document.createElement("p");
+  kicker.className = "music-kicker";
+  kicker.textContent = "YELLOW DOOR · VIDEO ENCOUNTER " + (musicIndex + 1) + " OF " + musicEncounters.length;
+
+  const heading = document.createElement("h2");
+  heading.id = "video-encounter-title";
+  heading.textContent = encounter.title;
+
+  const note = document.createElement("p");
+  note.className = "encounter-note";
+  note.textContent = encounter.prompt;
+
+  const frame = document.createElement("div");
+  frame.className = "video-frame";
+  frame.innerHTML =
+    '<iframe title="' + encounter.title.replace(/"/g, "&quot;") +
+    '" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLHbj3Gti2ieMLX14MIy5xvV0GPYMciUvz&index=' +
+    encounter.index +
+    '&rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+
+  const source = document.createElement("p");
+  source.className = "encounter-source";
+  source.textContent = "Source: the public SICK SICK SOUL playlist on YouTube. The Yellow Door presents the video as an external work; it does not claim ownership or artist participation in this experience.";
+
+  wrap.appendChild(kicker);
+  wrap.appendChild(heading);
+  wrap.appendChild(note);
+  wrap.appendChild(frame);
+  wrap.appendChild(source);
+  storyContainer.appendChild(wrap);
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "choice";
+  button.textContent = musicIndex === musicEncounters.length - 1
+    ? "Leave the screen and enter the corridor"
+    : "Continue through the Yellow Door";
+  button.addEventListener("click", function () {
+    musicIndex += 1;
+    if (musicIndex < musicEncounters.length) {
+      renderMusicEncounter();
+      window.scrollTo({top:0, behavior:"smooth"});
+    } else {
+      startInkStory();
+    }
+  });
+  choicesContainer.appendChild(button);
 }
 
 function continueStory(shouldScroll) {
@@ -90,6 +159,31 @@ function continueStory(shouldScroll) {
   }
 }
 
+function startInkStory() {
+  storyContainer.innerHTML = "";
+  choicesContainer.innerHTML = "";
+  errorContainer.hidden = false;
+  errorContainer.textContent = "The six encounters are complete. Opening the corridor…";
+
+  fetch("../story/yellow-door-alpha.json?v=20260926-1", {cache: "no-store"})
+    .then(function (response) {
+      if (!response.ok) throw new Error("Compiled story returned HTTP " + response.status);
+      return response.text();
+    })
+    .then(function (raw) {
+      story = new window.inkjs.Story(raw.replace(/^\uFEFF/, ""));
+      storyContainer.innerHTML = "";
+      continueStory(false);
+      started = true;
+      errorContainer.hidden = true;
+      window.scrollTo({top:0, behavior:"smooth"});
+    })
+    .catch(function (error) {
+      fail("The corridor could not open. " + (error && error.message ? error.message : String(error)));
+      console.error(error);
+    });
+}
+
 function startYellowDoor() {
   if (!window.inkjs || typeof window.inkjs.Story !== "function") {
     fail("Runtime error: The local Ink runtime did not expose inkjs.Story.");
@@ -98,35 +192,10 @@ function startYellowDoor() {
 
   if (bootTimer) window.clearTimeout(bootTimer);
   bootTimer = window.setTimeout(function () {
-    if (!started) {
-      fail("The Yellow Door is taking too long to start. Try Reload, or open this page with ?debug=1.");
-    }
+    if (!started) fail("The Yellow Door is taking too long to start. Try Reload, or open this page with ?debug=1.");
   }, 8000);
 
-  errorContainer.hidden = false;
-  errorContainer.textContent = "Ink runtime ready. Loading the compiled story…";
-
-  fetch("../story/yellow-door-alpha.json?v=20260923-6", {cache: "no-store"})
-    .then(function (response) {
-      if (!response.ok) {
-        throw new Error("Compiled story returned HTTP " + response.status);
-      }
-      return response.text();
-    })
-    .then(function (raw) {
-      errorContainer.textContent = "Compiled story loaded. Creating the story…";
-      const storyJson = raw.replace(/^\uFEFF/, "");
-      story = new window.inkjs.Story(storyJson);
-      storyContainer.innerHTML = "";
-      continueStory(false);
-      started = true;
-      window.clearTimeout(bootTimer);
-    })
-    .catch(function (error) {
-      window.clearTimeout(bootTimer);
-      fail("The alpha could not start. " + (error && error.message ? error.message : String(error)));
-      console.error(error);
-    });
+  renderMusicEncounter();
 }
 
 window.startYellowDoor = startYellowDoor;
