@@ -4,12 +4,12 @@ let bootTimer = null;
 let musicIndex = 0;
 
 const musicEncounters = [
-  {title:"So The Story Goes...", index:1, prompt:"The first image opens the door. Stay with it."},
-  {title:"CTRL ALT DELETE", index:2, prompt:"The corridor changes when the frame changes. What do you follow?"},
-  {title:"Truth or Dare", index:3, prompt:"A question arrives before an answer. Keep watching."},
-  {title:"Dream Life", index:4, prompt:"The room turns inward. Notice what the story makes visible."},
-  {title:"Two's On A Cigarette", index:5, prompt:"Two voices share the frame. Listen for the handoff."},
-  {title:"Pink Heineken", index:6, prompt:"The final room in this thread. Nothing here tells you what to believe."}
+  {title:"So The Story Goes...", id:"u1qtyMPokZM", prompt:"The first image opens the door. Stay with it."},
+  {title:"CTRL ALT DELETE", id:"X--PXyB1Zw0", prompt:"The corridor changes when the frame changes. What do you follow?"},
+  {title:"Truth or Dare", id:"FmaBhsRfhIw", prompt:"A question arrives before an answer. Keep watching."},
+  {title:"Dream Life", id:"0HhRNbZ0wRY", prompt:"The room turns inward. Notice what the story makes visible."},
+  {title:"Two's On A Cigarette", id:"1WCfWxgEY8E", prompt:"Two voices share the frame. Listen for the handoff."},
+  {title:"Pink Heineken", id:"Ra8gSw7Djvo", prompt:"The final room in this thread. Nothing here tells you what to believe."}
 ];
 
 const storyContainer = document.getElementById("story");
@@ -68,9 +68,8 @@ function renderMusicEncounter() {
   frame.className = "video-frame";
   frame.innerHTML =
     '<iframe title="' + encounter.title.replace(/"/g, "&quot;") +
-    '" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLHbj3Gti2ieMLX14MIy5xvV0GPYMciUvz&index=' +
-    encounter.index +
-    '&rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    '" src="https://www.youtube-nocookie.com/embed/' + encounter.id +
+    '?rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
 
   const source = document.createElement("p");
   source.className = "encounter-source";
