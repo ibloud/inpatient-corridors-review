@@ -4,7 +4,7 @@
 
 **Status:** Event phase in process — proposal / planning stage.
 
-The current next-phase event concept is **Violet's Revenge: The Forensics Trail**, a Halloween pop-up and all-day Minneapolis investigation proposed for **Saturday, October 31, 2026**. The proposal describes original IP, community playtesting, a fictional investigation structure, accessibility provisions, and a final destination at the Chris Webby Halloween show at The Cabooze.
+The current next-phase event concept is **Violet's Revenge: The Forensics Trail**, a Halloween pop-up and all-day Minneapolis investigation proposed for **Saturday, October 31, 2026**. The proposal describes original IP, community playtesting, a fictional investigation structure, accessibility provisions, and a choice of endings: a sober, family-friendly adventure or a separate adult concert option at The Cabooze.
 
 This document records the event as a **work-in-process phase of Inpatient Corridors**. It does not represent venue confirmation, ticketing confirmation, artist participation, endorsement, or final operational approval.
 
@@ -19,10 +19,21 @@ The proposal's current planning sequence includes:
 - a Whittier pop-up case-file phase;
 - a public landmark clue trail;
 - an accessible indoor reset / meal period;
-- final clue and check-in at The Cabooze;
-- the 7:00 p.m. listed Halloween show at The Cabooze.
+- a sober, family-friendly clue and reflection ending independent of a bar or concert;
+- a separate adult option associated with the listed Halloween show at The Cabooze, subject to age, ticketing, and venue verification.
 
 The proposal specifically marks several launch details for later verification, including venue address/capacity/hours/access, Cabooze ticket link, age policy, doors, re-entry, accessibility, final route, budget, registration/privacy language, and cancellation language.
+
+## Sober and family-friendly route — proposed event activity
+
+The Forensics Trail must offer a complete route for families with children and anyone who prefers not to enter a bar. It shares the fictional observation and clue prompts with the wider event, then ends on its own. No purchase, score, health disclosure, game victory, Discord membership, or concert ticket is required to follow the public route. A caregiver remains responsible for children. This is a self-guided proposal, not a hosted excursion or a claim of venue partnership.
+
+- **Mia / Whittier:** observe an artwork or designed object; ask, “What did someone design for another person to use?” [Mia visit details](https://new.artsmia.org/visit) list free general admission and Saturday hours of 10 a.m.–5 p.m.; verify October 31 access before publishing a timed itinerary.
+- **Mill City Museum / riverfront:** look at a machine, building or public system, then compare evidence with the fictional case file. [Museum admission and hours](https://www.mnhs.org/millcity/visit/hours), accessibility, travel and weather need final checks. The riverfront is a shorter outdoor alternative.
+- **Own ending:** a meal and optional family Halloween activity, with a concluding clue or reflection. [Barebones Halloween Extravaganza](https://mplsartsandculture.org/events-2026/barebones-halloween-extravaganza) independently lists an October 31 outdoor show at Powderhorn Park at 7 p.m., gates at 6 p.m., and pay-what-you-can admission. Separate travel, weather and ticket decisions apply. It is not a project partner.
+- **Optional maker detour:** [The Bakken Museum](https://thebakken.org/visit) offers an invention-oriented alternative. Its [October 31 Inventors Club](https://thebakken.org/inventors-club) is a separately registered multiweek youth class, not an open drop-in stop. Do not advertise it as part of this event.
+
+The Cabooze option is separate and must never be the only route ending. Verify age restrictions and venue details before making an operational public itinerary. Do not add an unverified market/trick-or-treat schedule as a confirmed event.
 
 ## How the event connects to Inpatient Corridors
 
