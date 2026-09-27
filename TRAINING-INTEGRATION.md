@@ -34,3 +34,7 @@ The training exercise should work from the repository's original, public-safe na
 6. Build a small original Ink story using the same concepts.
 
 This document is an educational cross-reference only; it is not a new project requirement.
+
+## Proposed maker pathway: Break the Grid Pinball
+
+See [PINBALL-MAKER-PILOT.md](PINBALL-MAKER-PILOT.md) for a scoped paper-to-digital pinball exercise and an optional, separately gated hardware study. It belongs to this independent project while its rules and participation remain provisional. The general Loptr Lab training pathway may reuse the tested skills and link back here; it should not present a physical cabinet, venue partnership, or artist collaboration as established. PIXIE may offer an optional learner guide only under the boundaries in [ECOSYSTEM-RELATIONSHIPS.md](ECOSYSTEM-RELATIONSHIPS.md).
