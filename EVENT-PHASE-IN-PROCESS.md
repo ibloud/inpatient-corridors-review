@@ -35,6 +35,19 @@ The Forensics Trail must offer a complete route for families with children and a
 
 The Cabooze option is separate and must never be the only route ending. Verify age restrictions and venue details before making an operational public itinerary. Do not add an unverified market/trick-or-treat schedule as a confirmed event.
 
+## Adult cannabis-interest trail — proposed event activity
+
+A distinct **21+ optional route** serves adult medical and recreational cannabis users who want to follow the fictional “sin and systems” clue theme toward the Chris Webby performance at The Cabooze. It is an informational route proposal, not a hosted cannabis event, a use session or an assertion of partnership. No purchase, consumption, medical disclosure, patient documentation or concert ticket is required to follow the public clues. The route does not replace the family ending.
+
+1. [Hell's Kitchen](https://hellskitcheninc.com/) (80 S 9th St): meal and opening clue.
+2. [Devil's Advocate](https://devilsadvocatemn.com/minneapolis/) (1070 Nicollet Mall): a second, separate restaurant stop and optional reflection.
+3. Optional licensed-retailer detour: [Sweetleaves](https://sweetleaves.co/contact/) lists its Minneapolis location at 905 N Washington Ave and adult sales for ages 21+. It is in the North Loop, so budget extra travel. Verify current license, Halloween hours, access, and whether a registered patient can obtain the desired medical products before placing it on a timed itinerary. “Sinful” was identified as a cannabis product brand, not verified as a Minneapolis dispensary; do not represent it as a venue.
+4. Independently ticketed concert ending: [The Cabooze events](https://cabooze.com/events/). Confirm the October 31 Chris Webby listing, show/door times, age restriction, ticketing, accessibility and entry policy directly before publication.
+
+Restaurants, a retailer and a concert venue are not consumption spaces by virtue of being on this list. [Minnesota OCM adult-use guidance](https://mn.gov/ocm/consumers/adult-use/) and [medical-use guidance](https://mn.gov/ocm/dmc/patients/resources/guidance-on-where-to-use-medical-cannabis.jsp) govern different circumstances. There is no cannabis event license, designated use area, or host consent documented here. Do not suggest public, restaurant, retailer or concert consumption. Attendees should follow applicable law and venue rules and use sober transportation if impaired.
+
+All stops operate independently; none has agreed to participate. Confirm travel and hours, and keep the family route's independent ending visible alongside this adult path.
+
 ## How the event connects to Inpatient Corridors
 
 The event phase extends the same design concerns already documented in the project:
