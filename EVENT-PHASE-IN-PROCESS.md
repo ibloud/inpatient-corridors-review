@@ -48,6 +48,20 @@ Restaurants, a retailer and a concert venue are not consumption spaces by virtue
 
 All stops operate independently; none has agreed to participate. Confirm travel and hours, and keep the family route's independent ending visible alongside this adult path.
 
+## Optional LITT pinball observation stop
+
+[LITT Pinball Bar](https://littpinballbar.com/) at **2021 Hennepin Ave** can serve as a public, self-guided pinball observation and play stop. Suggested prompt: “How does the table teach a newcomer what to do, and what makes its controls easier or harder to use?” An optional sketch or accessibility note can inform the [proposed digital maker pilot](PINBALL-MAKER-PILOT.md). The pilot is unapproved and no table, cabinet, class, venue partnership or project-hosted activity exists.
+
+LITT's [FAQ](https://littpinballbar.com/faqs) lists all-ages hours 11 a.m.–8 p.m., with under-18 visitors accompanied by a guardian, and a 21+ policy after 8 p.m. Games use quarters. The venue is a bar; no alcohol purchase is required for the proposed observation, and the family route must retain a complete bar-free version. Verify October 31 hours, special events, access and travel before adding a timed stop.
+
+### Optional Google Maps variants via LITT
+
+- [Family: Mia → LITT → Mill City Museum](https://www.google.com/maps/dir/?api=1&origin=Minneapolis%20Institute%20of%20Art%2C%202400%203rd%20Ave%20S%2C%20Minneapolis%20MN&destination=Mill%20City%20Museum%2C%20704%20S%202nd%20St%2C%20Minneapolis%20MN&waypoints=LITT%20Pinball%20Bar%2C%202021%20Hennepin%20Ave%2C%20Minneapolis%20MN) — LITT is skippable; see the bar-free link below.
+- [Adult Minneapolis: Hell's Kitchen → Green Goods → Devil's Advocate → LITT → Cabooze](https://www.google.com/maps/dir/?api=1&origin=Hell's%20Kitchen%2C%2080%20S%209th%20St%2C%20Minneapolis%20MN&destination=The%20Cabooze%2C%20917%20Cedar%20Ave%20S%2C%20Minneapolis%20MN&waypoints=Green%20Goods%2C%20207%20S%209th%20St%2C%20Minneapolis%20MN%7CDevil's%20Advocate%2C%201070%20Nicollet%20Mall%2C%20Minneapolis%20MN%7CLITT%20Pinball%20Bar%2C%202021%20Hennepin%20Ave%2C%20Minneapolis%20MN)
+- [Adult from St. Paul: RISE → Hell's Kitchen → Devil's Advocate → LITT → Cabooze](https://www.google.com/maps/dir/?api=1&origin=RISE%20Dispensary%2C%202239%20Ford%20Pkwy%2C%20St%20Paul%20MN&destination=The%20Cabooze%2C%20917%20Cedar%20Ave%20S%2C%20Minneapolis%20MN&waypoints=Hell's%20Kitchen%2C%2080%20S%209th%20St%2C%20Minneapolis%20MN%7CDevil's%20Advocate%2C%201070%20Nicollet%20Mall%2C%20Minneapolis%20MN%7CLITT%20Pinball%20Bar%2C%202021%20Hennepin%20Ave%2C%20Minneapolis%20MN)
+
+Google Maps may display fewer waypoints on some devices. Check the stop list and travel mode before departure.
+
 ## One-tap navigation links (proposed stops)
 
 These Google Maps links open directions in the app or browser; they are not downloadable offline map files. Choose a travel mode, check the listed stops and confirm the actual event hours before departure. Mobile browsers support a limited number of intermediate stops, so the family evening transfer is a separate link.
