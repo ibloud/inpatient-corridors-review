@@ -12,7 +12,7 @@ The digital table can test a portable Veiled Dominion systems vocabulary: pressu
 
 ## Loptr Lab Patreon hardware concept
 
-Treat the Loptr Lab Patreon hardware-build concept as a proposed funding and build-story reference, **pending identification and review of the specific Patreon post or page**. Do not quote it, claim a tier or budget, or promise rewards or a physical machine until the source and its terms are confirmed. A future hardware brief can cite the verified post, define milestone-based costs and ownership, and show contributors what the digital pilot actually proved.
+The founder supplied the Loptr Lab Patreon post [Hackaday Build](https://www.patreon.com/LoptrLab/posts/hackaday-build-163694370) as the hardware-build concept reference. The post could not be read through the available public access at the time of this update, so its specific design, parts, budget, terms, and status remain unverified here. Review the post directly with its author before translating it into a pinball cabinet brief. Do not quote it, claim a tier or budget, or promise rewards or a physical machine until its contents and terms are confirmed. A future hardware brief can map its confirmed approach to milestone costs, ownership, service, and what the digital pilot actually proved.
 
 ## Learning question
 
