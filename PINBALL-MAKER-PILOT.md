@@ -12,7 +12,7 @@ The digital table can test a portable Veiled Dominion systems vocabulary: pressu
 
 ## Related maker reference: Duet LED chessboard
 
-The [Duet LED chessboard design study](https://github.com/Loptr-Lab/duet-solo-hackathon/blob/main/docs/design/LED-CHESSBOARD-DESIGN-STUDY.md) is a parallel, unbuilt software-to-hardware learning reference sourced from founder-supplied Patreon text. It is not a physical pinball plan; Duet owns its rules, accessibility requirements, hardware decisions, and provenance.
+The [Duet LED chessboard design study](https://github.com/Loptr-Lab/duet-solo-hackathon/blob/main/docs/design/LED-CHESSBOARD-DESIGN-STUDY.md) is a parallel, unbuilt software-to-hardware learning reference sourced from founder-supplied Patreon text. It is not a physical pinball plan; Duet owns its rules, accessibility requirements, hardware decisions, and provenance. Keep the chessboard components out of the pinball bill of materials: a cabinet needs its own playfield, flipper and coil safety design, switches, controller, power plan, and maintenance plan.
 
 ## Learning question
 
@@ -52,4 +52,4 @@ The minimum team is a rules designer, digital table author, accessibility/playte
 
 ## Next decision
 
-Begin a paper design and small digital table exercise as an Inpatient Corridors pilot. The general Loptr Lab training index can link to the proposed exercise now, while outcome claims await learner testing; spin out a dedicated repository only when a maintainable digital release or funded hardware team exists.
+Proposed next decision: approve a paper design and small digital table exercise as an Inpatient Corridors pilot. The general Loptr Lab training index can link to the proposed exercise now, while outcome claims await learner testing; spin out a dedicated repository only when a maintainable digital release or funded hardware team exists.
