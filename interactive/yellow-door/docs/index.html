@@ -29,8 +29,9 @@
     <li>Two's On A Cigarette</li>
     <li>Pink Heineken</li>
   </ol>
-  <a class="music-link" href="https://www.youtube.com/playlist?list=PLHbj3Gti2ieMLX14MIy5xvV0GPYMciUvz" target="_blank" rel="noopener noreferrer">Listen on YouTube ↗</a>
+  <p><a class="music-link" href="https://music.apple.com/us/album/sick-sick-soul-vol-1-ep/1847428336" target="_blank" rel="noopener noreferrer">Apple Music ↗</a> · <a class="music-link" href="https://open.spotify.com/album/0ISO7wkMwNnepo80je1udA" target="_blank" rel="noopener noreferrer">Spotify ↗</a> · <a class="music-link" href="https://www.youtube.com/playlist?list=PLHbj3Gti2ieMLX14MIy5xvV0GPYMciUvz" target="_blank" rel="noopener noreferrer">YouTube ↗</a></p>
   <p class="music-note">This is an independent listening breadcrumb included as part of the Yellow Door experience. It does not imply endorsement, affiliation, commissioning, curation, or participation by the artists.</p>
+  <p class="music-note">Encounter photos: Ren's Instagram post “Oh we do like to be beside the sea side”; post credits @jakewiiliams, @spaaaacey, and @chloeimbach. Credited, noncommercial demonstration under the project owner's fair-use claim. Individual photo credits remain unmapped; no merchandise permission is claimed.</p>
 </aside>
 
 <section id="game" aria-live="polite">
@@ -67,7 +68,7 @@
     script.src = src;
     script.async = false;
     script.onload = function () {
-      show(label + " loaded. Starting the next step…");
+      if (label !== "Yellow Door application") show(label + " loaded. Starting the next step…");
       next();
     };
     script.onerror = function () {
@@ -81,7 +82,7 @@
       show("Runtime error: Ink browser runtime loaded, but inkjs.Story is unavailable.");
       return;
     }
-    loadScript("app.js?v=20260923-6", "Yellow Door application", function () {
+    loadScript("app.js?v=20260927-3", "Yellow Door application", function () {
       if (typeof window.startYellowDoor !== "function") {
         show("Runtime error: Yellow Door application loaded, but its startup function is unavailable.");
       }

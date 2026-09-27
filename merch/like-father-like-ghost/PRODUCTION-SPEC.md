@@ -3,6 +3,11 @@
 ## Capsule system
 The capsule uses the existing Inpatient Corridors visual vocabulary: institutional grid, corridor geometry, evidence labels, restrained red, black/white field, and deliberate negative space.
 
+## Source and concept status
+The project owner identifies `Like Father Like Ghost1.png` in the Adobe workspace as artwork commissioned through a Fiverr gig. `Like Father Like Ghost2.png` and `Like Father Like Ghost3.png` are separate number graphics for the Violet's Revenge collection; do not combine them into this capsule by default. Dominique identifies the uploaded photographs as coming from Ren's Instagram post “Oh we do like to be beside the sea side,” which credits @jakewiiliams, @spaaaacey, and @chloeimbach. The Fiverr gig does not establish rights to those photographs. Treat their poster, hoodie, and journal mockups as credited, noncommercial demonstrations under the project owner's fair-use claim. This does not authorize sale, manufacturing, or product listings using the photos; individual photographer mapping is still open. Keep the phone number in private project records, not public concept attribution.
+
+Use the exact source artwork for production. AI-generated mockups that change the lettering or crop the design are visual experiments and are not print masters.
+
 ### LFLG-01 — Corridor Tee
 **Garment:** heavyweight black unisex tee
 **Primary placement:** large back print
