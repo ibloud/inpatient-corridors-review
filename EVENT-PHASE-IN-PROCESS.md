@@ -48,6 +48,17 @@ Restaurants, a retailer and a concert venue are not consumption spaces by virtue
 
 All stops operate independently; none has agreed to participate. Confirm travel and hours, and keep the family route's independent ending visible alongside this adult path.
 
+## One-tap navigation links (proposed stops)
+
+These Google Maps links open directions in the app or browser; they are not downloadable offline map files. Choose a travel mode, check the listed stops and confirm the actual event hours before departure. Mobile browsers support a limited number of intermediate stops, so the family evening transfer is a separate link.
+
+- [Family daytime: Mia → Mill City Museum](https://www.google.com/maps/dir/?api=1&origin=Minneapolis%20Institute%20of%20Art%2C%202400%203rd%20Ave%20S%2C%20Minneapolis%20MN&destination=Mill%20City%20Museum%2C%20704%20S%202nd%20St%2C%20Minneapolis%20MN)
+- [Optional family evening: Mill City Museum → Powderhorn Park](https://www.google.com/maps/dir/?api=1&origin=Mill%20City%20Museum%2C%20704%20S%202nd%20St%2C%20Minneapolis%20MN&destination=Powderhorn%20Park%2C%203400%2015th%20Ave%20S%2C%20Minneapolis%20MN) — separate trip for Barebones.
+- [Adult Minneapolis: Hell's Kitchen → Green Goods → Devil's Advocate → Cabooze](https://www.google.com/maps/dir/?api=1&origin=Hell's%20Kitchen%2C%2080%20S%209th%20St%2C%20Minneapolis%20MN&destination=The%20Cabooze%2C%20917%20Cedar%20Ave%20S%2C%20Minneapolis%20MN&waypoints=Green%20Goods%2C%20207%20S%209th%20St%2C%20Minneapolis%20MN%7CDevil's%20Advocate%2C%201070%20Nicollet%20Mall%2C%20Minneapolis%20MN)
+- [Adult from St. Paul: RISE → Hell's Kitchen → Devil's Advocate → Cabooze](https://www.google.com/maps/dir/?api=1&origin=RISE%20Dispensary%2C%202239%20Ford%20Pkwy%2C%20St%20Paul%20MN&destination=The%20Cabooze%2C%20917%20Cedar%20Ave%20S%2C%20Minneapolis%20MN&waypoints=Hell's%20Kitchen%2C%2080%20S%209th%20St%2C%20Minneapolis%20MN%7CDevil's%20Advocate%2C%201070%20Nicollet%20Mall%2C%20Minneapolis%20MN) — RISE is the alternative starting retailer, not an extra Minneapolis stop.
+
+The St. Paul and family evening legs are not downtown walking segments. Anyone impaired should use transit or a sober ride. Google Maps can render or omit waypoints depending on device; check the stop list before using navigation.
+
 ## How the event connects to Inpatient Corridors
 
 The event phase extends the same design concerns already documented in the project:
