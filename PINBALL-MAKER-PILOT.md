@@ -4,7 +4,7 @@
 
 ## Placement
 
-Inpatient Corridors owns the pilot's rules, playfield, original assets, contributor credits, and release decision. Loptr Lab's general training pathway may link to the reusable design, fabrication, software, and accessibility exercises after they are tested. PIXIE may serve as an optional, consented learning guide; it does not control the project or collect health profiles. A physical cabinet is a separate feasibility phase, not a prerequisite for the digital table.
+Inpatient Corridors owns the pilot's rules, playfield, original assets, contributor credits, and release decision. The [Loptr Lab maker pathway index](https://github.com/Loptr-Lab/training/blob/main/docs/tracks/maker-game-systems.md) may point to this proposed exercise now with explicit status; claims about learner outcomes require actual testing. PIXIE may serve as an optional, consented learning guide; it does not control the project or collect health profiles. A physical cabinet is a separate feasibility phase, not a prerequisite for the digital table.
 
 ## Veiled Dominion growth path
 
@@ -12,11 +12,7 @@ The digital table can test a portable Veiled Dominion systems vocabulary: pressu
 
 ## Related maker reference: Duet LED chessboard
 
-The founder supplied the text of the Loptr Lab Patreon [Hackaday Build](https://www.patreon.com/LoptrLab/posts/hackaday-build-163694370) post. It describes a **proposed adaptation of an existing LED chessboard walkthrough to Duet**, not a pinball cabinet design or a completed Duet build. The linked [video walkthrough](https://youtu.be/Z92TdhsAWD4) covers a four-part 3D-printed base, eight strips of eight under-board LEDs, an Arduino Nano control panel with ten tactile switches, USB 5V power distribution, edge-coordinate LEDs, a Raspberry Pi, serial level conversion, OLED status, and final assembly. The supplied account says the reference board can run local standard chess with Stockfish or networked two-board play.
-
-For Duet, the post proposes replacing the standard-chess referee with Duet's validate/apply/resolve rules pipeline, dropping Stockfish in favor of the planned two-human-player game, remapping LEDs for Radius of Ruin, Sanctuary, and Veiled states, and changing buttons to square-select and confirm. It identifies **standalone audio and accessibility** as new design work: speaker output, proximity-to-pitch mapping, and deterministic speech or recorded announcements. Hardware LEDs and buttons alone do not preserve browser screen-reader access.
-
-This is a useful *parallel* maker case study for power planning, control inputs, clear status signals, firmware-to-game boundaries, and accessibility testing. It is **not** the physical pinball implementation plan. A pinball cabinet needs its own playfield, flipper/coil safety, switches, controller, power and maintenance design. Do not move the Duet chessboard proposal into the pinball bill of materials or imply the Patreon author committed to either build. The Patreon post itself was inaccessible through public retrieval when this document was updated; the description here is attributed to the founder's supplied text, and the video has not been independently audited.
+The [Duet LED chessboard design study](https://github.com/Loptr-Lab/duet-solo-hackathon/blob/main/docs/design/LED-CHESSBOARD-DESIGN-STUDY.md) is a parallel, unbuilt software-to-hardware learning reference sourced from founder-supplied Patreon text. It is not a physical pinball plan; Duet owns its rules, accessibility requirements, hardware decisions, and provenance. Keep the chessboard components out of the pinball bill of materials: a cabinet needs its own playfield, flipper and coil safety design, switches, controller, power plan, and maintenance plan.
 
 ## Learning question
 
@@ -56,4 +52,4 @@ The minimum team is a rules designer, digital table author, accessibility/playte
 
 ## Next decision
 
-Approve a paper design and a small digital table exercise as an Inpatient Corridors pilot. Revisit inclusion in the general Loptr Lab curriculum after learner testing; spin out a dedicated repository only when a maintainable digital release or funded hardware team exists.
+Proposed next decision: approve a paper design and small digital table exercise as an Inpatient Corridors pilot. The general Loptr Lab training index can link to the proposed exercise now, while outcome claims await learner testing; spin out a dedicated repository only when a maintainable digital release or funded hardware team exists.
