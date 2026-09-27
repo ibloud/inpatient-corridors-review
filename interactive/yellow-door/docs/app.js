@@ -18,10 +18,29 @@ const musicLinks = [
 ];
 
 const storyContainer = document.getElementById("story");
+const gameContainer = document.getElementById("game");
 const choicesContainer = document.getElementById("choices");
 const errorContainer = document.getElementById("error");
 const stats = document.getElementById("stats");
 const debug = new URLSearchParams(location.search).get("debug") === "1";
+
+function scrollStoryToTop() {
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    gameContainer.scrollIntoView({behavior:"smooth", block:"start"});
+  } else {
+    gameContainer.scrollTo({top:0, behavior:"smooth"});
+  }
+}
+
+function scrollStoryToLatest(target) {
+  if (!target) return;
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    target.scrollIntoView({behavior:"smooth", block:"nearest"});
+  } else {
+    const distance = target.getBoundingClientRect().bottom - gameContainer.getBoundingClientRect().bottom;
+    if (distance > 0) gameContainer.scrollBy({top:distance + 18, behavior:"smooth"});
+  }
+}
 
 function fail(message) {
   errorContainer.hidden = false;
@@ -118,7 +137,7 @@ function renderMusicEncounter() {
     musicIndex += 1;
     if (musicIndex < musicEncounters.length) {
       renderMusicEncounter();
-      window.scrollTo({top:0, behavior:"smooth"});
+      scrollStoryToTop();
     } else {
       startInkStory();
     }
@@ -178,7 +197,7 @@ function renderPromo() {
   direct.appendChild(watch);
   section.appendChild(direct);
   storyContainer.appendChild(section);
-  section.scrollIntoView({behavior:"smooth", block:"start"});
+  scrollStoryToTop();
 }
 
 function continueStory(shouldScroll) {
@@ -240,9 +259,7 @@ function continueStory(shouldScroll) {
 
   if (shouldScroll) {
     const target = choicesContainer.lastElementChild || storyContainer.lastElementChild;
-    if (target && typeof target.scrollIntoView === "function") {
-      target.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
+    scrollStoryToLatest(target);
   }
 }
 
@@ -263,7 +280,7 @@ function startInkStory() {
       continueStory(false);
       started = true;
       errorContainer.hidden = true;
-      window.scrollTo({top:0, behavior:"smooth"});
+      scrollStoryToTop();
     })
     .catch(function (error) {
       fail("The corridor could not open. " + (error && error.message ? error.message : String(error)));

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Inpatient Corridors: The Yellow Door — interactive alpha">
 <title>The Yellow Door — Inpatient Corridors</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20260927-4">
 <script src="../../../assets/pixie.js"></script>
 </head>
 <body>
@@ -15,6 +15,13 @@
 <h1>The Yellow Door</h1>
 <p class="intro">A 15–20 minute interactive narrative about uncertainty, participation, support, and process.</p>
 </header>
+
+<div class="experience">
+<section id="game" aria-label="The Yellow Door story" aria-live="polite" tabindex="0">
+<div id="story"></div>
+<div id="choices" aria-label="Story choices"></div>
+<div id="error" role="alert">Loading the Yellow Door runtime…</div>
+</section>
 
 <aside class="music-breadcrumb" aria-labelledby="music-title">
   <p class="music-kicker">INDEPENDENT MUSICAL BREADCRUMB</p>
@@ -33,12 +40,7 @@
   <p class="music-note">This is an independent listening breadcrumb included as part of the Yellow Door experience. It does not imply endorsement, affiliation, commissioning, curation, or participation by the artists.</p>
   <p class="music-note">Encounter photos: Ren's Instagram post “Oh we do like to be beside the sea side”; post credits @jakewiiliams, @spaaaacey, and @chloeimbach. Credited, noncommercial demonstration under the project owner's fair-use claim. Individual photo credits remain unmapped; no merchandise permission is claimed.</p>
 </aside>
-
-<section id="game" aria-live="polite">
-<div id="story"></div>
-<div id="choices" aria-label="Story choices"></div>
-<div id="error" role="alert">Loading the Yellow Door runtime…</div>
-</section>
+</div>
 <footer>
 <a href="../../">Back to project</a>
 <span id="stats" hidden></span>
@@ -82,7 +84,7 @@
       show("Runtime error: Ink browser runtime loaded, but inkjs.Story is unavailable.");
       return;
     }
-    loadScript("app.js?v=20260927-3", "Yellow Door application", function () {
+    loadScript("app.js?v=20260927-4", "Yellow Door application", function () {
       if (typeof window.startYellowDoor !== "function") {
         show("Runtime error: Yellow Door application loaded, but its startup function is unavailable.");
       }
