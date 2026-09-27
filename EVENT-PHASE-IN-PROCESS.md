@@ -59,6 +59,16 @@ These Google Maps links open directions in the app or browser; they are not down
 
 The St. Paul and family evening legs are not downtown walking segments. Anyone impaired should use transit or a sober ride. Google Maps can render or omit waypoints depending on device; check the stop list before using navigation.
 
+## Optional start-of-day buddy check-in
+
+At the start of any route, participants can agree privately with a trusted person on a meeting point, a check-in schedule, and a missed-check-in response. For children, a parent or guardian manages the plan. It is available without playing a game or joining Discord. No event organizer collects a location feed, map link, contact list, or minor's whereabouts.
+
+- **Apple Find My:** share with a trusted person if desired, and [stop sharing](https://support.apple.com/guide/iphone/share-your-location-iph01954dc44/ios) when the outing ends.
+- **Google Maps:** optionally [share a timed location or trip progress](https://support.google.com/maps/answer/15437054?co=GENIE.Platform%3DiOS&hl=en) with that person and stop sharing afterward. Check link recipients before sending.
+- **Without an app:** call or text at departure, the route ending and arrival home. Agree who calls first if a check-in is missed. For immediate emergencies use 911.
+
+Do not publish personal location links in Discord, on the event page or in public group chats. A map is not an emergency response service; phone battery and connectivity may fail. The named event organizer and emergency-contact workflow remain unresolved before any hosted event is announced.
+
 ## How the event connects to Inpatient Corridors
 
 The event phase extends the same design concerns already documented in the project:
