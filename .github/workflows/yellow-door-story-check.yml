@@ -1,6 +1,12 @@
 name: Check Yellow Door story
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "interactive/yellow-door/story/**"
+      - "interactive/yellow-door/tests/**"
+      - ".github/workflows/yellow-door-story-check.yml"
   pull_request:
     paths:
       - "interactive/yellow-door/story/**"
