@@ -1,0 +1,26 @@
+name: Check Yellow Door story
+
+on:
+  pull_request:
+    paths:
+      - "interactive/yellow-door/story/**"
+      - "interactive/yellow-door/tests/**"
+      - ".github/workflows/yellow-door-story-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  reachability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Ink runtime and compiler
+        run: npm install --no-save --ignore-scripts inkjs@2.4.0
+      - name: Compile source with knot visit counts
+        run: npx --no-install inkjs-compiler -c -o /tmp/yellow-door-story.json interactive/yellow-door/story/yellow-door-alpha.ink
+      - name: Explore story outcomes
+        run: node interactive/yellow-door/tests/reachability.test.js /tmp/yellow-door-story.json
