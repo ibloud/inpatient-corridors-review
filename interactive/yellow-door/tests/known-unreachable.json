@@ -1,0 +1,8 @@
+{
+  "ending_builder": {
+    "reason": "The runtime search found zero completed paths through this knot in the current score-bounded state model.",
+    "owner": "Dominique / Loptr Lab",
+    "removal_condition": "Remove this entry when a story change makes ending_builder reachable and the test confirms it.",
+    "baseline_run": "https://github.com/ibloud/inpatient-corridors-review/actions/runs/36364857352"
+  }
+}
