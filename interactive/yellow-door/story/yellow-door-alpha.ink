@@ -15,6 +15,7 @@ VAR Observed = false
 VAR SupportedPerson = false
 VAR ChallengedAuthority = false
 VAR MidpointRevealSeen = false
+VAR WhatRemains = ""
 
 -> start
 
@@ -298,7 +299,7 @@ But uncertainty becomes smaller.
 
 + Search old notices.
     -> archive
-+ Ask around anonymously.
+* Ask around anonymously.
     -> rumor
 + Share information with others.
     -> collective_action
@@ -382,7 +383,7 @@ But nobody stands alone.
 
 + Develop shared questions.
     -> collective_action
-+ Ask Mara what she needs.
+* Ask Mara what she needs.
     -> quiet_support
 
 === challenge_path ===
@@ -538,20 +539,20 @@ Sometimes avoiding conflict protects your energy.
 
 Sometimes it leaves questions unanswered.
 
--> determine_ending
+-> pressure_epilogue
 
 === determine_ending ===
 {
 - Support >= 3 && Resistance >= 2 && Knowledge >= 3 && Participation >= 5 && Trust >= 2:
     -> ending_community
+- Participation >= 5 && Trust >= 3:
+    -> ending_builder
 - Support >= 4 && Support >= Resistance + 1 && Support >= Knowledge:
     -> ending_caretaker
 - Resistance >= 4 && Resistance > Support:
     -> ending_instigator
 - Knowledge >= 5 && Investigated == true && Knowledge > Support:
     -> ending_researcher
-- Participation >= 5 && Trust >= 3:
-    -> ending_builder
 - else:
     -> ending_observer
 }
@@ -718,16 +719,22 @@ The yellow door is gone.
 What remains?
 
 + Being heard.
+    ~ WhatRemains = "Being heard."
     -> THE_END
 + Understanding why.
+    ~ WhatRemains = "Understanding why."
     -> THE_END
 + Helping others.
+    ~ WhatRemains = "Helping others."
     -> THE_END
 + Challenging decisions.
+    ~ WhatRemains = "Challenging decisions."
     -> THE_END
 + Building trust.
+    ~ WhatRemains = "Building trust."
     -> THE_END
 
 === THE_END ===
+What remains: {WhatRemains}
 Thank you for participating.
 -> END
