@@ -1,6 +1,6 @@
 // Explore compiled Ink with the real inkjs runtime, without modifying the story.
-// Sticky choices create unbounded scores. States beyond +/-8 share a search key;
-// this checks reachable outcomes within that score abstraction, not every raw score.
+// Score-farming choices are once-only, so the current story has finite scores.
+// Keep every raw score in the search key to cover all reachable runtime states.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -12,7 +12,6 @@ const exceptions = require('./known-unreachable.json');
 const variables = [...source.matchAll(/^VAR\s+(\w+)\s*=/gm)].map(match => match[1]);
 const endings = [...source.matchAll(/^===\s+(ending_\w+)\s+===/gm)].map(match => match[1]);
 const MAX_STATES = 30000;
-const SCORE_BOUND = 8;
 
 assert.ok(variables.length > 0, 'No story variables found in the Ink source');
 assert.ok(endings.length > 0, 'No ending knots found in the Ink source');
@@ -41,8 +40,7 @@ while (queue.length) {
   const visited = endings.filter(knot => story.state.VisitCountAtPathString(knot) > 0);
   const signature = JSON.stringify({
     variables: variables.map(name => {
-      const value = story.variablesState.$(name);
-      return typeof value === 'number' ? Math.max(-SCORE_BOUND, Math.min(SCORE_BOUND, value)) : value;
+      return story.variablesState.$(name);
     }),
     choices: choices.map(choice => choice.pathStringOnChoice),
     visited,
@@ -68,7 +66,7 @@ while (queue.length) {
 }
 
 assert.ok(finished > 0, 'No finished runs reached THE_END');
-console.log(`Explored ${explored} distinct score-bounded states (+/-${SCORE_BOUND}); ${finished} finished runs.`);
+console.log(`Explored ${explored} distinct raw-score states; ${finished} finished runs.`);
 for (const ending of endings) console.log(`${ending}: ${counts[ending]} finished runs`);
 
 for (const ending of endings) {
