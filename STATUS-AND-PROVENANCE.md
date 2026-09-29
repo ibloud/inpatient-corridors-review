@@ -44,3 +44,8 @@ Any future contributor receives written scope, credit, ownership/licensing, comp
 On September 12, 2026, Dominique Devereaux / Loptr Lab sent the project to the official general-inquiries address published by ChrisWebby.com. This verifies outreach only; it does not establish personal receipt by Chris, review, interest, approval, endorsement, or participation.
 
 See [OUTREACH-RECORD.md](OUTREACH-RECORD.md) for the preserved message and contact-routing rationale.
+
+
+## AI-assisted maintenance record
+
+- **2026-09-29:** At Dominique Devereaux’s explicit request, ChatGPT replaced two uncleared third-party photos on the Like Father Like Ghost merch concept page with existing project-owned mockup artwork. The change was committed under the maintainer identity before the AI identity split; the original image files were left untouched.
