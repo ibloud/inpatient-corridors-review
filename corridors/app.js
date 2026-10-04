@@ -32,8 +32,8 @@
       let next = i;
       if (event.key === 'ArrowLeft') next = i % 5 ? i - 1 : i;
       else if (event.key === 'ArrowRight') next = i % 5 < 4 ? i + 1 : i;
-      else if (event.key === 'ArrowUp') next = Math.max(0, i - 5);
-      else if (event.key === 'ArrowDown') next = Math.min(24, i + 5);
+      else if (event.key === 'ArrowUp') next = i >= 5 ? i - 5 : i;
+      else if (event.key === 'ArrowDown') next = i < 20 ? i + 5 : i;
       else if (event.key === 'Home') next = Math.floor(i / 5) * 5;
       else if (event.key === 'End') next = Math.floor(i / 5) * 5 + 4;
       else return;
@@ -57,7 +57,7 @@
   function render() {
     const p = state.players[state.active], locked = !!state.pending || !!state.outcome;
     $('round').textContent = state.round; $('pressure').textContent = state.pressure + ' / 10'; $('phase').textContent = E.phase(state);
-    $('turn').textContent = state.outcome ? 'Game ended' : 'Player ' + (state.active + 1) + ' · ' + state.actions + ' actions left';
+    $('turn').textContent = state.outcome ? 'Game ended' : 'Player ' + (state.active + 1) + ' · ' + state.actions + (state.actions === 1 ? ' action left' : ' actions left');
     cells.forEach((button, i) => {
       const occupants = state.players.flatMap((pawn, j) => pawn.position === i ? ['P' + (j + 1)] : []);
       const kind = i === E.VOID ? 'Void' : state.barriers.includes(i) ? 'Barrier' : E.EXITS.includes(i) ? 'Exit' : 'Open';

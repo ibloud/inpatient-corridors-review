@@ -74,9 +74,11 @@ function ui() {
 test('keyboard board has one tab stop, arrows explore without taking a game action', () => {
   const { w, d } = ui(), cells = [...d.querySelectorAll('.cell')];
   assert.equal(cells.filter(b => b.tabIndex === 0).length, 1); cells[2].focus();
+  for (const [cell, key] of [[2, 'ArrowUp'], [22, 'ArrowDown'], [0, 'ArrowLeft'], [4, 'ArrowRight']]) { cells[cell].focus(); cells[cell].dispatchEvent(new w.KeyboardEvent('keydown', { key, bubbles: true, cancelable: true })); assert.equal(d.activeElement, cells[cell]); }
+  cells[2].focus();
   cells[2].dispatchEvent(new w.KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true, cancelable: true }));
   assert.equal(d.activeElement, cells[1]); assert.equal(cells.filter(b => b.tabIndex === 0).length, 1);
-  assert.match(d.getElementById('turn').textContent, /2 actions/); cells[1].click(); assert.match(d.getElementById('turn').textContent, /1 actions/);
+  assert.match(d.getElementById('turn').textContent, /2 actions/); cells[1].click(); assert.match(d.getElementById('turn').textContent, /1 action/);
 });
 test('save is explicit, Undo restores state, resume and restart require confirmation', () => {
   const { w, d, click } = ui(); const key = 'loptr.corridors.cooperative.v1';
@@ -105,7 +107,7 @@ test('UI consent handoff disables actions and save; refusal consumes only the as
   w.localStorage.setItem('loptr.corridors.cooperative.v1', JSON.stringify(s)); click('resume'); click('confirm-restart'); click('request-care');
   assert.equal(d.activeElement.id, 'consent-title'); assert.equal(d.getElementById('save').disabled, true);
   assert.equal(d.querySelector('[data-action="gather"]').disabled, true); assert.equal(d.getElementById('consent-panel').hidden, false);
-  click('decline-care'); assert.equal(d.getElementById('consent-panel').hidden, true); assert.match(d.getElementById('turn').textContent, /1 actions/); assert.match(d.getElementById('player-status').textContent, /Tension 4/);
+  click('decline-care'); assert.equal(d.getElementById('consent-panel').hidden, true); assert.match(d.getElementById('turn').textContent, /1 action/); assert.match(d.getElementById('player-status').textContent, /Tension 4/);
 });
 test('complete game through UI displays shared ending and Undo can reopen it', () => {
   const { d, click } = ui();
