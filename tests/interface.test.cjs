@@ -28,6 +28,14 @@ test('PIXIE resolves local navigation consistently from nested pages, opens once
     assert.equal(d.querySelector('dialog').open, true);
     assert.equal(d.activeElement.id, 'pixie-close');
     assert.equal(b.getAttribute('aria-expanded'), 'true');
+    const backward = new w.KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true, cancelable: true });
+    d.getElementById('pixie-close').dispatchEvent(backward);
+    assert.equal(backward.defaultPrevented, true);
+    assert.equal(d.activeElement, d.querySelector('.pixie-grid a:last-child'));
+    const forward = new w.KeyboardEvent('keydown', { key: 'Tab', bubbles: true, cancelable: true });
+    d.activeElement.dispatchEvent(forward);
+    assert.equal(forward.defaultPrevented, true);
+    assert.equal(d.activeElement.id, 'pixie-close');
     const links = [...d.querySelectorAll('.pixie-grid a')].map(a => a.href);
     assert.ok(links.includes(url + 'VARIANT-RULES.html'));
     assert.ok(links.includes(url + 'RIGHTS-AND-SAFETY.html'));
