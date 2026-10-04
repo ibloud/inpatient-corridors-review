@@ -1,18 +1,143 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prototype Readiness and Shared-Benefit Assessment</title>
-  <meta http-equiv="refresh" content="0; url=https://github.com/ibloud/inpatient-corridors-review/blob/main/PROTOTYPE-ASSESSMENT.md">
-  <link rel="canonical" href="https://github.com/ibloud/inpatient-corridors-review/blob/main/PROTOTYPE-ASSESSMENT.md">
-</head>
-<body>
-  <main>
-    <h1>Prototype Readiness and Shared-Benefit Assessment</h1>
-    <p>This document is available at
-      <a href="https://github.com/ibloud/inpatient-corridors-review/blob/main/PROTOTYPE-ASSESSMENT.md">PROTOTYPE-ASSESSMENT.md</a>.
-    </p>
-  </main>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prototype Readiness and Shared-Benefit Assessment — Break the Grid</title>
+<link rel="stylesheet" href="assets/interface.css"><script defer src="assets/pixie.js"></script></head>
+<body class="document-page"><a class="skip-link" href="#main">Skip to main content</a>
+<nav class="return-nav" aria-label="Project navigation"><a href="./">← Break the Grid</a><a href="review/">Guided review</a><a href="STATUS-AND-PROVENANCE.html">Status &amp; provenance</a></nav>
+<main id="main" class="document-content" tabindex="-1"><p class="document-label">Project record · Inpatient Corridors</p>
+<details class="document-toc"><summary>On this page</summary><ul><li><a href="#section-1">Decision</a></li><li><a href="#section-2">Existing gameplay loop</a></li><li><a href="#section-3">What is already specified</a></li><li><a href="#section-4">Minimum Duet implementation decisions</a></li><li><a href="#section-5">Chris-driven direction now specified</a></li><li><a href="#section-6">Shared goal</a></li><li><a href="#section-7">Benefits by participant</a></li><li><a href="#section-8">Conditions for mutual benefit</a></li><li><a href="#section-9">Readiness summary</a></li></ul></details>
+<article><h1>Prototype Readiness and Shared-Benefit Assessment</h1>
+<h2 id="section-1">Decision</h2>
+<p>The design contains enough material for an immediate paper playtest and enough system definition to begin a two-player Duet implementation. It is not yet ready for public release or award submission.</p>
+<h2 id="section-2">Existing gameplay loop</h2>
+<ol>
+<li>A player chooses an action.</li>
+<li>Personal Tension and shared System Pressure change.</li>
+<li>Thresholds transform the board state.</li>
+<li>Players choose between individual control and cooperation.</li>
+<li>The game reaches a Control, Continuum, or System Collapse ending.</li>
+</ol>
+<h2 id="section-3">What is already specified</h2>
+<ul>
+<li>Player count and setup</li>
+<li>Turn actions</li>
+<li>Personal Tension and shared System Pressure</li>
+<li>Pressure tests and Outbursts</li>
+<li>Trauma and Support tokens</li>
+<li>Three escalating board phases</li>
+<li>Six community-care interventions</li>
+<li>Neutral 16-card pressure/support module with two-path choices</li>
+<li>Competitive, cooperative, and collapse endings</li>
+<li>Debrief questions</li>
+<li>Safety and consent boundaries</li>
+</ul>
+<h2 id="section-4">Minimum Duet implementation decisions</h2>
+<table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Minimum decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial format</td>
+<td>Implement two players first; evaluate four players later</td>
+</tr>
+<tr>
+<td>Board mapping</td>
+<td>Identify current Duet squares used for the Void and player sectors</td>
+</tr>
+<tr>
+<td>Piece mapping</td>
+<td>Map Prime, Warden, Guide, and Traveler to existing Duet pieces</td>
+</tr>
+<tr>
+<td>State display</td>
+<td>Display Tension, System Pressure, Trauma, Support, and current phase</td>
+</tr>
+<tr>
+<td>Timing</td>
+<td>Add a round counter and deterministic phase transitions</td>
+</tr>
+<tr>
+<td>Consent</td>
+<td>Provide an explicit accept/refuse interaction for Clinical Care</td>
+</tr>
+<tr>
+<td>Shared funding</td>
+<td>Let both players contribute Support to Care cards</td>
+</tr>
+<tr>
+<td>Balance</td>
+<td>Playtest thresholds of 6, 8, and 10 and all card costs; treat them as provisional</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Collect anonymous program feedback, never mental-health profiles</td>
+</tr>
+</tbody>
+</table>
+<p>The first digital prototype should remain a two-player Duet scenario. Four-player support adds networking, interface, and balance complexity without improving the first test of the central mechanic.</p>
+<h2 id="section-5">Chris-driven direction now specified</h2>
+<p>The repository now contains a documented, reviewable hypothesis grounded in Chris Webby's public discography. The proposed layer adds Own Your Move, Call It Plainly, Crew Check, Receipts, Revision Cycle, and Independent Exit.</p>
+<p>These mechanics are original Loptr Lab adaptations. The thematic connection is interpretive until Chris reviews it. No music, lyrics, likeness, voice model, or protected artwork is required to test them.</p>
+<h2 id="section-6">Shared goal</h2>
+<blockquote>
+<p>Build and test an accessible game in which players discover that managing individual behavior cannot repair a system that continually manufactures crisis.</p>
+</blockquote>
+<h2 id="section-7">Benefits by participant</h2>
+<table>
+<thead>
+<tr>
+<th>Participant</th>
+<th>Legitimate benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chris Webby</td>
+<td>A separate, optional opportunity to review or participate on his own terms, without being presented as a clinician or asked to mediate another relationship</td>
+</tr>
+<tr>
+<td>Loptr Lab</td>
+<td>Evidence that Veiled Dominion can translate cultural narratives into playable systems</td>
+</tr>
+<tr>
+<td>Duet</td>
+<td>A scenario demonstrating dynamic rules, cooperation, accessibility, and facilitated play</td>
+</tr>
+<tr>
+<td>Players</td>
+<td>An experience showing how orderly systems can generate pressure and why escape without support is incomplete</td>
+</tr>
+<tr>
+<td>Inpatient</td>
+<td>A possible cultural extension based on participation and reflection rather than merchandise alone</td>
+</tr>
+<tr>
+<td>Community partners</td>
+<td>A reusable discussion tool shaped with them and credited through verifiable contribution</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-8">Conditions for mutual benefit</h2>
+<ul>
+<li>Usefulness, consent, and measurable impact precede award positioning.</li>
+<li>Interest, silence, or private review never implies affiliation.</li>
+<li>Chris makes an independent participation decision. Ren is not a participant in the continuing project.</li>
+<li>Rights, compensation, approval, withdrawal, and credit are negotiated before any artist participates or protected material is used.</li>
+<li>The prototype is presented as art and facilitated engagement, not therapy or clinical research.</li>
+<li>Award credit follows completed, verifiable work.</li>
+</ul>
+<h2 id="section-9">Readiness summary</h2>
+<ul>
+<li>Paper playtest: <strong>ready</strong></li>
+<li>Two-player Duet implementation: <strong>ready to begin</strong></li>
+<li>Four-player digital implementation: <strong>defer until the core loop is validated</strong></li>
+<li>Public release: <strong>not ready; requires testing, partners, permissions, and accessibility review</strong></li>
+<li>Award submission: <strong>not ready; requires completed work and documented impact</strong></li>
+</ul>
+</article>
+<footer><a href="https://github.com/ibloud/inpatient-corridors-review/blob/main/PROTOTYPE-ASSESSMENT.md">Read the Markdown source</a> · <a href="./#archive">All project documents</a></footer>
+</main></body></html>
