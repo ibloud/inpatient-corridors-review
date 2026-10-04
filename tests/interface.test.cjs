@@ -87,7 +87,7 @@ for (const name of ['VARIANT-RULES', 'REVIEW-DECISION', 'CHRIS-WEBBY-DISCOGRAPHY
     assert.equal(d.querySelector('meta[http-equiv="refresh"]'), null);
     assert.equal(d.querySelectorAll('h1').length, 1);
     assert.ok(d.querySelector('main article').textContent.length > 100);
-    assert.equal(d.querySelector('script[src]').getAttribute('src'), 'assets/pixie.js');
+    assert.equal(d.querySelector('script[src]').getAttribute('src'), 'assets/pixie.js?v=20261004-2');
     for (const a of d.querySelectorAll('a[href^="#"]')) assert.ok(d.getElementById(a.hash.slice(1)), a.href);
     dom.window.close();
   });
