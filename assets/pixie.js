@@ -23,6 +23,7 @@ const close=document.getElementById("pixie-close");
 let previousFocus;
 b.addEventListener("click",()=>{if(d.open)return;previousFocus=document.activeElement;d.showModal();b.setAttribute("aria-expanded","true");close.focus()});
 close.addEventListener("click",()=>d.close());
+d.addEventListener("keydown",e=>{if(e.key!=="Tab")return;const controls=[...d.querySelectorAll("button,a[href]")];const first=controls[0],last=controls[controls.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
 d.addEventListener("click",e=>{if(e.target===d){const rect=d.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)d.close()}});
 d.addEventListener("close",()=>{b.setAttribute("aria-expanded","false");if(previousFocus?.isConnected)previousFocus.focus()});
 })();
