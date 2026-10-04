@@ -7,9 +7,9 @@ const root = path.resolve(__dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 const url = 'https://ibloud.github.io/inpatient-corridors-review/';
 function page(p) { return new JSDOM(read(p), { url: url + p, runScripts: 'outside-only' }); }
-test('homepage has distinct working rules, story and review entries before historical context', () => {
+test('homepage has distinct working cooperative game, story and review entries before historical context', () => {
   const { document: d } = page('index.html').window;
-  assert.deepEqual([...d.querySelectorAll('.start-card')].map(a => a.getAttribute('href')), ['VARIANT-RULES.html', 'interactive/yellow-door/docs/', 'review/']);
+  assert.deepEqual([...d.querySelectorAll('.start-card')].map(a => a.getAttribute('href')), ['corridors/', 'interactive/yellow-door/docs/', 'review/']);
   assert.equal(d.querySelector('iframe').closest('details').id, 'writing');
   for (const a of d.querySelectorAll('a[href^="#"]')) assert.ok(d.getElementById(a.hash.slice(1)), a.href);
 });
