@@ -14,7 +14,7 @@
   <meta property="og:image:alt" content="Break the Grid — Loptr Lab project artwork" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://ibloud.github.io/inpatient-corridors-review/assets/social-preview.png" />
-  <style>
+    <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -323,52 +323,29 @@
     footer a { font-size: 0.82rem; color: var(--dim); }
     footer a:hover { color: var(--text); }
   </style>
+<link rel="stylesheet" href="assets/interface.css" />
 <script defer src="assets/pixie.js"></script>
 </head>
 <body>
-  <div class="page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <main class="page" id="main" tabindex="-1">
 
     <header>
       <h1>Break the Grid</h1>
-      <p class="header-sub">An independent Loptr Lab systems prototype</p>
+      <p class="header-sub">Inpatient Corridors · An independent Loptr Lab systems prototype</p>
+      <p class="header-intro">Explore how a community can change a system built around pressure. Start with the paper-playtest rules, try a separate browser story, or help review the work.</p>
       <hr class="header-rule" />
     </header>
 
-    <section class="ecosystem-front-door" aria-label="ibloud.xyz ecosystem">
-      <div class="ecosystem-brand">
-        <strong>ibloud.xyz</strong>
-        <span>One identity · tools open separately</span>
-      </div>
-      <div class="path-kicker">Try the Path</div>
-      <div class="path-grid">
-        <a class="path-card" href="#writing"><strong>Writing</strong><span>Public work and verified records</span></a>
-        <a class="path-card" href="#archive"><strong>Archive</strong><span>Research, provenance, and history</span></a>
-        <a class="path-card" href="#play"><strong>Play</strong><span>Interactive experiments</span></a>
-        <a class="path-card" href="#live"><strong>Live</strong><span>Events and current phases</span></a>
-        <a class="path-card" href="review/"><strong>Review</strong><span>Follow an interactive mentor/advisor track</span></a>
-        <a class="path-card" href="shop/"><strong>Shop</strong><span>Artifacts / Break the Grid capsule</span></a>
-      </div>
-    </section>
-
-    <!-- Behind the scenes documentary -->
-    <div id="writing" class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/JadrrdwzO1U"
-        title="Inpatient — Behind the Scenes Documentary"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <div class="action-row">
-      <a class="btn-primary" href="VARIANT-RULES.html">Review the prototype</a>
-      <a class="btn-secondary" href="STATUS-AND-PROVENANCE.html">Status &amp; provenance</a>
-      <a class="btn-secondary" href="review/">Mentor / advisor review</a>
-    </div>
-
-    <div style="text-align:center; margin-bottom: 1.5rem;">
-      <div class="badge">Active Loptr Lab prototype · Chris Webby invited to review independently · Ren is not a participant</div>
-    </div>
+    <nav class="start-paths" aria-label="Start here">
+      <a class="start-card" href="VARIANT-RULES.html"><span class="start-label">Paper-playtest rules</span><strong>Explore Inpatient Corridors</strong><span>Read the chess-inspired Break the Grid scenario and its current rules.</span><b>Read the rules →</b></a>
+      <a class="start-card" href="interactive/yellow-door/docs/"><span class="start-label">Separate browser story · Alpha</span><strong>Play The Yellow Door</strong><span>Try the Ink narrative used in our interactive learning track.</span><b>Open the story →</b></a>
+      <a class="start-card" href="review/"><span class="start-label">Guided feedback</span><strong>Find your review route</strong><span>Choose mechanics, accessibility, safety, rights, or a broad review.</span><b>Start a review →</b></a>
+    </nav>
+    <p class="project-status">Independent prototype · Chris Webby invited to review independently · Ren is not a participant.</p>
+    <nav class="section-nav" aria-label="On this page">
+      <a href="#play">Learn</a><a href="#live">Events</a><a href="#shop">Artifacts</a><a href="#writing">Background</a><a href="#archive">Documents</a>
+    </nav>
 
     <p>
       This independent Loptr Lab prototype explores institutional pressure, autonomy, community care, and system redesign through a concrete question:
@@ -460,6 +437,12 @@
     </div>
     <p style="font-size:0.8rem; color:var(--dim); margin-top:0.5rem;">Made Sick is an independent Loptr Lab initiative — not part of the Chris Webby review, not affiliated with Ren, and not an Inpatient deliverable. Interest is not consent. Inspiration is not affiliation.</p>
 
+    <details class="background" id="writing">
+      <summary>Project background, review invitation &amp; proposed pilot</summary>
+      <div class="disclosure-content">
+      <p>Historical reference: the documentary below is external context, not a playable prototype or evidence of artist participation.</p>
+      <div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/JadrrdwzO1U" title="ASYLUM — documentary, historical artist reference" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+      <p><a href="https://www.youtube.com/watch?v=JadrrdwzO1U" target="_blank" rel="noreferrer">Watch the documentary on YouTube (opens a new tab)</a></p>
     <h2>If Chris drives the direction</h2>
     <p>The proposed experience becomes an independent-artist pressure lab: speak plainly, test inherited rules, own the consequences of rupture, build support without surrendering agency, and preserve a record that improves the next attempt. This is Loptr Lab's interpretation for Chris to approve, correct, or reject.</p>
 
@@ -511,8 +494,12 @@
     </p>
     <p>No award, nomination, eligibility, or individual credit is guaranteed. No submission should be made without written approval from the credited parties and evidence that the public work occurred.</p>
 
+      </div>
+    </details>
+
     <div id="archive"></div>
-    <h2>Repository documents</h2>
+    <h2>Project documents</h2>
+    <p>Start with <a href="STATUS-AND-PROVENANCE.html">status and provenance</a>, then choose the record you need.</p>
 
     <div class="doc-grid">
       <a class="doc-link" href="ORIGINAL-VARIANT-CONCEPT.html">
@@ -591,6 +578,7 @@
       <span>Loptr Lab · Break the Grid · Independent prototype</span>
       <a href="https://github.com/ibloud/inpatient-corridors-review/edit/main/README.md">Improve this page →</a>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
+
