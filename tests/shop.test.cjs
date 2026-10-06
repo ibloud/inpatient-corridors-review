@@ -9,6 +9,20 @@ function page() {
   for (const script of dom.window.document.querySelectorAll('script:not([src]):not([type])')) dom.window.eval(script.textContent);
   return dom;
 }
+test('Mortis breathing can be paused and resumed without moving focus', () => {
+  const dom = page(), d = dom.window.document, button = d.getElementById('sigil-pause');
+  assert.equal(button.hidden, false);
+  assert.equal(d.getElementById('mortis-sigil').getAttribute('role'), 'img');
+  button.focus(); button.click();
+  assert.equal(button.getAttribute('aria-pressed'), 'true');
+  assert.equal(button.textContent, 'Resume breathing');
+  assert.equal(d.getElementById('mortis-sigil').classList.contains('paused'), true);
+  assert.equal(d.activeElement, button);
+  button.click();
+  assert.equal(button.getAttribute('aria-pressed'), 'false');
+  assert.equal(d.getElementById('mortis-sigil').classList.contains('paused'), false);
+  dom.window.close();
+});
 test('catalog links to existing Squarespace products, with concepts kept in the archive', () => {
   const dom = page(), d = dom.window.document;
   const cards = [...d.querySelectorAll('#catalog .product')];
