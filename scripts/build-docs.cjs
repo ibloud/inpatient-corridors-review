@@ -28,9 +28,24 @@ for (const name of documents) {
   }
   const body = md.renderer.render(tokens, md.options, {});
   const toc = sections.length ? `<details class="document-toc"><summary>On this page</summary><ul>${sections.map(s => `<li><a href="#${s.id}">${escape(s.title)}</a></li>`).join('')}</ul></details>` : '';
+  const url = 'https://ibloud.github.io/inpatient-corridors-review/' + name + '.html';
+  const description = (title + '. Project documentation for Break the Grid, an independent Loptr Lab systems prototype.').slice(0, 190);
+  const structuredData = JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', name: title + ' — Break the Grid', url, description }).replace(/</g, '\\u003c');
+  const seo = `<link rel="canonical" href="${escape(url)}">
+<meta name="description" content="${escape(description)}">
+<meta property="og:title" content="${escape(title)} — Break the Grid">
+<meta property="og:description" content="${escape(description)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${escape(url)}">
+<meta property="og:site_name" content="Break the Grid">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${escape(title)} — Break the Grid">
+<meta name="twitter:description" content="${escape(description)}">
+<script type="application/ld+json">${structuredData}</script>`;
   const output = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${escape(title)} — Break the Grid</title>
+${seo}
 <link rel="stylesheet" href="assets/interface.css"><script defer src="assets/pixie.js?v=20261004-2"></script></head>
 <body class="document-page"><a class="skip-link" href="#main">Skip to main content</a>
 <nav class="return-nav" aria-label="Project navigation"><a href="./">← Break the Grid</a><a href="review/">Guided review</a><a href="STATUS-AND-PROVENANCE.html">Status &amp; provenance</a></nav>

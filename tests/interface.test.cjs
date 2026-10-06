@@ -48,7 +48,7 @@ test('PIXIE resolves local navigation consistently from nested pages, opens once
 });
 test('all review routes focus their heading, expose selection, and keep feedback on route changes', () => {
   const dom = page('review/index.html'), w = dom.window, d = w.document;
-  for (const script of d.querySelectorAll('script:not([src])')) w.eval(script.textContent);
+  for (const script of d.querySelectorAll('script:not([src]):not([type="application/ld+json"])')) w.eval(script.textContent);
   d.getElementById('observe').value = 'A test observation';
   for (const button of d.querySelectorAll('.choice')) {
     button.click();
@@ -70,7 +70,7 @@ test('all review routes focus their heading, expose selection, and keep feedback
 });
 test('copy reviews sends only requested text to the clipboard and announces failure', async () => {
   const dom = page('review/index.html'), w = dom.window, d = w.document;
-  for (const script of d.querySelectorAll('script:not([src])')) w.eval(script.textContent);
+  for (const script of d.querySelectorAll('script:not([src]):not([type="application/ld+json"])')) w.eval(script.textContent);
   let copied;
   Object.defineProperty(w.navigator, 'clipboard', { value: { writeText: async text => { copied = text; } } });
   d.querySelector('[data-lane="access"]').click(); d.getElementById('observe').value = 'Keyboard test';
