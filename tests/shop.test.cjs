@@ -67,3 +67,19 @@ test('official artist cards are visible outside the archive and search across st
   assert.equal(d.querySelectorAll('#catalog .product:not([hidden])').length, 0);
   dom.window.close();
 });
+test('Dallas XY is separate from Mortis products and the Like Father concept archive', () => {
+  const dom = page(), d = dom.window.document;
+  const dallas = d.getElementById('dallas-xy');
+  assert.ok(dallas.querySelector('a[href$="/sun-fade-raw-edge-cotton-shorts"]'));
+  assert.equal(dallas.querySelector('a[href$="/final-thoughts"]'), null);
+  assert.ok(d.getElementById('mortis-products').querySelector('a[href$="/final-thoughts"]'));
+  const concepts = d.getElementById('like-father-like-ghost');
+  assert.match(concepts.querySelector('summary').textContent, /not for sale/);
+  assert.equal(concepts.querySelector('.buy'), null);
+  assert.equal(concepts.contains(dallas), false);
+  d.querySelector('a[href="#like-father-like-ghost"]').click();
+  assert.equal(concepts.open, true);
+  const urls = [...d.querySelectorAll('#catalog .product')].map(card=>card.dataset.productUrl);
+  assert.equal(new Set(urls).size, urls.length);
+  dom.window.close();
+});
