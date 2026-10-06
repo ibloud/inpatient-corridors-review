@@ -14,11 +14,12 @@ async function main() {
     catalog = await response.json();
   }
   if (catalog.website?.id !== '69d3e5e9fada8c60edd68c32' || !Array.isArray(catalog.items) || !catalog.items.length) throw new Error('Unexpected or empty catalog');
+  const categories = new Map((catalog.nestedCategories?.categories || []).map(c => [c.id, c.shortSlug]));
   const products = catalog.items.filter(item => item.recordType === 11).map(item => {
     const url = new URL(item.fullUrl, origin);
     const image = new URL(item.items?.[0]?.assetUrl || item.assetUrl);
     if (url.origin !== origin || !url.pathname.startsWith('/shop/p/') || image.hostname !== 'images.squarespace-cdn.com' || image.protocol !== 'https:') throw new Error('Unexpected product URL');
-    return {name: item.title.replace(/\*\*/g, ''), url: url.href, image: image.href};
+    return {name: item.title.replace(/\*\*/g, ''), url: url.href, image: image.href, categories:(item.categoryIds || []).map(id=>categories.get(id)).filter(Boolean)};
   });
   if (!products.length) throw new Error('No products in catalog');
   const artistSource = process.argv.indexOf('--artist-source-dir');
@@ -43,8 +44,14 @@ async function main() {
     artistCatalog('https://merch.chriswebby.com', 'jerseys', 'webby-jerseys.json'),
     artistCatalog('https://renmakesmerch.com', 'inpatient-asylum', 'ren-inpatient.json')
   ]);
-  const artistCards = (items, owner) => items.map(p => `<article class="card product"><a class="art" href="${escape(p.url)}"><img src="${escape(p.image)}" alt="${escape(p.name)}" loading="lazy" width="750" height="750"></a><div class="details"><h3>${escape(p.name)}</h3><p class="availability">${p.available ? 'Listed as available' : 'Sold out'} · checked ${new Date().toISOString().slice(0,10)}</p><a class="buy" href="${escape(p.url)}">View in ${escape(owner)}’s official store →</a></div></article>`).join('\n');
-  const cards = products.map(p => `<article class="card product"><a class="art" href="${escape(p.url)}"><img src="${escape(p.image)}?format=750w" alt="${escape(p.name)}" loading="lazy" width="750" height="750"></a><div class="details"><h3>${escape(p.name)}</h3><a class="buy" href="${escape(p.url)}">View in Daddy’s Little Mortis →</a></div></article>`).join('\n');
+  const artistCards = (items, owner) => items.map(p => `<article class="card product"><a class="art" href="${escape(p.url)}"><img src="${escape(p.image)}" alt="${escape(p.name)}" loading="lazy" width="750" height="750"></a><div class="details"><h3 class="product-name">${escape(p.name)}</h3><p class="availability">${p.available ? 'Listed as available' : 'Sold out'} · checked ${new Date().toISOString().slice(0,10)}</p><a class="buy" href="${escape(p.url)}">View in ${escape(owner)}’s official store →</a></div></article>`).join('\n');
+  const card = p => `<article class="card product" data-product-url="${escape(p.url)}"><a class="art" href="${escape(p.url)}"><img src="${escape(p.image)}?format=750w" alt="${escape(p.name)}" loading="lazy" width="750" height="750"></a><div class="details"><h4 class="product-name">${escape(p.name)}</h4><a class="buy" href="${escape(p.url)}">View in Daddy’s Little Mortis →</a></div></article>`;
+  const groups = [
+    {id:'dallas-xy', name:'Dallas XY', description:'Our Pennywise variant and an example of building an experience around a television-show spoof and a parody AI content creator who went viral.', url:origin+'/shop/dallas-xy', items:products.filter(p=>p.categories.includes('dallas-xy'))},
+    {id:'mortis-products', name:'Daddy’s Little Mortis', description:'Items categorized as Daddy’s Little Mortis in our existing store.', url:origin+'/shop/daddys-little-mortis', items:products.filter(p=>!p.categories.includes('dallas-xy') && p.categories.includes('daddys-little-mortis'))},
+    {id:'other-products', name:'Other store items', description:'Additional items without either of these collection categories in the store.', url:origin+'/shop', items:products.filter(p=>!p.categories.includes('dallas-xy') && !p.categories.includes('daddys-little-mortis'))}
+  ];
+  const cards = groups.filter(group=>group.items.length).map(group=>`<section class="catalog-collection" id="${group.id}" aria-labelledby="${group.id}-title"><h3 id="${group.id}-title">${group.name}</h3><p class="status">${group.description}</p><p><a href="${group.url}">View this collection in the store →</a></p><div class="grid catalog-grid">${group.items.map(card).join('\n')}</div></section>`).join('\n');
   const listedProducts = [...products, ...webby, ...jerseys.slice(0,3), ...ren];
   const schema = JSON.stringify({'@context':'https://schema.org', '@type':'CollectionPage', name:'Daddy’s Little Mortis & Official Inpatient Merchandise', url:'https://ibloud.github.io/inpatient-corridors-review/shop/', description:'Browse Daddy’s Little Mortis and selected official Inpatient merchandise from Chris Webby and Ren. Purchases happen in each seller’s store.', mainEntity:{'@type':'ItemList', itemListElement:listedProducts.map((p,i)=>({'@type':'ListItem', position:i+1, name:p.name, url:p.url}))}}).replace(/</g,'\\u003c');
   let html = fs.readFileSync(target, 'utf8');
