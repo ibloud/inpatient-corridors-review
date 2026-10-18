@@ -13,7 +13,7 @@ Financial support is optional and sustains infrastructure, maintenance, accessib
 
 ## An independent Loptr Lab systems prototype
 
-**Status:** Active Loptr Lab prototype. Chris Webby is invited to review it independently and may decline, correct, advise, or discuss participation on his own terms. Ren is not a participant in the project's continued development. No affiliation, approval, or endorsement is implied.
+**Status — 18 October 2026:** Independent Loptr Lab development continues. A proposed collaboration did not proceed. The public page connects this transition to 50 Ways to Leave Another while preserving adventure access and goodwill. See [current public direction](PUBLIC-DIRECTION-2026-10-18.md). Earlier invitations and artist-led proposals below are historical, not current participation claims.
 
 This repository develops a small, playable public-interest project about institutional pressure, autonomy, community care, and system redesign:
 
@@ -21,7 +21,7 @@ This repository develops a small, playable public-interest project about institu
 
 The work grew from Loptr Lab's study of themes encountered around *Inpatient* and *Asylum*, but its gameplay, documentation, facilitation model, and accessibility architecture are being developed independently. Protected artist material is not required to play or continue the prototype.
 
-## If Chris Webby drives the direction
+## Historical proposal: if Chris Webby drove the direction
 
 A scan of Chris's public discography supports a distinct design hypothesis: **Inpatient becomes an independent-artist pressure lab built around candid speech, repeated practice, visible consequences, crew-based support, and the right to revise the system without surrendering personal agency.** This is Loptr Lab's interpretation for Chris to approve, correct, or reject—not a claim about his intent.
 
