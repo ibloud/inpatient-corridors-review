@@ -1,6 +1,12 @@
 # Status and Provenance
 
-**Effective September 11, 2026**
+**Updated October 18, 2026; earlier record retained below.**
+
+## October 18 public direction
+
+Independent Loptr Lab work continues after a proposed collaboration did not proceed. The public page connects that transition to 50 Ways to Leave Another, preserves adventure links, and shares independent resources with goodwill. Earlier review invitations below are historical; they do not establish current participation or endorsement. See [public direction and maintenance boundaries](PUBLIC-DIRECTION-2026-10-18.md).
+
+## September 11 record
 
 ## Current direction
 

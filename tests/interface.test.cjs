@@ -10,7 +10,11 @@ function page(p) { return new JSDOM(read(p), { url: url + p, runScripts: 'outsid
 test('homepage has distinct working cooperative game, story and review entries before historical context', () => {
   const { document: d } = page('index.html').window;
   assert.deepEqual([...d.querySelectorAll('.start-card')].map(a => a.getAttribute('href')), ['corridors/', 'interactive/yellow-door/docs/', 'review/']);
-  assert.equal(d.querySelector('iframe').closest('details').id, 'writing');
+  assert.equal(d.querySelector('iframe'), null); // Historical embeds no longer occupy the public front page.
+  for (const a of d.querySelectorAll('a[href]')) {
+    const href = a.getAttribute('href');
+    if (!/^(https?:|#)/.test(href)) assert.ok(fs.existsSync(path.join(root, href)), href);
+  }
   for (const a of d.querySelectorAll('a[href^="#"]')) assert.ok(d.getElementById(a.hash.slice(1)), a.href);
 });
 test('PIXIE resolves local navigation consistently from nested pages, opens once and restores focus', () => {
