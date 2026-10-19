@@ -9,3 +9,11 @@ The encounter titles follow the supplied *Sick Sick Soul (Vol. 1)* sequence. Dom
 Album destinations were resolved in the Apple Music and Spotify catalogs. YouTube video IDs and playlist URL were supplied in this project; successful playback of individual embeds depends on YouTube and browser restrictions.
 
 This independent experience does not imply that the artists selected, commissioned, approved, endorsed, or participated in it.
+
+## Visual clarity correction — 19 October 2026
+
+All seven photographs now have distinct visual alt text; source credit remains separate. The six prompts connect visible composition or setting to an existing corridor decision: being heard, approaching others, separating observation from assumption, listening, requesting information and examining who controls an account. These are Loptr Lab editorial readings, not verified lyrical mappings or claims about artist intent. The sequence labels that distinction and retains a skip route. The closing listening invitation is separate from the completed story.
+
+The image-to-track sequence remains the existing project arrangement, not an artist-approved assignment. Photographs and credit mappings still require the review described above. No lyrics were supplied or verified for this correction. Do not describe the story as following the song lyrics, or use these images as cleared bundle artwork. No story canon or commercial offer was added.
+
+The [listening evidence and story-to-store assessment](LYRIC-STORY-MAPPING.md) records the retrieved song sources, weak and partial narrative fits, and the optional official album/product handoff.
