@@ -213,6 +213,28 @@ function renderPromo() {
   watch.textContent = "If the video cannot play here, open it on YouTube ↗";
   direct.appendChild(watch);
   section.appendChild(direct);
+  const support = document.createElement("section");
+  const supportTitle = document.createElement("h3");
+  supportTitle.textContent = "Take the music with you";
+  const supportNote = document.createElement("p");
+  supportNote.textContent = "Explore Sick Sick Soul (Vol. 1) in the artists’ official stores. Purchases and checkout happen there; availability and prices are set by the seller. This is an independent story-to-store handoff, not a connected cart or an artist-approved bundle.";
+  support.appendChild(supportTitle);
+  support.appendChild(supportNote);
+  const storeLinks = document.createElement("div");
+  storeLinks.className = "encounter-links";
+  [
+    ["Explore the EP, vinyl and merch in Ren’s official store ↗", "https://renmakesmerch.com/collections/sick-sick-soul"],
+    ["View the EP vinyl in Ren’s official store ↗", "https://renmakesmerch.com/products/sick-sick-soul-vinyl-pre-order"],
+    ["View the EP CD in Ren’s official store ↗", "https://renmakesmerch.com/products/sick-sick-soul-cd-pre-order"],
+    ["Explore The Skinner Brothers’ official store ↗", "https://theskinnerbrothers.com/collections/all"]
+  ].forEach(function (item) {
+    const link = document.createElement("a");
+    link.textContent = item[0]; link.href = item[1];
+    link.target = "_blank"; link.rel = "noopener noreferrer";
+    storeLinks.appendChild(link);
+  });
+  support.appendChild(storeLinks);
+  section.appendChild(support);
   storyContainer.appendChild(section);
   scrollStoryToTop();
 }
