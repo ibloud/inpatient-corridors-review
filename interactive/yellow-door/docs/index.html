@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>The Yellow Door — Inpatient Corridors</title>
-<link rel="stylesheet" href="style.css?v=20261019-photo-space">
+<link rel="stylesheet" href="style.css?v=20261019-artist-products">
 <script defer src="../../../assets/pixie.js?v=20261004-2"></script>
 
 <link rel="canonical" href="https://ibloud.github.io/inpatient-corridors-review/interactive/yellow-door/docs/">
@@ -51,12 +51,47 @@
   <p><a class="music-link" href="https://music.apple.com/us/album/sick-sick-soul-vol-1-ep/1847428336" target="_blank" rel="noopener noreferrer">Apple Music ↗</a> · <a class="music-link" href="https://open.spotify.com/album/0ISO7wkMwNnepo80je1udA" target="_blank" rel="noopener noreferrer">Spotify ↗</a> · <a class="music-link" href="https://www.youtube.com/playlist?list=PLHbj3Gti2ieMLX14MIy5xvV0GPYMciUvz" target="_blank" rel="noopener noreferrer">YouTube ↗</a></p>
 </aside>
 </div>
-<section class="experience-notes" aria-labelledby="experience-notes-title">
+<section id="credits" class="experience-notes" aria-labelledby="experience-notes-title">
 <h2 id="experience-notes-title">Credits and disclosures</h2>
 <p><strong>The artist leads; AI supports the work.</strong> This independent story and Loptr Lab’s visual readings are not a faithful adaptation of the EP or a statement of the artists’ or photographers’ intent. AI can organize sources, map choices and prepare technical handoffs; it cannot supply artistic meaning or approval. <a href="ARTIST-STARTER.html">Artist starter and limitations</a>.</p>
-<p>No artist endorsement, affiliation, commissioning or participation is claimed. Music, purchases and signups are optional. Store links open the artists’ own shops, where sellers set prices and availability; this demonstration has no connected cart or artist-approved bundle.</p>
+<p>No artist endorsement, affiliation, commissioning or participation is claimed. Music, purchases and signups are optional. Store links open the artists’ own shops, where sellers set prices and availability; the product buttons open separate Shopify store carts. There is no shared cart, artist-approved bundle or order processing on this site.</p>
 <p>Photographs come from Ren’s Instagram post “Oh we do like to be beside the sea side,” crediting @jakewiiliams, @spaaaacey and @chloeimbach. They are presented as a credited, noncommercial demonstration under the project owner’s fair-use claim. Individual photograph credits remain unmapped; no merchandise permission is claimed.</p>
+<h3>Try the Ink + Shopify example</h3>
+<p>At the end of the story, an optional page offers one product from Ren’s official store and one from The Skinner Brothers’ official store. Each “Add 1” button opens that artist’s Shopify cart in a new tab. Buying is optional and does not affect the story. This public-link example does not access either store’s administration or live inventory.</p>
+<button type="button" id="preview-products" class="choice">Preview both products without leaving your story</button>
+<details class="merchant-instructions">
+<summary>Implementation instructions for artist teams</summary>
+<p><strong>Where it appears:</strong> Finish any Ink ending, choose “Open optional music and video page,” then find “Take the music with you.” The preview above shows the same two cards.</p>
+<div class="merchant-table"><table>
+<caption>Public product references checked 19 October 2026; availability can change.</caption>
+<thead><tr><th scope="col">Store</th><th scope="col">Product</th><th scope="col">Numeric variant ID</th></tr></thead>
+<tbody><tr><td>renmakesmerch.com</td><td><a href="https://renmakesmerch.com/products/sick-sick-soul-vinyl-pre-order" target="_blank" rel="noopener noreferrer">Sick Sick Soul — Vinyl ↗</a></td><td><code>56183455875445</code></td></tr>
+<tr><td>theskinnerbrothers.com</td><td><a href="https://theskinnerbrothers.com/products/sick-sick-soul-cd" target="_blank" rel="noopener noreferrer">Sick Sick Soul — CD ↗</a></td><td><code>49887103320341</code></td></tr></tbody>
+</table></div>
+<h3>On the artist’s Shopify side</h3>
+<ol>
+<li>Have your store administrator confirm the selected product and variant, its price, stock, shipping markets and returns policy. The product must be available through your Online Store and accessible to customers.</li>
+<li>Confirm the numeric <em>variant</em> ID, rather than the product ID. Your developer can inspect your public product URL with <code>.js</code> appended and locate the matching entry under <code>variants</code>. This example uses one default variant per product; clothing or other choices need an explicit variant selector.</li>
+<li>No app installation, API token or theme change is needed for this permalink example. Test the corresponding “Add 1” link in a fresh browser session: it should open your own cart with the right item and quantity. Check your theme’s existing-cart behavior and test desktop, mobile, shipping regions and sold-out behavior. Only your team should authorize and complete a test order.</li>
+<li>For an official collaboration, approve product selection, wording and any artwork separately. A working public cart link does not imply artist approval or an affiliate arrangement.</li>
+</ol>
+<h3>On the Yellow Door side</h3>
+<ol>
+<li>Edit <code>artistProducts</code> in <code>interactive/yellow-door/docs/app.js</code>: set each artist, title, store domain, product handle and numeric variant ID. Keep credentials out of the repository.</li>
+<li><code>continueStory()</code> detects an Ink ending with no remaining choices and offers the optional music page. Clicking it runs <code>renderPromo()</code>, which renders the two cards via <code>createArtistProducts()</code>. Ink does not submit orders or share story variables with either store.</li>
+<li>Each button follows <code>https://STORE/cart/VARIANT:1?storefront=true</code>. The store creates the cart after the visitor clicks; Shopify handles checkout, payment and fulfillment. Two independent stores mean two separate checkouts.</li>
+<li>Update this table when products change; retain the product-details fallback. Bump the script version in this page and deploy. Verify preview → correct merchant cart, and story ending → optional page → both cards.</li>
+</ol>
+<p><strong>Later, with merchant authorization:</strong> use each store’s Storefront API to retrieve current product data and create that store’s cart. Browser code may use a designated public Storefront token; Admin credentials and private tokens must stay on a server. That API connection is not part of this example.</p>
+<p>Reference: <a href="https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks" target="_blank" rel="noopener noreferrer">Shopify’s cart permalink instructions ↗</a>. No payment details, email, story scores or tracking parameters are added to these links.</p>
+</details>
 </section>
+<dialog id="product-preview" aria-labelledby="product-preview-title">
+<button type="button" id="close-product-preview" class="choice" autofocus>Close product preview</button>
+<h2 id="product-preview-title">Take the music with you</h2>
+<p>Optional purchases from the artists’ separate official stores. No endorsement or affiliation is claimed. Your story stays where you left it.</p>
+<div id="preview-product-cards"></div>
+</dialog>
 <footer>
 <a href="../../">Back to project</a>
 <span id="stats" hidden></span>
@@ -100,7 +135,7 @@
       show("Runtime error: Ink browser runtime loaded, but inkjs.Story is unavailable.");
       return;
     }
-    loadScript("app.js?v=20261019-layout-notes", "Yellow Door application", function () {
+    loadScript("app.js?v=20261019-artist-products", "Yellow Door application", function () {
       if (typeof window.startYellowDoor !== "function") {
         show("Runtime error: Yellow Door application loaded, but its startup function is unavailable.");
       }

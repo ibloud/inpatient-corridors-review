@@ -169,6 +169,58 @@ function renderMusicEncounter() {
   }
 }
 
+// Public product/variant references checked against each official store on 2026-10-19.
+// Cart permalinks need no Admin credentials. Each store owns its cart and checkout.
+const artistProducts = [
+  {artist: "Ren", title: "Sick Sick Soul — Vinyl", domain: "renmakesmerch.com",
+    handle: "sick-sick-soul-vinyl-pre-order", variant: "56183455875445"},
+  {artist: "The Skinner Brothers", title: "Sick Sick Soul — CD", domain: "theskinnerbrothers.com",
+    handle: "sick-sick-soul-cd", variant: "49887103320341"}
+];
+
+function createArtistProducts() {
+  const grid = document.createElement("div");
+  grid.className = "artist-products";
+  artistProducts.forEach(function (product) {
+    const card = document.createElement("article");
+    card.className = "artist-product";
+    const owner = document.createElement("p");
+    owner.className = "music-kicker";
+    owner.textContent = product.artist + " · official store";
+    const title = document.createElement("h4");
+    title.textContent = product.title;
+    const note = document.createElement("p");
+    note.textContent = "Price, availability, delivery and returns are confirmed by the seller in their store.";
+    const view = document.createElement("a");
+    view.href = "https://" + product.domain + "/products/" + product.handle;
+    view.textContent = "View product details ↗";
+    view.target = "_blank";
+    view.rel = "noopener noreferrer";
+    const cart = document.createElement("a");
+    cart.className = "product-cart-link";
+    cart.href = "https://" + product.domain + "/cart/" + product.variant + ":1?storefront=true";
+    cart.textContent = "Add 1 to " + product.artist + "’s store cart ↗";
+    cart.target = "_blank";
+    cart.rel = "noopener noreferrer";
+    const destination = document.createElement("p");
+    destination.className = "music-meta";
+    destination.textContent = "Opens " + product.domain + " in a new tab. Separate store checkout; no payment is taken here. If the cart link is unavailable, use product details above.";
+    card.append(owner, title, note, view, cart, destination);
+    grid.appendChild(card);
+  });
+  return grid;
+}
+
+// A preview outside Ink leaves the current passage and choices untouched.
+const productPreview = document.getElementById("product-preview");
+const previewButton = document.getElementById("preview-products");
+if (productPreview && previewButton) {
+  document.getElementById("preview-product-cards").appendChild(createArtistProducts());
+  previewButton.addEventListener("click", function () { productPreview.showModal(); });
+  document.getElementById("close-product-preview").addEventListener("click", function () { productPreview.close(); });
+  productPreview.addEventListener("close", function () { previewButton.focus(); });
+}
+
 function renderPromo() {
   storyContainer.innerHTML = "";
   choicesContainer.innerHTML = "";
@@ -216,20 +268,7 @@ function renderPromo() {
   supportNote.textContent = "Explore Sick Sick Soul (Vol. 1) in the artists’ official stores.";
   support.appendChild(supportTitle);
   support.appendChild(supportNote);
-  const storeLinks = document.createElement("div");
-  storeLinks.className = "encounter-links";
-  [
-    ["Explore the EP, vinyl and merch in Ren’s official store ↗", "https://renmakesmerch.com/collections/sick-sick-soul"],
-    ["View the EP vinyl in Ren’s official store ↗", "https://renmakesmerch.com/products/sick-sick-soul-vinyl-pre-order"],
-    ["View the EP CD in Ren’s official store ↗", "https://renmakesmerch.com/products/sick-sick-soul-cd-pre-order"],
-    ["Explore The Skinner Brothers’ official store ↗", "https://theskinnerbrothers.com/collections/all"]
-  ].forEach(function (item) {
-    const link = document.createElement("a");
-    link.textContent = item[0]; link.href = item[1];
-    link.target = "_blank"; link.rel = "noopener noreferrer";
-    storeLinks.appendChild(link);
-  });
-  support.appendChild(storeLinks);
+  support.appendChild(createArtistProducts());
   const guide = document.createElement("a");
   guide.href = "ARTIST-STARTER.html";
   guide.textContent = "For artists: start your own pilot and prepare your lyrics";
