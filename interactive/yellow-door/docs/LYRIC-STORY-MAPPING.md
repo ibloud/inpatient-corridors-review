@@ -33,3 +33,7 @@ The current Ink narrative is about institutional process and community responses
 The ending now provides optional direct links to existing official EP product pages and artist stores, alongside existing listening links. The narrative finishes first. No purchase, signup or stream is required. This demonstrates a browser Ink experience handing off to external artist commerce. It does not implement Shopify cart state, checkout, account access, Storefront API or purchase verification. No new product, affiliate relationship, claimed scarcity, price or future bundle is enabled.
 
 Use existing official destinations; do not invent an After-Hours product listing. Stock and prices remain with the seller. This documentation does not expand permissions for the existing photos or music.
+
+## Artist-owned starting point
+
+See [Artist starter: lyrics, images, story and release handoff](ARTIST-STARTER.md) for lyric source-of-truth guidance, Apple Music delivery distinctions and a copyable iterative prompt.

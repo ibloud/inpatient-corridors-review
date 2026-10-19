@@ -234,6 +234,10 @@ function renderPromo() {
     storeLinks.appendChild(link);
   });
   support.appendChild(storeLinks);
+  const guide = document.createElement("a");
+  guide.href = "ARTIST-STARTER.html";
+  guide.textContent = "For artists: start your own pilot and prepare your lyrics";
+  support.appendChild(guide);
   section.appendChild(support);
   storyContainer.appendChild(section);
   scrollStoryToTop();
