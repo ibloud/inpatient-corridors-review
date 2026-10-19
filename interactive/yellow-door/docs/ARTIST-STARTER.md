@@ -2,6 +2,12 @@
 
 This is a development starting point, not a final release recipe. Prepared with OpenAI Codex assistance, 19 October 2026.
 
+## The artist leads; AI supports the work
+
+ChatGPT does not replace the artist. It can carry analytical, organizational and technical tasks the artist does not want to manage alone: source records, metadata, budgets, choice maps, file preparation and checks. The artist supplies meaning, voice and approval. “Left-brained work” is shorthand for these tasks, not a neurological claim.
+
+Yellow Door is not a faithful adaptation of the EP. Its revised image framing does not make it one. AI can draft original scenes around broad themes, but cannot infer artistic intent or claim approval from third-party lyric listings. Start with the artist’s approved material, review one scene, and keep every generated addition editable. Generated source is not a final release.
+
 ## Lyrics are release infrastructure
 
 An artist-approved lyric record prevents creative work from depending on incomplete search results or crowd transcriptions. Keep one versioned, exportable source of truth under artist/team control, with access appropriate to the work’s release status. A private working database, structured folder or existing catalogue system can serve this role; no new service or public upload is required. A public repository is not the default home for unreleased or third-party lyrics.
