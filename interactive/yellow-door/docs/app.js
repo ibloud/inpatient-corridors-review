@@ -115,9 +115,6 @@ function renderMusicEncounter() {
   note.className = "encounter-note";
   note.textContent = encounter.prompt;
 
-  const framing = document.createElement("p");
-  framing.className = "encounter-source";
-  framing.textContent = "Loptr Lab’s visual reading, not a lyric adaptation or a statement of the photographer’s or artists’ intent. The independent story works without playing any music.";
 
   const photo = document.createElement("img");
   photo.className = "encounter-photo";
@@ -127,12 +124,11 @@ function renderMusicEncounter() {
 
   const source = document.createElement("p");
   source.className = "encounter-source";
-  source.textContent = "Photo source: Ren's Instagram post, ‘Oh we do like to be beside the sea side.’ Post credits: @jakewiiliams, @spaaaacey, @chloeimbach. Presented as a credited, noncommercial demonstration under the project owner's fair-use claim; individual photo credits remain unmapped. This independent story does not claim artist participation.";
+  source.textContent = "Photo: Ren’s Instagram, ‘Oh we do like to be beside the sea side.’ Post credits: @jakewiiliams, @spaaaacey, @chloeimbach.";
 
   wrap.appendChild(kicker);
   wrap.appendChild(heading);
   wrap.appendChild(note);
-  wrap.appendChild(framing);
   wrap.appendChild(photo);
   wrap.appendChild(source);
   addMusicLinks(wrap);
@@ -189,7 +185,7 @@ function renderPromo() {
   photo.alt = "Sepia-toned image of a figure with a skull-like face and a jacket standing in a doorway beneath a speech bubble.";
   const credit = document.createElement("p");
   credit.className = "encounter-source";
-  credit.textContent = "Photo source: Ren's Instagram post, ‘Oh we do like to be beside the sea side.’ Post credits: @jakewiiliams, @spaaaacey, @chloeimbach. Credited, noncommercial demonstration under the project owner's fair-use claim; individual photo credits remain unmapped.";
+  credit.textContent = "Photo: Ren’s Instagram, ‘Oh we do like to be beside the sea side.’ Post credits: @jakewiiliams, @spaaaacey, @chloeimbach.";
   const frame = document.createElement("div");
   frame.className = "video-frame";
   const video = document.createElement("iframe");
@@ -217,7 +213,7 @@ function renderPromo() {
   const supportTitle = document.createElement("h3");
   supportTitle.textContent = "Take the music with you";
   const supportNote = document.createElement("p");
-  supportNote.textContent = "Explore Sick Sick Soul (Vol. 1) in the artists’ official stores. Purchases and checkout happen there; availability and prices are set by the seller. This is an independent story-to-store handoff, not a connected cart or an artist-approved bundle.";
+  supportNote.textContent = "Explore Sick Sick Soul (Vol. 1) in the artists’ official stores.";
   support.appendChild(supportTitle);
   support.appendChild(supportNote);
   const storeLinks = document.createElement("div");

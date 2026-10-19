@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>The Yellow Door — Inpatient Corridors</title>
-<link rel="stylesheet" href="style.css?v=20261019-frame">
+<link rel="stylesheet" href="style.css?v=20261019-layout-notes">
 <script defer src="../../../assets/pixie.js?v=20261004-2"></script>
 
 <link rel="canonical" href="https://ibloud.github.io/inpatient-corridors-review/interactive/yellow-door/docs/">
@@ -26,7 +26,6 @@
 <p class="eyebrow">INPATIENT CORRIDORS · ALPHA</p>
 <h1>The Yellow Door</h1>
 <p class="intro">A 15–20 minute interactive narrative about uncertainty, participation, support, and process.</p>
-<p class="intro"><strong>The artist leads; AI supports the work.</strong> This independent story is not a faithful adaptation of the EP. AI can organize sources, map choices and prepare technical handoffs; it cannot supply the artists’ intended meaning or approval. <a href="ARTIST-STARTER.html">Read the artist starter and limitations</a>.</p>
 </header>
 
 <div class="experience">
@@ -50,10 +49,14 @@
     <li>Pink Heineken</li>
   </ol>
   <p><a class="music-link" href="https://music.apple.com/us/album/sick-sick-soul-vol-1-ep/1847428336" target="_blank" rel="noopener noreferrer">Apple Music ↗</a> · <a class="music-link" href="https://open.spotify.com/album/0ISO7wkMwNnepo80je1udA" target="_blank" rel="noopener noreferrer">Spotify ↗</a> · <a class="music-link" href="https://www.youtube.com/playlist?list=PLHbj3Gti2ieMLX14MIy5xvV0GPYMciUvz" target="_blank" rel="noopener noreferrer">YouTube ↗</a></p>
-  <p class="music-note">This is an independent listening breadcrumb included as part of the Yellow Door experience. It does not imply endorsement, affiliation, commissioning, curation, or participation by the artists.</p>
-  <p class="music-note">Encounter photos: Ren's Instagram post “Oh we do like to be beside the sea side”; post credits @jakewiiliams, @spaaaacey, and @chloeimbach. Credited, noncommercial demonstration under the project owner's fair-use claim. Individual photo credits remain unmapped; no merchandise permission is claimed.</p>
 </aside>
 </div>
+<section class="experience-notes" aria-labelledby="experience-notes-title">
+<h2 id="experience-notes-title">Credits and disclosures</h2>
+<p><strong>The artist leads; AI supports the work.</strong> This independent story and Loptr Lab’s visual readings are not a faithful adaptation of the EP or a statement of the artists’ or photographers’ intent. AI can organize sources, map choices and prepare technical handoffs; it cannot supply artistic meaning or approval. <a href="ARTIST-STARTER.html">Artist starter and limitations</a>.</p>
+<p>No artist endorsement, affiliation, commissioning or participation is claimed. Music, purchases and signups are optional. Store links open the artists’ own shops, where sellers set prices and availability; this demonstration has no connected cart or artist-approved bundle.</p>
+<p>Photographs come from Ren’s Instagram post “Oh we do like to be beside the sea side,” crediting @jakewiiliams, @spaaaacey and @chloeimbach. They are presented as a credited, noncommercial demonstration under the project owner’s fair-use claim. Individual photograph credits remain unmapped; no merchandise permission is claimed.</p>
+</section>
 <footer>
 <a href="../../">Back to project</a>
 <span id="stats" hidden></span>
@@ -97,7 +100,7 @@
       show("Runtime error: Ink browser runtime loaded, but inkjs.Story is unavailable.");
       return;
     }
-    loadScript("app.js?v=20261019-visual-clarity", "Yellow Door application", function () {
+    loadScript("app.js?v=20261019-layout-notes", "Yellow Door application", function () {
       if (typeof window.startYellowDoor !== "function") {
         show("Runtime error: Yellow Door application loaded, but its startup function is unavailable.");
       }

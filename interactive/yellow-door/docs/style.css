@@ -12,3 +12,11 @@
 #choices .choice{padding:10px 14px;margin:8px 0}
 @media(min-width:761px){#choices{position:sticky;bottom:-20px;background:var(--surface);padding:6px 0 0;border-top:1px solid var(--border)}#game{padding-bottom:12px}.video-frame{max-width:640px;margin:14px auto}}
 @media(max-width:760px){.encounter-photo{height:clamp(140px,28dvh,220px);max-height:220px;margin:10px auto}.shell{padding-top:24px}.experience{margin-top:20px}.video-encounter h2{font-size:23px}}
+
+/* Introduction and consolidated notes follow the full experience width. */
+.shell > header .intro{max-width:none}
+.experience-notes{margin-top:28px;padding:22px 24px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--muted);font:14px/1.6 system-ui,sans-serif}
+.experience-notes h2{margin:0 0 12px;color:var(--text);font-size:18px}
+.experience-notes p{margin:10px 0}
+.experience-notes p:last-child{margin-bottom:0}
+@media(max-width:760px){.experience-notes{padding:18px;margin-top:20px}}
