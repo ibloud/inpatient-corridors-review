@@ -67,19 +67,20 @@ test('official artist cards are visible outside the archive and search across st
   assert.equal(d.querySelectorAll('#catalog .product:not([hidden])').length, 0);
   dom.window.close();
 });
-test('Dallas XY is separate from Mortis products and the Like Father concept archive', () => {
+test('live Like Father journal stays separate from Dallas XY and design studies', () => {
   const dom = page(), d = dom.window.document;
-  const dallas = d.getElementById('dallas-xy');
-  assert.ok(dallas.querySelector('a[href$="/sun-fade-raw-edge-cotton-shorts"]'));
-  assert.equal(dallas.querySelector('a[href$="/final-thoughts"]'), null);
-  assert.ok(d.getElementById('mortis-products').querySelector('a[href$="/final-thoughts"]'));
-  const concepts = d.getElementById('like-father-like-ghost');
-  assert.match(concepts.querySelector('summary').textContent, /not for sale/);
-  assert.equal(concepts.querySelector('.buy'), null);
-  assert.equal(concepts.contains(dallas), false);
-  d.querySelector('a[href="#like-father-like-ghost"]').click();
-  assert.equal(concepts.open, true);
+  const ghost = d.getElementById('like-father-like-ghost');
+  assert.equal(ghost.closest('details'), null);
+  assert.ok(ghost.querySelector('a.buy[href$="/final-thoughts"]'));
+  assert.equal(d.getElementById('dallas-xy').querySelector('a[href$="/final-thoughts"]'), null);
+  assert.equal(d.getElementById('mortis-products').querySelector('a[href$="/final-thoughts"]'), null);
+  assert.doesNotMatch(ghost.textContent, /not for sale|not current store listings/);
+  assert.equal(d.querySelector('#artwork-studies .book'), null);
   const urls = [...d.querySelectorAll('#catalog .product')].map(card=>card.dataset.productUrl);
   assert.equal(new Set(urls).size, urls.length);
+  const input=d.getElementById('product-search');
+  input.value='Like Father'; input.dispatchEvent(new dom.window.Event('input'));
+  assert.equal(d.querySelectorAll('#catalog .product:not([hidden])').length, 1);
+  assert.ok(ghost.querySelector('.product:not([hidden])'));
   dom.window.close();
 });
