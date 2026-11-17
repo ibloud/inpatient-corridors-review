@@ -42,11 +42,13 @@ for (const name of documents) {
 <meta name="twitter:title" content="${escape(title)} — Break the Grid">
 <meta name="twitter:description" content="${escape(description)}">
 <script type="application/ld+json">${structuredData}</script>`;
+  const breadcrumbs = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Break the Grid', item: 'https://ibloud.github.io/inpatient-corridors-review/' }, { '@type': 'ListItem', position: 2, name: title, item: url }] }).replace(/</g, '\\u003c');
   const output = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${escape(title)} — Break the Grid</title>
 ${seo}
-<link rel="stylesheet" href="assets/interface.css"><script defer src="assets/pixie.js?v=20261004-2"></script></head>
+<link rel="stylesheet" href="assets/interface.css"><script defer src="assets/pixie.js?v=20261004-2"></script><script type="application/ld+json" id="site-breadcrumbs">${breadcrumbs}</script>
+</head>
 <body class="document-page"><a class="skip-link" href="#main">Skip to main content</a>
 <nav class="return-nav" aria-label="Project navigation"><a href="./">← Break the Grid</a><a href="review/">Guided review</a><a href="STATUS-AND-PROVENANCE.html">Status &amp; provenance</a></nav>
 <main id="main" class="document-content" tabindex="-1"><p class="document-label">Project record · Inpatient Corridors</p>
