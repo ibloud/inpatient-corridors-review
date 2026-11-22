@@ -6,6 +6,8 @@
 
 ## Research leads / source records
 
+| “Get out of the maze” short-film visual references | User-provided Facebook Watch link: https://www.facebook.com/watch/?v=1014489590980458; two user-uploaded stills (2026-11-22) | Artist/social video lead; supplied still images | 2026-11-22 | Video playback was not independently accessible in this review. The supplied stills visibly depict (1) a dark, multi-level curved/spiral interior with small human figures and (2) a green-lit, repeated rectangular corridor/threshold receding into haze, with a small figure. These are visual evidence from supplied screenshots only; do not assert their sequence, setting, symbolism, or story role without reviewing the video itself. Add the video to the primary-source queue for frame-by-frame notes/transcript. |
+
 | Claim | Source | Source type | Checked | Status / permitted use |
 |---|---|---|---|---|
 | FILTHY YUCK! appears as a 17-song release dated Oct. 16, 2026 | https://music.apple.com/us/artist/not-a-toy/1510814882 | Apple Music artist discography | 2026-11-22 | Secondary platform metadata. Use as release metadata after checking official artist/label source; does not establish plot. |
