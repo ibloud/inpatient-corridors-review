@@ -1,7 +1,7 @@
 # Not a Toy — Ink Adventure: Story & Product Integration Brief
 
 **Relationship:** Yellow Door Ink pilot → Not a Toy Ink Adventure → Filthy Yuck!
-**Status:** Ink story draft authored and committed; source/integration brief and ledger updated. The story is an original adaptation using only the user-supplied premise and track/interlude structure. It is not yet compiled, integrated into the browser runtime, or playtested.
+**Status:** Ink story draft authored and committed; separate browser-playable visual test prototype implemented. The visual test uses a hand-authored browser story renderer mirroring the Ink adaptation (not compiled Ink). Compiler validation, Ink runtime integration, and playtesting remain pending.
 
 
 ## Lore integrity / source-of-truth rules
@@ -52,7 +52,7 @@ The adventure must work as a complete, satisfying story without a product click,
 
 The Not a Toy premise is the “get out of the maze” story. Build a coherent arc from the project's public Threads record and existing approved source material. Do not invent quotations, artist intent, plot facts, product claims, or character details that are not supported by the source.
 
-## Implemented story draft\n\nThe current draft lives at [`../story/not-a-toy-ink-adventure.ink`](../story/not-a-toy-ink-adventure.ink). It is a playable-structure draft with four acts, persistent choice variables, branches, a loading interruption using the supplied track interlude percentages, a user-selected exit, and a debrief. It deliberately avoids named characters, lyrics, locations, specific official plot events, or claims about what the simulation/maze literally is. System prompts and mechanics are adaptation-original. The ending explicitly identifies this as an adaptation rather than the official album story.\n\n**Current implementation status:** source written; Ink compilation and runtime integration remain. Do not overwrite the existing Yellow Door story or its compiled JSON. Compile this new source to a separate JSON artifact and add a dedicated entry point/host integration after validating the Ink syntax.\n\n## Story arc (design scaffold)
+## Implemented story draft\n\nThe current draft lives at [`../story/not-a-toy-ink-adventure.ink`](../story/not-a-toy-ink-adventure.ink). It is a playable-structure draft with four acts, persistent choice variables, branches, a loading interruption using the supplied track interlude percentages, a user-selected exit, and a debrief. It deliberately avoids named characters, lyrics, locations, specific official plot events, or claims about what the simulation/maze literally is. System prompts and mechanics are adaptation-original. The ending explicitly identifies this as an adaptation rather than the official album story.\n\n**Current implementation status:** Ink source written; a separate browser visual test is available at [`../../not-a-toy/`](../../not-a-toy/). It is a parallel prototype implemented in JavaScript for immediate visual review, not yet driven by compiled Ink. Do not overwrite the existing Yellow Door story or its compiled JSON. Next, compile this Ink source and replace/align the prototype renderer with a dedicated Ink runtime integration after validating the syntax.\n\n## Story arc (design scaffold)
 
 1. **Entry / orientation:** establish the maze, protagonist, immediate objective, and meaningful stakes.
 2. **Exploration:** choices uncover clues and reveal different perspectives; the player can observe, ask, investigate, or take action.
