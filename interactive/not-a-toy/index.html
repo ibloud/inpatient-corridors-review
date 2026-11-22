@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOT A TOY — FILTHY YUCK! / Interactive Adaptation</title>
+<meta name="description" content="An original interactive adaptation inspired by the user-supplied premise and structure of NOT A TOY's FILTHY YUCK!.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<header class="masthead">
+<a class="back" href="../yellow-door/docs/">← Yellow Door / Ink pilot</a>
+<div class="brand"><span class="signal" aria-hidden="true"></span><span>NOT A TOY</span><span class="slash">/</span><span>FILTHY YUCK!</span></div>
+<p class="eyebrow">INTERACTIVE ADAPTATION · VISUAL TEST</p>
+<h1>GET OUT<br><em>OF THE MAZE.</em></h1>
+<p class="lede">A system asks you to continue. You can follow it, question it, or wait.</p>
+</header>
+<section class="panel" aria-label="Interactive story">
+<div class="hud">
+<div><span class="hud-label">SESSION</span><strong id="session">01</strong></div>
+<div class="progress-wrap"><span class="hud-label">SEQUENCE</span><div class="progress"><span id="progress"></span></div><small id="act">ACT 01 / 04</small></div>
+<div><span class="hud-label">STATE</span><strong id="state">ACTIVE</strong></div>
+</div>
+<div class="screen">
+<div class="screen-top"><span>SYS://NAT</span><span id="timestamp">—</span><span class="live">● LIVE</span></div>
+<div id="story" class="story" aria-live="polite" tabindex="-1"></div>
+<div id="choices" class="choices"></div>
+</div>
+<div class="panel-footer"><span>INPUT REQUIRED</span><span id="choice-count">—</span></div>
+</section>
+<section class="disclosure">
+<h2>About this adaptation</h2>
+<p>This is an original interactive work based on the user-supplied description and track structure of <em>FILTHY YUCK!</em>. It does not reproduce lyrics or claim to be the band's official story, game, or approved interpretation. System language, choices, and mechanics are adaptation-original. Official lore remains subject to source verification.</p>
+</section>
+<footer><button id="restart" class="restart" type="button">↻ RESTART EXPERIENCE</button><span>NO ACCOUNT · NO PURCHASE · NO TRACKING</span></footer>
+</main>
+<script src="story.js"></script>
+</body>
+</html>
