@@ -65,10 +65,3 @@ a:focus-visible, button:focus-visible, summary:focus-visible, textarea:focus-vis
 .footer-note a { text-decoration:underline; text-underline-offset:.2rem; }
 @media(max-width:600px){ .footer-brand { flex-direction:column; gap:.2rem; } .footer-links { flex-direction:column; gap:0; } }
 
-/* PIXIE companion placement in project header */
-.project-header { position:relative; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:1rem; }
-.project-header .header-title { flex:1 1 20rem; }
-.project-header .header-rule { flex-basis:100%; }
-.pixie-companion { display:inline-flex; align-items:center; gap:.35rem; border:1px solid #505050; border-radius:4px; padding:.55rem .85rem; min-height:44px; color:#ef9d92; font-size:.8rem; font-weight:700; letter-spacing:.08em; text-decoration:none; }
-.pixie-companion:hover { border-color:#c0392b; color:#fff; }
-@media(max-width:480px){ .project-header { align-items:center; } .pixie-companion { margin-left:auto; } }
