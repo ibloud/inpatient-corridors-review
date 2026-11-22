@@ -12,7 +12,7 @@
 | FILTHY YUCK! release group lists 17 tracks, date Oct. 16, 2026, and label broke | https://musicbrainz.org/release-group/d98dcb45-ae91-428a-9de5-43f7805b1acd | MusicBrainz release-group record | 2026-11-22 | Community metadata; corroborating lead, not primary canon. |
 | Official artist/label page exists for NOT A TOY | https://fearlessrecords.com/artists/not-a-toy/ | Label/artist page | 2026-11-22 | Official page surfaced, but current search excerpt mainly shows tour dates. Retrieve release links, bios, and official source materials before asserting lore. |
 | FILTHY YUCK! track sequence and loading interludes | https://www.albumoftheyear.org/album/2084998-not-a-toy-filthy-yuck.php | Third-party album metadata | 2026-11-22 | Research lead: tracklist includes LOADING... 40.4% (7), DISSEVER (interlude) (9), LOADING... 73.1% (13), THE MAZE (14), THE ENDING (15), JAILBREAK THE CONSOLE (16). Confirm against official tracklist before public factual use. |
-| Maze phrase / premise | NOT A TOY public Threads record referenced by project research; exact post URL not yet captured | Social source | Not captured | User/project-supplied lead: “get out of the maze.” Need exact post URL, text, and context before treating it as a narrative premise. |
+| Maze phrase / premise | [Official Threads profile: @notatoy](https://threads.com/@notatoy) | Official social profile (user-provided URL) | 2026-11-22 | Profile URL confirmed by user. Direct profile access/search did not expose the specific post in this check. “Get out of the maze” remains a project/user-supplied phrase pending direct post permalink and context. |
 | 2025 rollout and EP contents | User-supplied research summary in conversation | User-provided research | 2026-11-22 | Pending primary-source verification: DOOMSDAY HOLIDAY EP, [NOT A TOY] 4LBUM L34K EP, singles and dates. Do not convert rollout into plot. |
 | 2026 singles / versions releases | User-supplied research summary in conversation | User-provided research | 2026-11-22 | Pending official release verification: DEAD EYES, DEAD EYES.zip (Versions), UNALIVE ME. |
 | Band lineup (Branson Hoog, Benji Spoliansky, Jeremy Marmor, TJ Wessel) | User-supplied research summary in conversation | User-provided research | 2026-11-22 | Pending official bio verification. Do not use as story characters without explicit canon source. |
@@ -34,7 +34,7 @@ The release titles, loading interludes, archive/file naming, and game-related wo
 
 ## Next research tasks
 
-1. Capture direct official links for the relevant Threads posts, official music/video uploads, label release pages, and official discography.
+1. Start from the user-confirmed [official Threads profile](https://threads.com/@notatoy); capture direct post links for relevant posts (profile confirmed, individual post not yet located). Capture official music/video uploads, label release pages, and official discography.
 2. Verify the supplied 2025 EP/single chronology and the 2026 release metadata from primary sources.
 3. Record exact post/video wording and locators. Avoid reproducing lyrics.
 4. Ask for an approved lore/story reference only for questions primary sources do not resolve.
