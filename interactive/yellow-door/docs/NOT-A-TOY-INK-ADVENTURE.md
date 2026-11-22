@@ -1,7 +1,7 @@
 # Not a Toy — Ink Adventure: Story & Product Integration Brief
 
 **Relationship:** Yellow Door Ink pilot → Not a Toy Ink Adventure → Filthy Yuck!
-**Status:** narrative / integration brief; adventure not yet implemented or playtested.
+**Status:** narrative / integration brief and source ledger created; lore research is in progress; adventure not yet implemented or playtested.
 
 
 ## Lore integrity / source-of-truth rules
@@ -38,6 +38,8 @@ These release/track-title patterns support an **interface and structural vocabul
 The Ink concept may borrow interaction patterns (loading states, files, navigation, branches, system prompts) only as an adaptation design—not claim those mechanics are official band lore. The narrative facts and exact wording must be sourced from official material or approved reference.
 
 ### Canon/source ledger requirement
+
+See [NOT-A-TOY-SOURCE-LEDGER.md](NOT-A-TOY-SOURCE-LEDGER.md) for the initial source records, supported adaptation vocabulary, and unresolved canon questions. This ledger is intentionally conservative: third-party metadata and user-supplied summaries are marked pending primary-source verification.
 
 Before story drafting, record each proposed lore element in a table with: **claim / source URL or repo path / source type / date checked / evidence excerpt or precise locator / status** (confirmed, user-supplied pending verification, interpretation approved, or unresolved). Use public posts and official discography/video materials as evidence; repository content is authoritative only for what that repository actually confirms. No source means no lore claim. Ask for references where a story beat needs missing facts.
 
