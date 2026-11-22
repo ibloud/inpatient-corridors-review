@@ -65,6 +65,12 @@ Product references must be integrated at natural story beats. The story should i
 - **Music:** where included, connect listening to a narrative atmosphere or optional reflection. Streaming links are separate from product links.
 - **Support:** optional support should be clearly labeled and independent from story progress.
 
+## Known storefront destinations from project records
+
+- Official storefront recorded in project history: `https://notatoymerch.myshopify.com/`
+- FILTHY YUCK! comic product page recorded in project history: `https://notatoymerch.myshopify.com/products/filthy-yuck-comic`
+- These are known project URLs, not a fresh live-page or inventory check. Recheck links before release. Do not create alternate domains or substitute guessed URLs.
+
 ## Shopify / MyShopify integration contract
 
 Before implementing commerce links, verify the actual Filthy Yuck! store domain, current product URLs, and product availability from the public store. The store may use a custom domain or a `*.myshopify.com` domain; do not guess or substitute one.
