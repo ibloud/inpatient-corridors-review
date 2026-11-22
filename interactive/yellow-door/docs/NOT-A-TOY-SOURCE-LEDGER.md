@@ -29,6 +29,9 @@
 | Artist interview / behind-the-scenes lead | [Branson Hoog](https://www.instagram.com/) (profile link supplied through user research; exact permalink unresolved) | Artist/social profile and interview/video leads | 2026-11-22 | User supplied a summary pointing to frontman Branson Hoog posts, touring with VOILA and Giorgio Austin, and behind-the-scenes material. Exact source links and context must be captured before treating details as evidence. |
 | Similar-name account exclusion | [@notatoycompany](https://www.instagram.com/notatoycompany/) (user supplied) | Separate account | 2026-11-22 | User warns this is a separate account associated with 3D-printed items. Do not mix it into NOT A TOY music/art research or source attribution. |
 
+
+| “Get Out of the Maze” social clip context | User-supplied research summary; Facebook NOT A TOY post, dated Nov. 18, 2026; original link: https://www.facebook.com/watch/?v=1014489590980458 | Promotional social clip/reel paired with “THE MAZE,” not confirmed standalone narrative short film | 2026-11-22 | User reports clip uses an 8-second first-person garden-maze exit puzzle and caption “get out of the maze >>> [link in bio]”; audio is “THE MAZE.” User research says track first appeared on 2025 DOOMSDAY HOLIDAY EP and was later included on FILTHY YUCK! (Oct. 2026). The post appears to be promotional short-form content, despite Facebook’s “Short Film” label; it directs viewers toward the song/profile. These details are supplied research, not independently verified in this review. Do not treat the clip as standalone story canon. |
+
 ## Supported adaptation vocabulary (not lore)
 
 The release titles, loading interludes, archive/file naming, and game-related words may inform the adventure's UI and interaction mechanics: loading state, files, menus, navigation, progress, choices, branching, and system-style presentation. These are design choices by the adaptation, not statements about NOT A TOY's canon.
