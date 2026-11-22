@@ -20,6 +20,27 @@ Maintain a source ledger for every material story fact: fact or quote, source UR
 
 **Open canon questions:** What is the maze literally/metaphorically in the approved story? Who is the player/protagonist? What existing characters or events are canon? What are the intended stakes and ending(s)? Which social posts or repository artifacts are approved narrative source material? Request an artist/user reference before authoring these details if sources don't answer them.
 
+
+## Public-facing discography context supplied for this project
+
+**Source status:** The following summary was supplied by the user as public-facing research. Treat it as a research brief, not independently verified canon; retain a source URL or citation for each official release before publishing claims externally.
+
+- NOT A TOY is fronted by Branson Hoog, alongside Benji Spoliansky, Jeremy Marmor, and TJ Wessel (as supplied; verify against official band materials before publishing).
+- The supplied summary states that *FILTHY YUCK!* was released October 16, 2026 via Broke and is a 17-track debut full-length. (Date is in the future relative to some earlier project records; verify release metadata before using in public copy.)
+- The 2025 rollout described in the supplied summary includes *PLAYING W/ DEATH*, *THE MAZE*, *NPC*, and *DOOMSDAY HOLIDAY*; the *DOOMSDAY HOLIDAY* EP (August 22, 2025) packages four tracks; and *[NOT A TOY] 4LBUM L34K* (October 17, 2025) adds *KINGKILLER* and *SITH MODE* while retaining those tracks.
+- The supplied summary identifies 2026 singles *DEAD EYES* (with *DEAD EYES.zip (Versions)*) and *UNALIVE ME* preceding the LP.
+- The supplied tracklist context calls out interludes *LOADING... 40.4%* (track 7) and *LOADING... 73.1%* (track 13), and game/simulation/file-system naming such as *PLAYING W/ DEATH*, *NPC*, *THE MAZE*, *THE ENDING*, *JAILBREAK THE CONSOLE*, *[NOT A TOY] 4LBUM L34K*, *DEAD EYES.zip*, *H4RD_DR!V3*, and *beam me up.aif*.
+
+### What this supports—and what it does not
+
+These release/track-title patterns support an **interface and structural vocabulary** for an interactive adaptation: staged loading, file-like artifacts, game/simulation terminology, a sequence of releases, and player navigation/choice. They do not establish a linear plot, hidden ARG, character identities or backstories, what the maze represents, the meaning of any song/video, or the relationships among music videos. Do not invent these or infer narrative connections from titles alone.
+
+The Ink concept may borrow interaction patterns (loading states, files, navigation, branches, system prompts) only as an adaptation design—not claim those mechanics are official band lore. The narrative facts and exact wording must be sourced from official material or approved reference.
+
+### Canon/source ledger requirement
+
+Before story drafting, record each proposed lore element in a table with: **claim / source URL or repo path / source type / date checked / evidence excerpt or precise locator / status** (confirmed, user-supplied pending verification, interpretation approved, or unresolved). Use public posts and official discography/video materials as evidence; repository content is authoritative only for what that repository actually confirms. No source means no lore claim. Ask for references where a story beat needs missing facts.
+
 ## Narrative-first requirement
 
 The adventure must work as a complete, satisfying story without a product click, stream, purchase, signup, or support action. Commerce is an optional extension of story moments—not the story's objective and not a sequence of unrelated prompts.
