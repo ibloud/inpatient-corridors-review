@@ -35,3 +35,6 @@ function go(id){step++;const s=screens[id];if(!s)return;storyEl.innerHTML=(s.hea
 function restart(){stats={agency:0,curiosity:0,evidence:0,risk:0};step=0;go('boot')}
 document.getElementById('restart').addEventListener('click',restart);restart();
 (()=>{let scale=1;const apply=()=>document.documentElement.style.setProperty('--story-scale',scale);document.getElementById('text-sm').addEventListener('click',()=>{scale=Math.max(.85,scale-.1);apply()});document.getElementById('text-lg').addEventListener('click',()=>{scale=Math.min(1.6,scale+.1);apply()});document.getElementById('text-reset').addEventListener('click',()=>{scale=1;apply()});})();
+
+// Place the existing PIXIE companion button in the story panel's upper-right corner.
+(()=>{const pixie=document.getElementById('pixie-open'),panel=document.querySelector('.story-panel');if(pixie&&panel){panel.appendChild(pixie);pixie.style.position='absolute';pixie.style.top='8px';pixie.style.right='12px';pixie.style.bottom='auto';pixie.style.zIndex='20';pixie.style.minHeight='36px';pixie.style.minWidth='auto';pixie.style.padding='8px 12px';}})();
