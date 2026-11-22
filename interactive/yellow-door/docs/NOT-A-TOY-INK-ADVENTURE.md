@@ -3,6 +3,23 @@
 **Relationship:** Yellow Door Ink pilot → Not a Toy Ink Adventure → Filthy Yuck!
 **Status:** narrative / integration brief; adventure not yet implemented or playtested.
 
+
+## Lore integrity / source-of-truth rules
+
+**Do not invent lore.** All narrative details, character names, relationships, settings, chronology, motivations, dialogue, symbolism, and artist intent must be grounded in:
+1. Public NOT A TOY social-media posts and other official public materials that can be cited;
+2. Source files and facts explicitly confirmed in the project repository; or
+3. A reference supplied or explicitly approved by the user/artist.
+
+Maintain a source ledger for every material story fact: fact or quote, source URL/path, retrieval date, and whether it is direct quotation, paraphrase, or approved interpretation. Do not turn song lyrics into dialogue or reproduce lyrics; use factual track titles and themes only where supported and appropriate. Search results/snippets are leads, not sufficient evidence for plot details. If the available sources do not establish a needed detail, leave it open and request a reference instead of filling it with invented lore.
+
+### Current confirmed public-source leads (not a complete story canon)
+- NOT A TOY's public Threads profile/post is surfaced with the phrase **“get out of the maze”**; treat this as a premise/phrase, not permission to invent what the maze is or who is inside it.
+- Public posts identify **FILTHY YUCK!** and reference the official merch store/product page; product destination should be confirmed against the store before release.
+- Public music metadata lists track titles including **THE MAZE**, **THE ENDING**, and **JAILBREAK THE CONSOLE**. Titles alone do not establish plot, characters, or sequence.
+
+**Open canon questions:** What is the maze literally/metaphorically in the approved story? Who is the player/protagonist? What existing characters or events are canon? What are the intended stakes and ending(s)? Which social posts or repository artifacts are approved narrative source material? Request an artist/user reference before authoring these details if sources don't answer them.
+
 ## Narrative-first requirement
 
 The adventure must work as a complete, satisfying story without a product click, stream, purchase, signup, or support action. Commerce is an optional extension of story moments—not the story's objective and not a sequence of unrelated prompts.
