@@ -24,6 +24,11 @@
 | Store domain | https://notatoymerch.myshopify.com/ | Project record / official store URL supplied in prior project context | Not freshly checked | Known destination in project records. Recheck before launch. |
 | FILTHY YUCK! comic product page | https://notatoymerch.myshopify.com/products/filthy-yuck-comic | Project record / official product URL supplied in prior project context | Not freshly checked | Known destination in project records. Recheck before launch; no claims about availability, price, or story content. |
 
+
+| Official Instagram account / content hub | [@notatoy](https://www.instagram.com/notatoy/) (user supplied) | Official social account; posts, reels, music/art, release promotion | 2026-11-22 | User identifies this as the official NOT A TOY account. Direct posts/reels still need individual capture and review. Research leads supplied: FILTHY YUCK! and “PLAYING W/ DEATH”; art/merch including a reported hand-drawn 40-page comic paired with the album; tour and behind-the-scenes posts; thriller-inspired reels. These are search leads, not independently verified canon. |
+| Artist interview / behind-the-scenes lead | [Branson Hoog](https://www.instagram.com/) (profile link supplied through user research; exact permalink unresolved) | Artist/social profile and interview/video leads | 2026-11-22 | User supplied a summary pointing to frontman Branson Hoog posts, touring with VOILA and Giorgio Austin, and behind-the-scenes material. Exact source links and context must be captured before treating details as evidence. |
+| Similar-name account exclusion | [@notatoycompany](https://www.instagram.com/notatoycompany/) (user supplied) | Separate account | 2026-11-22 | User warns this is a separate account associated with 3D-printed items. Do not mix it into NOT A TOY music/art research or source attribution. |
+
 ## Supported adaptation vocabulary (not lore)
 
 The release titles, loading interludes, archive/file naming, and game-related words may inform the adventure's UI and interaction mechanics: loading state, files, menus, navigation, progress, choices, branching, and system-style presentation. These are design choices by the adaptation, not statements about NOT A TOY's canon.
