@@ -5,10 +5,8 @@
 
 VAR Curiosity = 0
 VAR Agency = 0
-VAR Connection = 0
 VAR Risk = 0
 VAR Evidence = 0
-VAR Act = 1
 
 -> boot
 
@@ -47,7 +45,8 @@ A narrow path of options opens. It looks less like a map than a sequence of inst
 -> act_one
 
 === act_one ===
-\nACT I — ORIENTATION
+
+ACT I — ORIENTATION
 
 A new prompt arrives with three choices. None explains what lies beyond it.
 
@@ -144,7 +143,8 @@ You record what you saw instead of deciding what it means.
 -> act_two
 
 === act_two ===
-\nACT II — PATTERN
+
+ACT II — PATTERN
 
 A new sequence begins. The instructions are familiar, but the consequences are not.
 
@@ -213,7 +213,8 @@ Recognition is not proof of intent. It is enough to change how you approach the 
     -> act_three
 
 === act_three ===
-\nACT III — INTERRUPTION
+
+ACT III — INTERRUPTION
 
 The progress marker stops.
 
@@ -310,7 +311,8 @@ You decide to keep the question, rather than accept the prompt as an explanation
 -> act_four
 
 === act_four ===
-\nACT IV — EXIT
+
+ACT IV — EXIT
 
 A final sequence appears.
 
@@ -369,7 +371,8 @@ You know now that you can question a prompt, inspect a claim, wait, refuse, or c
     -> offered_exit
 
 === ending ===
-\nJAILBREAK THE CONSOLE — ADAPTATION END
+
+JAILBREAK THE CONSOLE — ADAPTATION END
 
 This is an original interactive ending, not a reproduction of the album's official story.
 
@@ -393,7 +396,8 @@ No score determines whether your exit is real. No purchase, account, or external
 -> debrief
 
 === debrief ===
-\nSESSION SUMMARY
+
+SESSION SUMMARY
 
 Independent choices: {Agency}
 Questions asked: {Curiosity}
