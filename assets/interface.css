@@ -50,3 +50,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible, textarea:focus-vis
 .document-toc summary { min-height: 48px; padding-block: .7rem; cursor: pointer; }
 .document-toc a { display: inline-block; min-height: 44px; padding-block: .4rem; }
 @media print { .pixie-button, .pixie-backdrop, .return-nav, .skip-link, .document-toc { display: none !important; } .document-page { background: #fff; color: #111; } .document-content p, .document-content li, .document-page a { color: #111; } }
+
+/* Unified project breadcrumbs and footer */
+.breadcrumbs { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; padding:.75rem 0; color:#aaa; font-size:.85rem; }
+.breadcrumbs a { color:#ccc; text-decoration:underline; text-underline-offset:.2rem; }
+.breadcrumbs [aria-current="page"] { color:#f0f0f0; }
+.site-footer { display:block; border-top:1px solid var(--border); margin-top:3rem; padding:1.5rem 0 0; }
+.footer-brand { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:baseline; margin-bottom:1rem; }
+.footer-brand strong { color:#eee; font-size:1rem; }
+.footer-brand span { color:#aaa; font-size:.85rem; }
+.footer-links { display:flex; flex-wrap:wrap; gap:.5rem 1rem; margin-bottom:1rem; }
+.footer-links a { color:#bbb; text-decoration:underline; text-underline-offset:.2rem; min-height:44px; display:inline-flex; align-items:center; }
+.footer-note { color:#999; font-size:.82rem; max-width:75ch; margin:0; }
+.footer-note a { text-decoration:underline; text-underline-offset:.2rem; }
+@media(max-width:600px){ .footer-brand { flex-direction:column; gap:.2rem; } .footer-links { flex-direction:column; gap:0; } }
