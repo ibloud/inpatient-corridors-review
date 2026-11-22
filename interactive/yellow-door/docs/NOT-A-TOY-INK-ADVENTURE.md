@@ -1,10 +1,10 @@
 # Not a Toy — Ink Adventure: Story & Product Integration Brief
 
-**Relationship:** Yellow Door Ink pilot → Not a Toy Ink Adventure → Filthy Yuck!
+**Relationship:** Separate projects. The Yellow Door is an independent pilot and is not part of NOT A TOY or FILTHY YUCK! It served only as a technical/design reference for learning from the first interactive narrative pilot before building the NOT A TOY phase.
 **Status:** Ink story draft authored and committed; separate browser-playable visual test prototype implemented. The visual test uses a hand-authored browser story renderer mirroring the Ink adaptation (not compiled Ink). Compiler validation, Ink runtime integration, and playtesting remain pending.
 
 
-## Lore integrity / source-of-truth rules
+## Project separation\n\nThe Yellow Door pilot remains a separate project, with its own narrative, scope, and source-of-truth. It is not a prequel, chapter, shared universe, or lore component of NOT A TOY. References to Yellow Door in this document are strictly development breadcrumbs: a prior pilot whose implementation was examined to learn interaction/runtime patterns. NOT A TOY is a new phase with its own source research, canon, narrative, and build. Keep links between the projects in documentation/navigation only; do not merge story content or present them as one experience.\n\n## Lore integrity / source-of-truth rules
 
 **Do not invent lore.** All narrative details, character names, relationships, settings, chronology, motivations, dialogue, symbolism, and artist intent must be grounded in:
 1. Public NOT A TOY social-media posts and other official public materials that can be cited;
